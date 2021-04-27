@@ -1,0 +1,10 @@
+new_session: yes
+rmd_files:   [ "index.Rmd",
+               "acknowledgements.Rmd",
+               "course_description.Rmd",
+               "how_to.Rmd",
+               "bioinformatics.Rmd",
+               "human_genome.Rmd"
+             ]
+output_dir: docs
+before_chapter_script:  "_common.R"
