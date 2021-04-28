@@ -206,7 +206,7 @@ Table: (\#tab:stats) The types and numbers of sites with variations in the autos
 library("tidyverse")
 library(printr)        
 
-setwd("~/Dropbox/R/genetics-master")
+setwd("~/Dropbox/R/bioinformatics")
 
 #options(scipen=100, digits=3)
 

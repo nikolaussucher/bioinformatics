@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 The Human Genome | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
+  <meta name="description" content="9 The Human Genome | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="9 The Human Genome | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="cover.jpg" />
+  
+  <meta name="github-repo" content="nikolaussuchert/bioinformatics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="9 The Human Genome | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="twitter:site" content="@NikolausSucher" />
+  
+  <meta name="twitter:image" content="cover.jpg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="pcr-primer-design.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">LSAP Bioinformatics Worshop at RCC</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="course-description.html"><a href="course-description.html"><i class="fa fa-check"></i><b>1</b> Course Description</a><ul>
+<li class="chapter" data-level="1.1" data-path="course-description.html"><a href="course-description.html#instructional-objectives"><i class="fa fa-check"></i><b>1.1</b> Instructional Objectives:</a></li>
+<li class="chapter" data-level="1.2" data-path="course-description.html"><a href="course-description.html#student-learning-outcomes"><i class="fa fa-check"></i><b>1.2</b> Student Learning Outcomes:</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bioinformatics.html"><a href="bioinformatics.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics</a><ul>
+<li class="chapter" data-level="2.1" data-path="bioinformatics.html"><a href="bioinformatics.html#sequence-analysis"><i class="fa fa-check"></i><b>2.1</b> Sequence analysis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="bioinformatics.html"><a href="bioinformatics.html#dna-sequencing"><i class="fa fa-check"></i><b>2.1.1</b> DNA sequencing</a></li>
+<li class="chapter" data-level="2.1.2" data-path="bioinformatics.html"><a href="bioinformatics.html#sequence-assembly"><i class="fa fa-check"></i><b>2.1.2</b> Sequence assembly</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="bioinformatics.html"><a href="bioinformatics.html#genome-annotation"><i class="fa fa-check"></i><b>2.2</b> Genome annotation</a></li>
+<li class="chapter" data-level="2.3" data-path="bioinformatics.html"><a href="bioinformatics.html#computational-evolutionary-biology"><i class="fa fa-check"></i><b>2.3</b> Computational evolutionary biology</a></li>
+<li class="chapter" data-level="2.4" data-path="bioinformatics.html"><a href="bioinformatics.html#comparative-genomics"><i class="fa fa-check"></i><b>2.4</b> Comparative genomics</a></li>
+<li class="chapter" data-level="2.5" data-path="bioinformatics.html"><a href="bioinformatics.html#pan-genomics"><i class="fa fa-check"></i><b>2.5</b> Pan genomics</a></li>
+<li class="chapter" data-level="2.6" data-path="bioinformatics.html"><a href="bioinformatics.html#genetics-of-disease"><i class="fa fa-check"></i><b>2.6</b> Genetics of disease</a></li>
+<li class="chapter" data-level="2.7" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-mutations-in-cancer"><i class="fa fa-check"></i><b>2.7</b> Analysis of mutations in cancer</a></li>
+<li class="chapter" data-level="2.8" data-path="bioinformatics.html"><a href="bioinformatics.html#gene-and-protein-expression"><i class="fa fa-check"></i><b>2.8</b> Gene and protein expression</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-gene-expression"><i class="fa fa-check"></i><b>2.8.1</b> Analysis of gene expression</a></li>
+<li class="chapter" data-level="2.8.2" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-protein-expression"><i class="fa fa-check"></i><b>2.8.2</b> Analysis of protein expression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-regulation"><i class="fa fa-check"></i><b>2.9</b> Analysis of regulation</a></li>
+<li class="chapter" data-level="2.10" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-cellular-organization"><i class="fa fa-check"></i><b>2.10</b> Analysis of cellular organization</a></li>
+<li class="chapter" data-level="2.11" data-path="bioinformatics.html"><a href="bioinformatics.html#microscopy-and-image-analysis"><i class="fa fa-check"></i><b>2.11</b> Microscopy and image analysis</a><ul>
+<li class="chapter" data-level="2.11.1" data-path="bioinformatics.html"><a href="bioinformatics.html#protein-localization"><i class="fa fa-check"></i><b>2.11.1</b> Protein localization</a></li>
+</ul></li>
+<li class="chapter" data-level="2.12" data-path="bioinformatics.html"><a href="bioinformatics.html#nuclear-organization-of-chromatin"><i class="fa fa-check"></i><b>2.12</b> Nuclear organization of chromatin</a></li>
+<li class="chapter" data-level="2.13" data-path="bioinformatics.html"><a href="bioinformatics.html#structural-bioinformatics"><i class="fa fa-check"></i><b>2.13</b> Structural bioinformatics</a></li>
+<li class="chapter" data-level="2.14" data-path="bioinformatics.html"><a href="bioinformatics.html#network-and-systems-biology"><i class="fa fa-check"></i><b>2.14</b> Network and systems biology</a></li>
+<li class="chapter" data-level="2.15" data-path="bioinformatics.html"><a href="bioinformatics.html#literature-analysis"><i class="fa fa-check"></i><b>2.15</b> Literature analysis</a></li>
+<li class="chapter" data-level="2.16" data-path="bioinformatics.html"><a href="bioinformatics.html#high-throughput-image-analysis"><i class="fa fa-check"></i><b>2.16</b> High-throughput image analysis</a></li>
+<li class="chapter" data-level="2.17" data-path="bioinformatics.html"><a href="bioinformatics.html#high-throughput-single-cell-data-analysis"><i class="fa fa-check"></i><b>2.17</b> High-throughput single cell data analysis</a></li>
+<li class="chapter" data-level="2.18" data-path="bioinformatics.html"><a href="bioinformatics.html#biodiversity-informatics"><i class="fa fa-check"></i><b>2.18</b> Biodiversity informatics</a></li>
+<li class="chapter" data-level="2.19" data-path="bioinformatics.html"><a href="bioinformatics.html#ontologies-and-data-integration"><i class="fa fa-check"></i><b>2.19</b> Ontologies and data integration</a></li>
+<li class="chapter" data-level="2.20" data-path="bioinformatics.html"><a href="bioinformatics.html#databases"><i class="fa fa-check"></i><b>2.20</b> Databases</a></li>
+<li class="chapter" data-level="2.21" data-path="bioinformatics.html"><a href="bioinformatics.html#open-source-bioinformatics-software"><i class="fa fa-check"></i><b>2.21</b> Open-source bioinformatics software</a></li>
+<li class="chapter" data-level="2.22" data-path="bioinformatics.html"><a href="bioinformatics.html#web-services-in-bioinformatics"><i class="fa fa-check"></i><b>2.22</b> Web services in bioinformatics</a></li>
+<li class="chapter" data-level="2.23" data-path="bioinformatics.html"><a href="bioinformatics.html#bioinformatics-workflow-management-systems"><i class="fa fa-check"></i><b>2.23</b> Bioinformatics workflow management systems</a></li>
+<li class="chapter" data-level="2.24" data-path="bioinformatics.html"><a href="bioinformatics.html#biocompute-and-biocompute-objects"><i class="fa fa-check"></i><b>2.24</b> BioCompute and BioCompute Objects</a></li>
+<li class="chapter" data-level="2.25" data-path="bioinformatics.html"><a href="bioinformatics.html#education-platforms"><i class="fa fa-check"></i><b>2.25</b> Education platforms</a></li>
+<li class="chapter" data-level="2.26" data-path="bioinformatics.html"><a href="bioinformatics.html#conferences"><i class="fa fa-check"></i><b>2.26</b> Conferences</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dna-and-rna.html"><a href="dna-and-rna.html"><i class="fa fa-check"></i><b>3</b> DNA and RNA</a><ul>
+<li class="chapter" data-level="3.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna"><i class="fa fa-check"></i><b>3.1</b> DNA</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#structure-and-composition-of-dna"><i class="fa fa-check"></i><b>3.1.1</b> Structure and composition of DNA</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#base-modifications-and-dna-packaging"><i class="fa fa-check"></i><b>3.1.2</b> Base modifications and DNA packaging</a></li>
+<li class="chapter" data-level="3.1.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-damage"><i class="fa fa-check"></i><b>3.1.3</b> DNA damage</a></li>
+<li class="chapter" data-level="3.1.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#biological-functions-of-dna"><i class="fa fa-check"></i><b>3.1.4</b> Biological functions of DNA</a></li>
+<li class="chapter" data-level="3.1.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-replication"><i class="fa fa-check"></i><b>3.1.5</b> DNA replication</a></li>
+<li class="chapter" data-level="3.1.6" data-path="dna-and-rna.html"><a href="dna-and-rna.html#interactions-of-dna-with-proteins"><i class="fa fa-check"></i><b>3.1.6</b> Interactions of DNA with proteins</a></li>
+<li class="chapter" data-level="3.1.7" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-modifying-enzymes"><i class="fa fa-check"></i><b>3.1.7</b> DNA-modifying enzymes</a></li>
+<li class="chapter" data-level="3.1.8" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-recombination"><i class="fa fa-check"></i><b>3.1.8</b> DNA recombination</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#evolution"><i class="fa fa-check"></i><b>3.2</b> Evolution</a></li>
+<li class="chapter" data-level="3.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#genetic-engineering"><i class="fa fa-check"></i><b>3.3</b> Genetic engineering</a></li>
+<li class="chapter" data-level="3.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-profiling"><i class="fa fa-check"></i><b>3.4</b> DNA profiling</a></li>
+<li class="chapter" data-level="3.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#rna"><i class="fa fa-check"></i><b>3.5</b> RNA</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#comparison-with-dna"><i class="fa fa-check"></i><b>3.5.1</b> Comparison with DNA</a></li>
+<li class="chapter" data-level="3.5.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#structure-of-rna"><i class="fa fa-check"></i><b>3.5.2</b> Structure of RNA</a></li>
+<li class="chapter" data-level="3.5.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#synthesis-of-rna"><i class="fa fa-check"></i><b>3.5.3</b> Synthesis of RNA</a></li>
+<li class="chapter" data-level="3.5.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#coding-and-non-coding-rna"><i class="fa fa-check"></i><b>3.5.4</b> Coding and non-coding RNA</a></li>
+<li class="chapter" data-level="3.5.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#regulatory-rna"><i class="fa fa-check"></i><b>3.5.5</b> Regulatory RNA</a></li>
+<li class="chapter" data-level="3.5.6" data-path="dna-and-rna.html"><a href="dna-and-rna.html#rna-interference-by-mirnas"><i class="fa fa-check"></i><b>3.5.6</b> RNA interference by miRNAs</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html"><i class="fa fa-check"></i><b>4</b> Transcription And RNA Processing</a><ul>
+<li class="chapter" data-level="4.1" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#initiation"><i class="fa fa-check"></i><b>4.1</b> Initiation</a></li>
+<li class="chapter" data-level="4.2" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#elongation"><i class="fa fa-check"></i><b>4.2</b> Elongation</a></li>
+<li class="chapter" data-level="4.3" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#termination"><i class="fa fa-check"></i><b>4.3</b> Termination</a></li>
+<li class="chapter" data-level="4.4" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#inhibitors-of-transcription"><i class="fa fa-check"></i><b>4.4</b> Inhibitors of transcription</a></li>
+<li class="chapter" data-level="4.5" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#transcription-factors"><i class="fa fa-check"></i><b>4.5</b> Transcription factors</a></li>
+<li class="chapter" data-level="4.6" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#rna-processing"><i class="fa fa-check"></i><b>4.6</b> RNA Processing</a></li>
+<li class="chapter" data-level="4.7" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#mrna-processing"><i class="fa fa-check"></i><b>4.7</b> mRNA processing</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#processing"><i class="fa fa-check"></i><b>4.7.1</b> 5’ processing</a></li>
+<li class="chapter" data-level="4.7.2" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#processing-1"><i class="fa fa-check"></i><b>4.7.2</b> 3’ processing</a></li>
+<li class="chapter" data-level="4.7.3" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#intron-splicing"><i class="fa fa-check"></i><b>4.7.3</b> Intron splicing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#reverse-transcription"><i class="fa fa-check"></i><b>4.8</b> Reverse transcription</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html"><i class="fa fa-check"></i><b>5</b> Translation And The Genetic Code</a><ul>
+<li class="chapter" data-level="5.1" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#ribosomes"><i class="fa fa-check"></i><b>5.1</b> Ribosomes</a></li>
+<li class="chapter" data-level="5.2" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#bacterial-ribosomes"><i class="fa fa-check"></i><b>5.2</b> Bacterial ribosomes</a></li>
+<li class="chapter" data-level="5.3" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#eukaryotic-ribosomes"><i class="fa fa-check"></i><b>5.3</b> Eukaryotic ribosomes</a></li>
+<li class="chapter" data-level="5.4" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#translation"><i class="fa fa-check"></i><b>5.4</b> Translation</a></li>
+<li class="chapter" data-level="5.5" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#eukaryotic-translation"><i class="fa fa-check"></i><b>5.5</b> Eukaryotic translation</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#initiation-1"><i class="fa fa-check"></i><b>5.5.1</b> Initiation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#elongation-1"><i class="fa fa-check"></i><b>5.5.2</b> Elongation</a></li>
+<li class="chapter" data-level="5.5.3" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#termination-1"><i class="fa fa-check"></i><b>5.5.3</b> Termination</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#genetic-code"><i class="fa fa-check"></i><b>5.6</b> Genetic code</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html"><i class="fa fa-check"></i><b>6</b> Techniques Of Molecular Biology</a><ul>
+<li class="chapter" data-level="6.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#polymerase-chain-reaction"><i class="fa fa-check"></i><b>6.1</b> Polymerase chain reaction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#procedure"><i class="fa fa-check"></i><b>6.1.1</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#dna-sequencing-1"><i class="fa fa-check"></i><b>6.2</b> DNA Sequencing</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#sanger-sequencing"><i class="fa fa-check"></i><b>6.2.1</b> Sanger sequencing</a></li>
+<li class="chapter" data-level="6.2.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#high-throughput-sequencing-hts-methods"><i class="fa fa-check"></i><b>6.2.2</b> High-throughput sequencing (HTS) methods</a></li>
+<li class="chapter" data-level="6.2.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#pyrosequencing"><i class="fa fa-check"></i><b>6.2.3</b> 454 pyrosequencing</a></li>
+<li class="chapter" data-level="6.2.4" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#illumina-solexa-sequencing"><i class="fa fa-check"></i><b>6.2.4</b> Illumina (Solexa) sequencing</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#rna-seq"><i class="fa fa-check"></i><b>6.3</b> RNA-Seq</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#single-cell-rna-sequencing-scrna-seq"><i class="fa fa-check"></i><b>6.3.1</b> Single-cell RNA sequencing (scRNA-Seq)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#dna-microarray"><i class="fa fa-check"></i><b>6.4</b> DNA microarray</a></li>
+<li class="chapter" data-level="6.5" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#recombinant-dna"><i class="fa fa-check"></i><b>6.5</b> Recombinant DNA</a></li>
+<li class="chapter" data-level="6.6" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#molecular-cloning"><i class="fa fa-check"></i><b>6.6</b> Molecular cloning</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#procedures"><i class="fa fa-check"></i><b>6.6.1</b> Procedures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#mutagenesis"><i class="fa fa-check"></i><b>6.7</b> Mutagenesis</a><ul>
+<li class="chapter" data-level="6.7.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#random-mutagenesis"><i class="fa fa-check"></i><b>6.7.1</b> Random mutagenesis</a></li>
+<li class="chapter" data-level="6.7.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#site-directed-mutagenesis"><i class="fa fa-check"></i><b>6.7.2</b> Site-directed mutagenesis</a></li>
+<li class="chapter" data-level="6.7.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-synthesis"><i class="fa fa-check"></i><b>6.7.3</b> Gene synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knockout"><i class="fa fa-check"></i><b>6.8</b> Gene knockout</a></li>
+<li class="chapter" data-level="6.9" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#conditional-gene-knockout"><i class="fa fa-check"></i><b>6.9</b> Conditional gene knockout</a></li>
+<li class="chapter" data-level="6.10" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knock-in"><i class="fa fa-check"></i><b>6.10</b> Gene knock-in</a></li>
+<li class="chapter" data-level="6.11" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#rna-interference"><i class="fa fa-check"></i><b>6.11</b> RNA interference</a><ul>
+<li class="chapter" data-level="6.11.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#transcriptional-silencing"><i class="fa fa-check"></i><b>6.11.1</b> Transcriptional silencing</a></li>
+<li class="chapter" data-level="6.11.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knockdown"><i class="fa fa-check"></i><b>6.11.2</b> Gene knockdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6.12" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#cre-lox-recombination"><i class="fa fa-check"></i><b>6.12</b> Cre-Lox recombination</a></li>
+<li class="chapter" data-level="6.13" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#crispr-gene-editing"><i class="fa fa-check"></i><b>6.13</b> CRISPR gene editing</a></li>
+<li class="chapter" data-level="6.14" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-drive"><i class="fa fa-check"></i><b>6.14</b> Gene drive</a></li>
+<li class="chapter" data-level="6.15" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#human-germline-modification"><i class="fa fa-check"></i><b>6.15</b> Human germline modification</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> DNA sequence analysis</a><ul>
+<li class="chapter" data-level="7.1" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#experimental-procedures"><i class="fa fa-check"></i><b>7.1</b> Experimental procedures</a></li>
+<li class="chapter" data-level="7.2" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#blast-search"><i class="fa fa-check"></i><b>7.2</b> BLAST search</a></li>
+<li class="chapter" data-level="7.3" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#experimental-procedures-1"><i class="fa fa-check"></i><b>7.3</b> Experimental procedures</a></li>
+<li class="chapter" data-level="7.4" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#review-questions"><i class="fa fa-check"></i><b>7.4</b> Review Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR primer design</a></li>
+<li class="chapter" data-level="9" data-path="the-human-genome.html"><a href="the-human-genome.html"><i class="fa fa-check"></i><b>9</b> The Human Genome</a><ul>
+<li class="chapter" data-level="9.1" data-path="the-human-genome.html"><a href="the-human-genome.html#the-human-genome-project"><i class="fa fa-check"></i><b>9.1</b> The Human Genome Project</a></li>
+<li class="chapter" data-level="9.2" data-path="the-human-genome.html"><a href="the-human-genome.html#public-private-competition-around-the-human-genome-project"><i class="fa fa-check"></i><b>9.2</b> Public-Private Competition Around The Human Genome Project</a></li>
+<li class="chapter" data-level="9.3" data-path="the-human-genome.html"><a href="the-human-genome.html#genome-annotation-1"><i class="fa fa-check"></i><b>9.3</b> Genome Annotation</a></li>
+<li class="chapter" data-level="9.4" data-path="the-human-genome.html"><a href="the-human-genome.html#international-hapmap-project"><i class="fa fa-check"></i><b>9.4</b> International HapMap Project</a></li>
+<li class="chapter" data-level="9.5" data-path="the-human-genome.html"><a href="the-human-genome.html#the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variation"><i class="fa fa-check"></i><b>9.5</b> The Single Nucleotide Polymorphism Database (dbSNP) of Nucleotide Sequence Variation</a></li>
+<li class="chapter" data-level="9.6" data-path="the-human-genome.html"><a href="the-human-genome.html#the-1000-genomes-project"><i class="fa fa-check"></i><b>9.6</b> The 1000 Genomes Project</a></li>
+<li class="chapter" data-level="9.7" data-path="the-human-genome.html"><a href="the-human-genome.html#personal-genomics"><i class="fa fa-check"></i><b>9.7</b> Personal genomics</a></li>
+<li class="chapter" data-level="9.8" data-path="the-human-genome.html"><a href="the-human-genome.html#viewing-the-human-genome"><i class="fa fa-check"></i><b>9.8</b> Viewing The Human Genome</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="the-human-genome.html"><a href="the-human-genome.html#experimental-procedures-2"><i class="fa fa-check"></i><b>9.8.1</b> Experimental Procedures</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="the-human-genome.html"><a href="the-human-genome.html#review-questions-1"><i class="fa fa-check"></i><b>9.9</b> Review Questions</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LSAMP Bioinformatics Short Course at Roxbury Community College</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-human-genome" class="section level1">
+<h1><span class="header-section-number">9</span> The Human Genome</h1>
+<p>In this lab session, we will take a closer look at the human genome and known variations that distinguish different populations and variations that have been linked to increased risk for certain diseases.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Human_genome">human genome</a> is the complete set of nucleic acid sequences for humans, encoded as DNA within the 23 chromosome pairs in cell nuclei and in a small DNA molecule found within mitochondria. The human genome includes both protein-coding DNA genes and noncoding DNA. The haploid human genome in egg and sperm cells consists of more than three billion DNA base pairs (Table <a href="the-human-genome.html#tab:chr">9.1</a>), while the diploid genome in somatic cells has twice the DNA content. The Human Genome Project (HGP) produced the first (almost) complete sequence of the human genome, with the first draft sequence and initial analysis being published in 2001.</p>
+<div id="the-human-genome-project" class="section level2">
+<h2><span class="header-section-number">9.1</span> The Human Genome Project</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Human_Genome_Project">Human Genome Project</a> was an international scientific research project with the goal of determining the sequence of nucleotide base pairs that make up human DNA, and of identifying and mapping all of the genes of the human genome from both a physical and a functional standpoint. After the idea was picked up in 1984 by the US government when the planning started, the project formally launched in 1990 and was declared complete in 2003. Funding came from the US government through the National Institutes of Health (NIH) as well as numerous other groups from around the world. A parallel project was conducted outside government by the Celera Corporation, or Celera Genomics, which was formally launched in 1998. Most of the government-sponsored sequencing was performed in twenty universities and research centers in the United States, the United Kingdom, Japan, France, Germany, Spain and China.</p>
+<p>The Human Genome Project originally aimed to map the nucleotides contained in a human haploid reference genome (more than three billion). The project was not able to sequence all the DNA found in human cells. It sequenced only euchromatic regions of the genome, which make up 92% of the human genome. The other regions, called heterochromatic, are found in centromeres and telomeres, and were not sequenced under the project. An initial rough draft of the human genome was available in June 2000 and by February 2001 a working draft had been completed and published followed by the final sequencing mapping of the human genome on April 14, 2003. Although this was reported to cover 99% of the euchromatic human genome with 99.99% accuracy, a major quality assessment of the human genome sequence was published on May 27, 2004 indicating over 92% of sampling exceeded 99.99% accuracy which was within the intended goal. Further analyses and papers on the HGP continue to occur.</p>
+<p>The most recent official version of the human genome sequence is the Dec. 2013 (GRCh38/hg38) assembly of the human genome (hg38, GRCh38 Genome Reference Consortium Human Reference 38 (GCA_000001405.15)). The Dec. 2013 human reference sequence (GRCh38) was produced by the <a href="http://www.ncbi.nlm.nih.gov/projects/genome/assembly/grc/">Genome Reference Consortium</a>.</p>
+<p>An assembly is a set of chromosomes, unlocalized and unplaced (random) sequences and alternate loci used to represent an organism’s genome. Most current assemblies are a haploid representation of an organism’s genome, although some loci may be represented more than once. The human genome reference assembly has been obtained from multiple individuals. The haploid assembly does not represent a single haplotype, but rather a mixture of haplotypes. As sequencing technology evolves, it is anticipated that diploid sequences representing an individual’s genome will become available.</p>
+<p>A haplotype (haplo: from Ancient Greek ὰπλόος (haplos, single, simple)) is a contiguous section of closely linked segments of DNA within the larger genome that tend to be inherited together as a unit on a single chromosome. Haplotypes have no defined size and can refer to anything from a few closely linked loci up to an entire chromosome. The term is also used to describe groups of single-nucleotide polymorphisms (SNPs) that are statistically associated.</p>
+<p>The term ‘haplogroup’ refers to the SNP/unique-event polymorphism (UEP) mutations that represent the clade to which a collection of particular human haplotypes belong. (Clade here refers to a set of haplotypes sharing a common ancestor.) A haplogroup is a group of similar haplotypes that share a common ancestor with a single-nucleotide polymorphism mutation. Mitochondrial DNA passes along a maternal lineage hat can date back thousands of years. Similarly, the Y-chromosome passes along the paternal lineage.</p>
+<p>A chromosome assembly represents a relatively complete pseudo-molecule assembled from smaller sequences (components) that represent a biological chromosome. Relatively complete implies that some gaps may still be present in the assembly (e.g. there are still gaps in the human genome assembly), but independent measures suggest that most of the sequence is represented by sequenced bases. An unlocalized sequence is a sequence found in an assembly that is associated with a specific chromosome but cannot be ordered or oriented on that chromosome. An unplaced sequence is a sequence found in an assembly that is not associated with any chromosome.</p>
+<p>Assemblies are built from components, which in turn are joined to form contigs, which are used to build scaffolds (definitions of these and other relevant terms can be found on the <a href="https://www.ncbi.nlm.nih.gov/grc/help/definitions/#ALTERNATE">GRC web site</a>).</p>
+<table>
+<caption><span id="tab:chr">Table 9.1: </span> <a href="https://www.ncbi.nlm.nih.gov/grc/human/data">Human Genome Assembly GRCh38.p12</a> (Release date: 2017-12-21). Length of DNA sequence of each human chromosome. Total lengths are calculated by summing the length of the sequenced bases and estimated gaps. Ungapped lengths are calculated by summing the length of sequenced bases only. ‘Ns’ are excluded.</caption>
+<thead>
+<tr class="header">
+<th align="center">Chromosome</th>
+<th align="right">Total length</th>
+<th align="right">Ungapped length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="right">248,956,422</td>
+<td align="right">231,223,641</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="right">242,193,529</td>
+<td align="right">240,863,511</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="right">198,295,559</td>
+<td align="right">198,255,541</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="right">190,214,555</td>
+<td align="right">189,962,376</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="right">181,538,259</td>
+<td align="right">181,358,067</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="right">170,805,979</td>
+<td align="right">170,078,524</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="right">159,345,973</td>
+<td align="right">158,970,135</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="right">145,138,636</td>
+<td align="right">144,768,136</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="right">138,394,717</td>
+<td align="right">122,084,564</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="right">133,797,422</td>
+<td align="right">133,263,006</td>
+</tr>
+<tr class="odd">
+<td align="center">11</td>
+<td align="right">135,086,622</td>
+<td align="right">134,634,058</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="right">133,275,309</td>
+<td align="right">133,137,821</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="right">114,364,328</td>
+<td align="right">97,983,128</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="right">107,043,718</td>
+<td align="right">91,660,769</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="right">101,991,189</td>
+<td align="right">85,089,576</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="right">90,338,345</td>
+<td align="right">83,378,703</td>
+</tr>
+<tr class="odd">
+<td align="center">17</td>
+<td align="right">83,257,441</td>
+<td align="right">83,481,871</td>
+</tr>
+<tr class="even">
+<td align="center">18</td>
+<td align="right">80,373,285</td>
+<td align="right">80,089,650</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="right">58,617,616</td>
+<td align="right">58,440,758</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="right">64,444,167</td>
+<td align="right">63,944,268</td>
+</tr>
+<tr class="odd">
+<td align="center">21</td>
+<td align="right">46,709,983</td>
+<td align="right">40,088,623</td>
+</tr>
+<tr class="even">
+<td align="center">22</td>
+<td align="right">50,818,468</td>
+<td align="right">40,181,019</td>
+</tr>
+<tr class="odd">
+<td align="center">X</td>
+<td align="right">156,040,895</td>
+<td align="right">154,893,034</td>
+</tr>
+<tr class="even">
+<td align="center">Y</td>
+<td align="right">57,227,415</td>
+<td align="right">26,452,288</td>
+</tr>
+<tr class="odd">
+<td align="center">MT</td>
+<td align="right">16,569</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="center">Unplaced</td>
+<td align="right">4,485,509</td>
+<td align="right">4,328,403</td>
+</tr>
+<tr class="odd">
+<td align="center">Genome</td>
+<td align="right">3,099,734,149</td>
+<td align="right">2,948,611,470</td>
+</tr>
+</tbody>
+</table>
+<p>HGP scientists used white blood cells from the blood of two male and two female donors (randomly selected from 20 of each) each donor yielding a separate DNA library. One of these libraries (RP11) was used considerably more than others, due to quality considerations. More than 70% of the reference genome produced by the public HGP came from RP11, a single anonymous male donor from Buffalo, New York (code name RP11).</p>
+<p>The genome was broken into smaller pieces; approximately 150,000 base pairs in length. These pieces were then ligated into a type of vector known as “bacterial artificial chromosomes”, or BACs, which are derived from bacterial chromosomes which have been genetically engineered. The vectors containing the genes can be introduced into bacteria where they are copied by the bacterial DNA replication machinery. Each of these pieces was then sequenced separately as a small “shotgun” project and then assembled. The larger, 150,000 base pairs go together to create chromosomes. This is known as the “hierarchical shotgun” approach, because the genome is first broken into relatively large chunks, which are then mapped to chromosomes before being selected for sequencing.</p>
+<p>The “genome” of any given individual is unique; mapping the “human genome” involved sequencing a small number of individuals and then assembling these together to get a complete sequence for each chromosome. Therefore, the finished human genome is a mosaic, not representing any one individual. In fact, we now know that there is variation in the genomes of individual cells in any one human. The implications of this recent finding for human health will keep scientists busy for a long time.</p>
+</div>
+<div id="public-private-competition-around-the-human-genome-project" class="section level2">
+<h2><span class="header-section-number">9.2</span> Public-Private Competition Around The Human Genome Project</h2>
+<p>In 1998, a privately funded quest to sequence the human genome was launched by the American researcher <a href="https://en.wikipedia.org/wiki/Craig_Venter">Craig Venter</a>, and his firm <a href="https://en.wikipedia.org/wiki/Celera_Corporation">Celera Genomics</a>. Venter was a scientist at the NIH during the early 1990s when the project was initiated. The $300,000,000 Celera effort was intended to proceed at a faster pace and at a fraction of the cost of the roughly $3 billion publicly funded project. The Celera approach was able to proceed at a much more rapid rate, and at a lower cost than the public project because it relied upon data made available by the publicly funded project.</p>
+<p>Celera used a technique called whole genome shotgun sequencing, employing pairwise end sequencing, which had been used to sequence bacterial genomes of up to six million base pairs in length, but not for anything nearly as large as the three billion base pair human genome.</p>
+<p>Celera initially announced that it would seek patent protection on “only 200-300” genes, but later amended this to seeking “intellectual property protection” on “fully-characterized important structures” amounting to 100-300 targets. The firm eventually filed preliminary (“place-holder”) patent applications on 6,500 whole or partial genes. Celera also promised to publish their findings in accordance with the terms of the 1996 “Bermuda Statement”, by releasing new data annually (the HGP released its new data daily), although, unlike the publicly funded project, they would not permit free redistribution or scientific use of the data. The publicly funded competitors were compelled to release the first draft of the human genome before Celera for this reason. On July 7, 2000, the UCSC Genome Bioinformatics Group released a first working draft on the web. The scientific community downloaded about 500 GB of information from the UCSC genome server in the first 24 hours of free and unrestricted access.</p>
+<p>In March 2000, US President Clinton announced that the genome sequence could not be patented, and should be made freely available to all researchers. The statement sent Celera’s stock plummeting and dragged down the biotechnology-heavy Nasdaq. The biotechnology sector lost about $50 billion in market capitalization in two days.</p>
+<p>Although the working draft was announced in June 2000, it was not until February 2001 that Celera and the HGP scientists published details of their drafts. Special issues of Nature (which published the publicly funded project’s scientific paper)[43] and Science (which published Celera’s paper) described the methods used to produce the draft sequence and offered analysis of the sequence. These drafts covered about 83% of the genome (90% of the euchromatic regions with 150,000 gaps and the order and orientation of many segments not yet established). In February 2001, at the time of the joint publications, press releases announced that the project had been completed by both groups. Improved drafts were announced in 2003 and 2005, filling in to approximately 92% of the sequence currently.</p>
+</div>
+<div id="genome-annotation-1" class="section level2">
+<h2><span class="header-section-number">9.3</span> Genome Annotation</h2>
+<p>The process of identifying the boundaries between genes and other features in a raw DNA sequence is called genome annotation and is in the domain of bioinformatics. Annotation of genes (coding sequences, CDS) is provided by multiple public resources, using different methods, and resulting in information that is similar but not always identical. The <a href="https://www.ncbi.nlm.nih.gov/projects/CCDS/CcdsBrowse.cgi">Consensus CDS (CCDS) project</a> is a collaborative effort to identify a core set of protein coding regions that are consistently annotated and of high quality and support convergence towards a standard set of gene annotations. While expert biologists make the best annotators, their work proceeds slowly, and computer programs are increasingly used to meet the high-throughput demands of genome sequencing projects. Beginning in 2008, a new technology known as <a href="https://en.wikipedia.org/wiki/RNA-Seq">RNA-seq</a> was introduced that allowed scientists to directly sequence the messenger RNA in cells. This replaced previous methods of annotation, which relied on inherent properties of the DNA sequence, with direct measurement, which was much more accurate. Today, annotation of the human genome and other genomes relies primarily on deep sequencing of the transcripts in every human tissue using RNA-seq. These experiments have revealed that over 90% of genes contain at least one and usually several alternative splice variants, in which the exons are combined in different ways to produce 2 or more gene products from the same locus.</p>
+<table>
+<caption><span id="tab:gene">Table 9.2: </span> Human Genome Assembly GRCh38.p12 (Release date: 2017-12-21). GC content (%) and number of proteins, ribosomal RNA (rRNA), transfer RNA (tRNA), other RNA, genes and pseudogenes on each chromosome. Retrieved on August 10, 2018 at <a href="https://www.ncbi.nlm.nih.gov/genome/?term=txid9606%5Borgn%5D" class="uri">https://www.ncbi.nlm.nih.gov/genome/?term=txid9606[orgn]</a></caption>
+<thead>
+<tr class="header">
+<th align="left">Name</th>
+<th align="right">GC (%)</th>
+<th align="right">Protein</th>
+<th align="right">rRNA</th>
+<th align="right">tRNA</th>
+<th align="right">Other RNA</th>
+<th align="right">Gene</th>
+<th align="right">Pseudogene</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Chr 1</td>
+<td align="right">42.3</td>
+<td align="right">11,321</td>
+<td align="right">17</td>
+<td align="right">90</td>
+<td align="right">4,457</td>
+<td align="right">5,109</td>
+<td align="right">1,386</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 2</td>
+<td align="right">40.3</td>
+<td align="right">8,291</td>
+<td align="right">-</td>
+<td align="right">7</td>
+<td align="right">3,728</td>
+<td align="right">3,871</td>
+<td align="right">1,181</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 3</td>
+<td align="right">39.7</td>
+<td align="right">7,150</td>
+<td align="right">-</td>
+<td align="right">4</td>
+<td align="right">2,782</td>
+<td align="right">2,990</td>
+<td align="right">900</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 4</td>
+<td align="right">38.3</td>
+<td align="right">4,599</td>
+<td align="right">-</td>
+<td align="right">1</td>
+<td align="right">2,193</td>
+<td align="right">2,441</td>
+<td align="right">803</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 5</td>
+<td align="right">39.5</td>
+<td align="right">4,729</td>
+<td align="right">-</td>
+<td align="right">17</td>
+<td align="right">2,194</td>
+<td align="right">2,592</td>
+<td align="right">778</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 6</td>
+<td align="right">39.6</td>
+<td align="right">5,522</td>
+<td align="right">-</td>
+<td align="right">138</td>
+<td align="right">2,453</td>
+<td align="right">3,005</td>
+<td align="right">882</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 7</td>
+<td align="right">40.7</td>
+<td align="right">5,112</td>
+<td align="right">-</td>
+<td align="right">22</td>
+<td align="right">2,330</td>
+<td align="right">2,792</td>
+<td align="right">911</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 8</td>
+<td align="right">40.2</td>
+<td align="right">4,199</td>
+<td align="right">-</td>
+<td align="right">4</td>
+<td align="right">2,011</td>
+<td align="right">2,165</td>
+<td align="right">671</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 9</td>
+<td align="right">42.3</td>
+<td align="right">4,699</td>
+<td align="right">-</td>
+<td align="right">3</td>
+<td align="right">2,222</td>
+<td align="right">2,270</td>
+<td align="right">706</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 10</td>
+<td align="right">41.6</td>
+<td align="right">5,429</td>
+<td align="right">-</td>
+<td align="right">3</td>
+<td align="right">2,133</td>
+<td align="right">2,179</td>
+<td align="right">640</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 11</td>
+<td align="right">41.6</td>
+<td align="right">6,394</td>
+<td align="right">-</td>
+<td align="right">13</td>
+<td align="right">2,336</td>
+<td align="right">2,924</td>
+<td align="right">829</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 12</td>
+<td align="right">40.8</td>
+<td align="right">5,975</td>
+<td align="right">-</td>
+<td align="right">9</td>
+<td align="right">2,457</td>
+<td align="right">2,526</td>
+<td align="right">691</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 13</td>
+<td align="right">40.2</td>
+<td align="right">2,056</td>
+<td align="right">-</td>
+<td align="right">4</td>
+<td align="right">1,243</td>
+<td align="right">1,385</td>
+<td align="right">475</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 14</td>
+<td align="right">42.2</td>
+<td align="right">3,501</td>
+<td align="right">-</td>
+<td align="right">18</td>
+<td align="right">1,704</td>
+<td align="right">2,065</td>
+<td align="right">585</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 15</td>
+<td align="right">43.4</td>
+<td align="right">3,623</td>
+<td align="right">-</td>
+<td align="right">9</td>
+<td align="right">1,810</td>
+<td align="right">1,824</td>
+<td align="right">554</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 16</td>
+<td align="right">45.1</td>
+<td align="right">4,625</td>
+<td align="right">-</td>
+<td align="right">27</td>
+<td align="right">1,761</td>
+<td align="right">1,938</td>
+<td align="right">469</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 17</td>
+<td align="right">45.3</td>
+<td align="right">6,226</td>
+<td align="right">-</td>
+<td align="right">33</td>
+<td align="right">2,243</td>
+<td align="right">2,450</td>
+<td align="right">556</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 18</td>
+<td align="right">39.8</td>
+<td align="right">2,029</td>
+<td align="right">-</td>
+<td align="right">1</td>
+<td align="right">996</td>
+<td align="right">984</td>
+<td align="right">295</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 19</td>
+<td align="right">47.9</td>
+<td align="right">6,750</td>
+<td align="right">-</td>
+<td align="right">6</td>
+<td align="right">1,877</td>
+<td align="right">2,499</td>
+<td align="right">523</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 20</td>
+<td align="right">43.9</td>
+<td align="right">2,904</td>
+<td align="right">-</td>
+<td align="right">-</td>
+<td align="right">1,308</td>
+<td align="right">1,358</td>
+<td align="right">338</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr 21</td>
+<td align="right">42.2</td>
+<td align="right">1,297</td>
+<td align="right">12</td>
+<td align="right">1</td>
+<td align="right">707</td>
+<td align="right">77</td>
+<td align="right">207</td>
+</tr>
+<tr class="even">
+<td align="left">Chr 22</td>
+<td align="right">47.7</td>
+<td align="right">2,582</td>
+<td align="right">-</td>
+<td align="right">-</td>
+<td align="right">1,014</td>
+<td align="right">1,189</td>
+<td align="right">354</td>
+</tr>
+<tr class="odd">
+<td align="left">Chr X</td>
+<td align="right">39.6</td>
+<td align="right">3,801</td>
+<td align="right">-</td>
+<td align="right">4</td>
+<td align="right">1,265</td>
+<td align="right">2,186</td>
+<td align="right">875</td>
+</tr>
+<tr class="even">
+<td align="left">Chr Y</td>
+<td align="right">45.4</td>
+<td align="right">324</td>
+<td align="right">-</td>
+<td align="right">-</td>
+<td align="right">311</td>
+<td align="right">580</td>
+<td align="right">392</td>
+</tr>
+<tr class="odd">
+<td align="left">MT</td>
+<td align="right">44.4</td>
+<td align="right">13</td>
+<td align="right">2</td>
+<td align="right">22</td>
+<td align="right">-</td>
+<td align="right">37</td>
+<td align="right">-</td>
+</tr>
+<tr class="even">
+<td align="left">Un</td>
+<td align="right">44.3</td>
+<td align="right">6,143</td>
+<td align="right">17</td>
+<td align="right">161</td>
+<td align="right">3,437</td>
+<td align="right">6,543</td>
+<td align="right">1,878</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:cds">Table 9.3: </span> Gene counts based on the <a href="http://useast.ensembl.org/Homo_sapiens/Info/Annotation">Ensembl human genome annotations</a> of the primary assembly of GRCh38.p12 (Genome Reference Consortium Human Build 38).</caption>
+<thead>
+<tr class="header">
+<th align="left">Coding sequence type</th>
+<th align="right">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Coding genes</strong></td>
+<td align="right">20,376 (incl 612 readthrough)</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Non coding genes</strong></td>
+<td align="right">22,305</td>
+</tr>
+<tr class="odd">
+<td align="left">Small non coding genes</td>
+<td align="right">5,363</td>
+</tr>
+<tr class="even">
+<td align="left">Long non coding genes</td>
+<td align="right">14,720 (incl 256 readthrough)</td>
+</tr>
+<tr class="odd">
+<td align="left">Misc non coding genes</td>
+<td align="right">2,222</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Pseudogenes</strong></td>
+<td align="right">14,692 (incl 7 readthrough)</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Gene transcripts</strong></td>
+<td align="right">203,903</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="international-hapmap-project" class="section level2">
+<h2><span class="header-section-number">9.4</span> International HapMap Project</h2>
+<p><a href="https://en.wikipedia.org/wiki/International_HapMap_Project">The International HapMap Project</a> was an organization that aimed to develop a haplotype map (HapMap) of the human genome, to describe the common patterns of human genetic variation. HapMap is used to find genetic variants affecting health, disease and responses to drugs and environmental factors. The information produced by the project was made freely available for research.</p>
+<p>Four populations were selected for inclusion in the HapMap: 30 adult-and-both-parents Yoruba trios from Ibadan, Nigeria (YRI), 30 trios of Utah residents of northern and western European ancestry (CEU), 44 unrelated Japanese individuals from Tokyo, Japan (JPT) and 45 unrelated Han Chinese individuals from Beijing, China (CHB).</p>
+<p>All samples were collected through a community engagement process with appropriate informed consent. The community engagement process was designed to identify and attempt to respond to culturally specific concerns and give participating communities input into the informed consent and sample collection processes.</p>
+<p>In phase III, 11 global ancestry groups were assembled: ASW (African ancestry in Southwest USA); CEU (Utah residents with Northern and Western European ancestry from the CEPH collection); CHB (Han Chinese in Beijing, China); CHD (Chinese in Metropolitan Denver, Colorado); GIH (Gujarati Indians in Houston, Texas); JPT (Japanese in Tokyo, Japan); LWK (Luhya in Webuye, Kenya); MEX (Mexican ancestry in Los Angeles, California); MKK (Maasai in Kinyawa, Kenya); TSI (Tuscans in Italy); YRI (Yoruba in Ibadan, Nigeria).</p>
+<p>Through this research millions of SNPs were discovered and many GWAS studies used this dataset in research for disease association. This project was a stepping stone for the 1000 genomes project which utilizes many of the same populations.</p>
+</div>
+<div id="the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variation" class="section level2">
+<h2><span class="header-section-number">9.5</span> The Single Nucleotide Polymorphism Database (dbSNP) of Nucleotide Sequence Variation</h2>
+<p>The <a href="https://www.ncbi.nlm.nih.gov/books/NBK21088/">Single Nucleotide Polymorphism database</a> (dbSNP) is a public-domain archive for a broad collection of simple genetic polymorphisms. This collection of polymorphisms includes single-base nucleotide substitutions (also known as single nucleotide polymorphisms or SNPs), small-scale multi-base deletions or insertions (also called deletion insertion polymorphisms or DIPs), and retroposable element insertions and microsatellite repeat variations (also called short tandem repeats or STRs). Please note that in this chapter, you can substitute any class of variation for the term SNP. Each dbSNP entry includes the sequence context of the polymorphism (i.e., the surrounding sequence), the occurrence frequency of the polymorphism (by population or individual), and the experimental method(s), protocols, and conditions used to assay the variation.</p>
+<p>The Reference SNP cluster ID (rsid) is an accession number used to refer to specific SNPs in the database.</p>
+</div>
+<div id="the-1000-genomes-project" class="section level2">
+<h2><span class="header-section-number">9.6</span> The 1000 Genomes Project</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/1000_Genomes_Project">1000 Genomes Project</a> launched in January 2008, is an international research effort to establish by far the most detailed catalogue of human genetic variation (Table <a href="the-human-genome.html#tab:thousand">9.4</a>). Scientists planned to sequence the genomes of at least one thousand anonymous participants from a number of different ethnic groups within the following three years, using newly developed technologies which were faster and less expensive. In 2015, two papers in the journal Nature reported results and the completion of the project and opportunities for future research. Many rare variations, restricted to closely related groups, were identified, and eight structural-variation classes were analyzed.</p>
+<p>The project unites multidisciplinary research teams from institutes around the world, including China, Italy, Japan, Kenya, Nigeria, Peru, the United Kingdom, and the United States. The team have been contributing to the enormous sequence dataset and to a refined human genome map, which are freely accessible through public databases to the scientific community and the general public alike. The <a href="http://www.internationalgenome.org/home">International Genome Sample Resource</a> (IGSR) was established at the European Bioinformatics Institute (<a href="https://www.ebi.ac.uk">EMBL-EBI</a>) in January 2015. The resource was established with three main <a href="http://www.internationalgenome.org/sample_collection_principles">aims</a>, to:</p>
+<ol style="list-style-type: decimal">
+<li>Ensure maximal usefulness and relevance of the existing 1000 Genomes data resources</li>
+<li>Extend the resource for the existing populations</li>
+<li>Expand the resource to new populations</li>
+</ol>
+<p>By providing an overview of all human genetic variation, the consortium has generated a valuable tool for all fields of biological science, especially in the disciplines of genetics, medicine, pharmacology, biochemistry, and bioinformatics.</p>
+<table>
+<caption><span id="tab:thousand">Table 9.4: </span> Populations represented in the 1000 genomes collection.</caption>
+<colgroup>
+<col width="15%" />
+<col width="68%" />
+<col width="10%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Superpopulation</th>
+<th align="left">Description</th>
+<th align="center">Population</th>
+<th align="center">Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">AFR</td>
+<td align="left">African Ancestry in Southwest US</td>
+<td align="center">ASW</td>
+<td align="center">112</td>
+</tr>
+<tr class="even">
+<td align="center">AFR</td>
+<td align="left">African Caribbean in Barbados</td>
+<td align="center">ACB</td>
+<td align="center">123</td>
+</tr>
+<tr class="odd">
+<td align="center">AFR</td>
+<td align="left">Esan in Nigeria</td>
+<td align="center">ESN</td>
+<td align="center">173</td>
+</tr>
+<tr class="even">
+<td align="center">AFR</td>
+<td align="left">Gambian in Western Division, The Gambia - Fula</td>
+<td align="center">GWF</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">AFR</td>
+<td align="left">Gambian in Western Division, The Gambia - Mandinka</td>
+<td align="center">GWD</td>
+<td align="center">280</td>
+</tr>
+<tr class="even">
+<td align="center">AFR</td>
+<td align="left">Gambian in Western Division, The Gambia - Wolof</td>
+<td align="center">GWW</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">AFR</td>
+<td align="left">Luhya in Webuye, Kenya</td>
+<td align="center">LWK</td>
+<td align="center">116</td>
+</tr>
+<tr class="even">
+<td align="center">AFR</td>
+<td align="left">Mende in Sierra Leone</td>
+<td align="center">MSL</td>
+<td align="center">128</td>
+</tr>
+<tr class="odd">
+<td align="center">AFR</td>
+<td align="left">Yoruba in Ibadan, Nigeria</td>
+<td align="center">YRI</td>
+<td align="center">186</td>
+</tr>
+<tr class="even">
+<td align="center">AMR</td>
+<td align="left">Colombian in Medellin, Colombia</td>
+<td align="center">CLM</td>
+<td align="center">148</td>
+</tr>
+<tr class="odd">
+<td align="center">AMR</td>
+<td align="left">Mexican Ancestry in Los Angeles, California</td>
+<td align="center">MXL</td>
+<td align="center">107</td>
+</tr>
+<tr class="even">
+<td align="center">AMR</td>
+<td align="left">Peruvian in Lima, Peru</td>
+<td align="center">PEL</td>
+<td align="center">130</td>
+</tr>
+<tr class="odd">
+<td align="center">AMR</td>
+<td align="left">Puerto Rican in Puerto Rico</td>
+<td align="center">PUR</td>
+<td align="center">150</td>
+</tr>
+<tr class="even">
+<td align="center">EAS</td>
+<td align="left">Chinese Dai in Xishuangbanna, China</td>
+<td align="center">CDX</td>
+<td align="center">109</td>
+</tr>
+<tr class="odd">
+<td align="center">EAS</td>
+<td align="left">Han Chinese in Beijing, China</td>
+<td align="center">CHB</td>
+<td align="center">112</td>
+</tr>
+<tr class="even">
+<td align="center">EAS</td>
+<td align="left">Han Chinese South</td>
+<td align="center">CHS</td>
+<td align="center">171</td>
+</tr>
+<tr class="odd">
+<td align="center">EAS</td>
+<td align="left">Japanese in Tokyo, Japan</td>
+<td align="center">JPT</td>
+<td align="center">105</td>
+</tr>
+<tr class="even">
+<td align="center">EAS</td>
+<td align="left">Kinh in Ho Chi Minh City, Vietnam</td>
+<td align="center">KHV</td>
+<td align="center">124</td>
+</tr>
+<tr class="odd">
+<td align="center">EUR</td>
+<td align="left">British in England and Scotland</td>
+<td align="center">GBR</td>
+<td align="center">107</td>
+</tr>
+<tr class="even">
+<td align="center">EUR</td>
+<td align="left">Finnish in Finland</td>
+<td align="center">FIN</td>
+<td align="center">105</td>
+</tr>
+<tr class="odd">
+<td align="center">EUR</td>
+<td align="left">Iberian populations in Spain</td>
+<td align="center">IBS</td>
+<td align="center">162</td>
+</tr>
+<tr class="even">
+<td align="center">EUR</td>
+<td align="left">Toscani in Italy</td>
+<td align="center">TSI</td>
+<td align="center">112</td>
+</tr>
+<tr class="odd">
+<td align="center">EUR</td>
+<td align="left">Utah residents (CEPH) with Northern and Western European ancestry</td>
+<td align="center">CEU</td>
+<td align="center">183</td>
+</tr>
+<tr class="even">
+<td align="center">SAS</td>
+<td align="left">Bengali in Bangladesh</td>
+<td align="center">BEB</td>
+<td align="center">144</td>
+</tr>
+<tr class="odd">
+<td align="center">SAS</td>
+<td align="left">Gujarati Indian in Houston, TX</td>
+<td align="center">GIH</td>
+<td align="center">113</td>
+</tr>
+<tr class="even">
+<td align="center">SAS</td>
+<td align="left">Indian Telugu in the UK</td>
+<td align="center">ITU</td>
+<td align="center">118</td>
+</tr>
+<tr class="odd">
+<td align="center">SAS</td>
+<td align="left">Punjabi in Lahore, Pakistan</td>
+<td align="center">PJL</td>
+<td align="center">158</td>
+</tr>
+<tr class="even">
+<td align="center">SAS</td>
+<td align="left">Sri Lankan Tamil in the UK</td>
+<td align="center">STU</td>
+<td align="center">128</td>
+</tr>
+</tbody>
+</table>
+<p>Some basic statistics about the variant sites on the autosomes (chromosomes 1 to 22) and the X chromosome in phase 3 release version 5a from Feb. 20th, 2015 are listed in Table <a href="the-human-genome.html#tab:stats">9.5</a>. The numbering of chromosome locations is based on <a href="https://www.ebi.ac.uk/ena/data/view/GCA_000001405.14">Genome Reference Consortium Human Build 37 patch release 13</a> (GRCh37.p13).</p>
+<table>
+<caption><span id="tab:stats">Table 9.5: </span> The types and numbers of sites with variations in the autosomes and X chromosome in the genomes of 2504 people examined in the 1000 genomes project (phase 3 v5a).</caption>
+<thead>
+<tr class="header">
+<th align="left">Type</th>
+<th align="right">Autosomes</th>
+<th align="right">X chromosome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SNPs</td>
+<td align="right">78136341</td>
+<td align="right">3246232</td>
+</tr>
+<tr class="even">
+<td align="left">indels</td>
+<td align="right">3135424</td>
+<td align="right">227112</td>
+</tr>
+<tr class="odd">
+<td align="left">others</td>
+<td align="right">58671</td>
+<td align="right">2040</td>
+</tr>
+<tr class="even">
+<td align="left">multiallelic sites</td>
+<td align="right">416023</td>
+<td align="right">30994</td>
+</tr>
+<tr class="odd">
+<td align="left">multiallelic SNP sites</td>
+<td align="right">259370</td>
+<td align="right">1505</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="right">81271745</td>
+<td align="right">3468087</td>
+</tr>
+</tbody>
+</table>
+
+<div class="figure" style="text-align: center"><span id="fig:pca"></span>
+<img src="human_genome_files/figure-html/pca-1.pdf" alt="Principle component analysis (PCA) of genetic variation in the 1000 genomes project reveals population stratification. PCA is based on 473,964 autosomal variants with a minor allele frequency greater than 10% in 2504 people from 5 superpopulations." width="70%" /><img src="human_genome_files/figure-html/pca-2.pdf" alt="Principle component analysis (PCA) of genetic variation in the 1000 genomes project reveals population stratification. PCA is based on 473,964 autosomal variants with a minor allele frequency greater than 10% in 2504 people from 5 superpopulations." width="70%" />
+<p class="caption">
+Figure 9.1: Principle component analysis (PCA) of genetic variation in the 1000 genomes project reveals population stratification. PCA is based on 473,964 autosomal variants with a minor allele frequency greater than 10% in 2504 people from 5 superpopulations.
+</p>
+</div>
+</div>
+<div id="personal-genomics" class="section level2">
+<h2><span class="header-section-number">9.7</span> Personal genomics</h2>
+<p><a href="https://en.wikipedia.org/wiki/Personal_genomics">Personal genomics</a> or consumer genetics is the branch of genomics concerned with the sequencing, analysis and interpretation of the genome of an individual. The genotyping stage employs different techniques, including single-nucleotide polymorphism (SNP) analysis chips (typically 0.02% of the genome), or partial or full genome sequencing. Once the genotypes are known, the individual’s variations can be compared with the published literature to determine likelihood of trait expression, ancestry inference and disease risk.</p>
+<p>Automated high-throughput sequencers have increased the speed and reduced the cost of sequencing, making it possible to offer genetic testing to consumers for less than $1,000. The emerging market of direct-to-consumer genome sequencing services has brought new questions about both the medical efficacy and the ethical dilemmas associated with widespread knowledge of individual genetic information. Companies like <a href="https://www.ancestry.com">Ancestry</a> and <a href="https://www.23andme.com">23andMe</a>, however, do not sequence your DNA but perform “genotyping” using DNA microarrays (“genotyping chips”) to determine SNPs at hundreds of thousands of locations in your genome. Ancestry, for example state that they examine some 700,000 SNPs.</p>
+<p>Starting in 2005 as a pilot experiment with 10 individuals, the <a href="https://pgp.med.harvard.edu">Harvard Personal Genome Project</a> (Harvard PGP) pioneered a new form of genomics research. The main goal of the project is to allow scientists to connect human genetic information (human DNA sequence, gene expression, associated microbial sequence data, etc) with human trait information (medical information, biospecimens and physical traits) and environmental exposures.</p>
+<p>PGP participants consent to publicly share their genomic and trait data in a free and open manner to be used for unimpeded research and other scientific, patient care and commercial purposes worldwide. Consistent with this consent, the project organizers seek to lower as many barriers as possible to access PGP data and cells to empower and engage the scientific community to drive new knowledge about human biology. The project now has over 5,000 participants.</p>
+</div>
+<div id="viewing-the-human-genome" class="section level2">
+<h2><span class="header-section-number">9.8</span> Viewing The Human Genome</h2>
+<div id="experimental-procedures-2" class="section level3">
+<h3><span class="header-section-number">9.8.1</span> Experimental Procedures</h3>
+<ol style="list-style-type: decimal">
+<li>Open a web browser and go to the <a href="http://useast.ensembl.org/Homo_sapiens/Info/Index">Ensemble genome browser</a> (Fig. <a href="the-human-genome.html#fig:ensembl">9.2</a>). This site provides a data set based on the December 2013 Homo sapiens high coverage assembly GRCh38 from the Genome Reference Consortium.</li>
+</ol>
+
+<div class="figure" style="text-align: center"><span id="fig:ensembl"></span>
+<img src="figures/human_genome/ensembl_browser.png" alt="The Ensembl genome browser web page." width="70%" />
+<p class="caption">
+Figure 9.2: <a href="http://useast.ensembl.org/Homo_sapiens/Info/Index">The Ensembl genome browser web page</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="review-questions-1" class="section level2">
+<h2><span class="header-section-number">9.9</span> Review Questions</h2>
+<ol style="list-style-type: decimal">
+<li>What is the length of the human genome (in base pairs)?</li>
+<li>What is a genome assembly?</li>
+<li>What is genome annotation?</li>
+<li>How many genes are in the human genome?</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="pcr-primer-design.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nikolaussucher/bioinformatics/edit/master/human_genome.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

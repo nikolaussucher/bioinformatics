@@ -117,7 +117,7 @@ library(tidyverse)
 library(printr)        
 library(kableExtra)
 
-setwd("~/Dropbox/R/genetics-textbook-master")
+setwd("~/Dropbox/R/bioinformatics")
 
 code <-  as.tibble(read.csv("data/genetic_code.csv"))
 

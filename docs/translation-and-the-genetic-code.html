@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Translation And The Genetic Code | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
+  <meta name="description" content="5 Translation And The Genetic Code | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Translation And The Genetic Code | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="cover.jpg" />
+  
+  <meta name="github-repo" content="nikolaussuchert/bioinformatics" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Translation And The Genetic Code | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="twitter:site" content="@NikolausSucher" />
+  
+  <meta name="twitter:image" content="cover.jpg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="transcription-and-rna-processing.html"/>
+<link rel="next" href="techniques-of-molecular-biology.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">LSAP Bioinformatics Worshop at RCC</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="1" data-path="course-description.html"><a href="course-description.html"><i class="fa fa-check"></i><b>1</b> Course Description</a><ul>
+<li class="chapter" data-level="1.1" data-path="course-description.html"><a href="course-description.html#instructional-objectives"><i class="fa fa-check"></i><b>1.1</b> Instructional Objectives:</a></li>
+<li class="chapter" data-level="1.2" data-path="course-description.html"><a href="course-description.html#student-learning-outcomes"><i class="fa fa-check"></i><b>1.2</b> Student Learning Outcomes:</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bioinformatics.html"><a href="bioinformatics.html"><i class="fa fa-check"></i><b>2</b> Bioinformatics</a><ul>
+<li class="chapter" data-level="2.1" data-path="bioinformatics.html"><a href="bioinformatics.html#sequence-analysis"><i class="fa fa-check"></i><b>2.1</b> Sequence analysis</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="bioinformatics.html"><a href="bioinformatics.html#dna-sequencing"><i class="fa fa-check"></i><b>2.1.1</b> DNA sequencing</a></li>
+<li class="chapter" data-level="2.1.2" data-path="bioinformatics.html"><a href="bioinformatics.html#sequence-assembly"><i class="fa fa-check"></i><b>2.1.2</b> Sequence assembly</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="bioinformatics.html"><a href="bioinformatics.html#genome-annotation"><i class="fa fa-check"></i><b>2.2</b> Genome annotation</a></li>
+<li class="chapter" data-level="2.3" data-path="bioinformatics.html"><a href="bioinformatics.html#computational-evolutionary-biology"><i class="fa fa-check"></i><b>2.3</b> Computational evolutionary biology</a></li>
+<li class="chapter" data-level="2.4" data-path="bioinformatics.html"><a href="bioinformatics.html#comparative-genomics"><i class="fa fa-check"></i><b>2.4</b> Comparative genomics</a></li>
+<li class="chapter" data-level="2.5" data-path="bioinformatics.html"><a href="bioinformatics.html#pan-genomics"><i class="fa fa-check"></i><b>2.5</b> Pan genomics</a></li>
+<li class="chapter" data-level="2.6" data-path="bioinformatics.html"><a href="bioinformatics.html#genetics-of-disease"><i class="fa fa-check"></i><b>2.6</b> Genetics of disease</a></li>
+<li class="chapter" data-level="2.7" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-mutations-in-cancer"><i class="fa fa-check"></i><b>2.7</b> Analysis of mutations in cancer</a></li>
+<li class="chapter" data-level="2.8" data-path="bioinformatics.html"><a href="bioinformatics.html#gene-and-protein-expression"><i class="fa fa-check"></i><b>2.8</b> Gene and protein expression</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-gene-expression"><i class="fa fa-check"></i><b>2.8.1</b> Analysis of gene expression</a></li>
+<li class="chapter" data-level="2.8.2" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-protein-expression"><i class="fa fa-check"></i><b>2.8.2</b> Analysis of protein expression</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-regulation"><i class="fa fa-check"></i><b>2.9</b> Analysis of regulation</a></li>
+<li class="chapter" data-level="2.10" data-path="bioinformatics.html"><a href="bioinformatics.html#analysis-of-cellular-organization"><i class="fa fa-check"></i><b>2.10</b> Analysis of cellular organization</a></li>
+<li class="chapter" data-level="2.11" data-path="bioinformatics.html"><a href="bioinformatics.html#microscopy-and-image-analysis"><i class="fa fa-check"></i><b>2.11</b> Microscopy and image analysis</a><ul>
+<li class="chapter" data-level="2.11.1" data-path="bioinformatics.html"><a href="bioinformatics.html#protein-localization"><i class="fa fa-check"></i><b>2.11.1</b> Protein localization</a></li>
+</ul></li>
+<li class="chapter" data-level="2.12" data-path="bioinformatics.html"><a href="bioinformatics.html#nuclear-organization-of-chromatin"><i class="fa fa-check"></i><b>2.12</b> Nuclear organization of chromatin</a></li>
+<li class="chapter" data-level="2.13" data-path="bioinformatics.html"><a href="bioinformatics.html#structural-bioinformatics"><i class="fa fa-check"></i><b>2.13</b> Structural bioinformatics</a></li>
+<li class="chapter" data-level="2.14" data-path="bioinformatics.html"><a href="bioinformatics.html#network-and-systems-biology"><i class="fa fa-check"></i><b>2.14</b> Network and systems biology</a></li>
+<li class="chapter" data-level="2.15" data-path="bioinformatics.html"><a href="bioinformatics.html#literature-analysis"><i class="fa fa-check"></i><b>2.15</b> Literature analysis</a></li>
+<li class="chapter" data-level="2.16" data-path="bioinformatics.html"><a href="bioinformatics.html#high-throughput-image-analysis"><i class="fa fa-check"></i><b>2.16</b> High-throughput image analysis</a></li>
+<li class="chapter" data-level="2.17" data-path="bioinformatics.html"><a href="bioinformatics.html#high-throughput-single-cell-data-analysis"><i class="fa fa-check"></i><b>2.17</b> High-throughput single cell data analysis</a></li>
+<li class="chapter" data-level="2.18" data-path="bioinformatics.html"><a href="bioinformatics.html#biodiversity-informatics"><i class="fa fa-check"></i><b>2.18</b> Biodiversity informatics</a></li>
+<li class="chapter" data-level="2.19" data-path="bioinformatics.html"><a href="bioinformatics.html#ontologies-and-data-integration"><i class="fa fa-check"></i><b>2.19</b> Ontologies and data integration</a></li>
+<li class="chapter" data-level="2.20" data-path="bioinformatics.html"><a href="bioinformatics.html#databases"><i class="fa fa-check"></i><b>2.20</b> Databases</a></li>
+<li class="chapter" data-level="2.21" data-path="bioinformatics.html"><a href="bioinformatics.html#open-source-bioinformatics-software"><i class="fa fa-check"></i><b>2.21</b> Open-source bioinformatics software</a></li>
+<li class="chapter" data-level="2.22" data-path="bioinformatics.html"><a href="bioinformatics.html#web-services-in-bioinformatics"><i class="fa fa-check"></i><b>2.22</b> Web services in bioinformatics</a></li>
+<li class="chapter" data-level="2.23" data-path="bioinformatics.html"><a href="bioinformatics.html#bioinformatics-workflow-management-systems"><i class="fa fa-check"></i><b>2.23</b> Bioinformatics workflow management systems</a></li>
+<li class="chapter" data-level="2.24" data-path="bioinformatics.html"><a href="bioinformatics.html#biocompute-and-biocompute-objects"><i class="fa fa-check"></i><b>2.24</b> BioCompute and BioCompute Objects</a></li>
+<li class="chapter" data-level="2.25" data-path="bioinformatics.html"><a href="bioinformatics.html#education-platforms"><i class="fa fa-check"></i><b>2.25</b> Education platforms</a></li>
+<li class="chapter" data-level="2.26" data-path="bioinformatics.html"><a href="bioinformatics.html#conferences"><i class="fa fa-check"></i><b>2.26</b> Conferences</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dna-and-rna.html"><a href="dna-and-rna.html"><i class="fa fa-check"></i><b>3</b> DNA and RNA</a><ul>
+<li class="chapter" data-level="3.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna"><i class="fa fa-check"></i><b>3.1</b> DNA</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#structure-and-composition-of-dna"><i class="fa fa-check"></i><b>3.1.1</b> Structure and composition of DNA</a></li>
+<li class="chapter" data-level="3.1.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#base-modifications-and-dna-packaging"><i class="fa fa-check"></i><b>3.1.2</b> Base modifications and DNA packaging</a></li>
+<li class="chapter" data-level="3.1.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-damage"><i class="fa fa-check"></i><b>3.1.3</b> DNA damage</a></li>
+<li class="chapter" data-level="3.1.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#biological-functions-of-dna"><i class="fa fa-check"></i><b>3.1.4</b> Biological functions of DNA</a></li>
+<li class="chapter" data-level="3.1.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-replication"><i class="fa fa-check"></i><b>3.1.5</b> DNA replication</a></li>
+<li class="chapter" data-level="3.1.6" data-path="dna-and-rna.html"><a href="dna-and-rna.html#interactions-of-dna-with-proteins"><i class="fa fa-check"></i><b>3.1.6</b> Interactions of DNA with proteins</a></li>
+<li class="chapter" data-level="3.1.7" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-modifying-enzymes"><i class="fa fa-check"></i><b>3.1.7</b> DNA-modifying enzymes</a></li>
+<li class="chapter" data-level="3.1.8" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-recombination"><i class="fa fa-check"></i><b>3.1.8</b> DNA recombination</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#evolution"><i class="fa fa-check"></i><b>3.2</b> Evolution</a></li>
+<li class="chapter" data-level="3.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#genetic-engineering"><i class="fa fa-check"></i><b>3.3</b> Genetic engineering</a></li>
+<li class="chapter" data-level="3.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#dna-profiling"><i class="fa fa-check"></i><b>3.4</b> DNA profiling</a></li>
+<li class="chapter" data-level="3.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#rna"><i class="fa fa-check"></i><b>3.5</b> RNA</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="dna-and-rna.html"><a href="dna-and-rna.html#comparison-with-dna"><i class="fa fa-check"></i><b>3.5.1</b> Comparison with DNA</a></li>
+<li class="chapter" data-level="3.5.2" data-path="dna-and-rna.html"><a href="dna-and-rna.html#structure-of-rna"><i class="fa fa-check"></i><b>3.5.2</b> Structure of RNA</a></li>
+<li class="chapter" data-level="3.5.3" data-path="dna-and-rna.html"><a href="dna-and-rna.html#synthesis-of-rna"><i class="fa fa-check"></i><b>3.5.3</b> Synthesis of RNA</a></li>
+<li class="chapter" data-level="3.5.4" data-path="dna-and-rna.html"><a href="dna-and-rna.html#coding-and-non-coding-rna"><i class="fa fa-check"></i><b>3.5.4</b> Coding and non-coding RNA</a></li>
+<li class="chapter" data-level="3.5.5" data-path="dna-and-rna.html"><a href="dna-and-rna.html#regulatory-rna"><i class="fa fa-check"></i><b>3.5.5</b> Regulatory RNA</a></li>
+<li class="chapter" data-level="3.5.6" data-path="dna-and-rna.html"><a href="dna-and-rna.html#rna-interference-by-mirnas"><i class="fa fa-check"></i><b>3.5.6</b> RNA interference by miRNAs</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html"><i class="fa fa-check"></i><b>4</b> Transcription And RNA Processing</a><ul>
+<li class="chapter" data-level="4.1" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#initiation"><i class="fa fa-check"></i><b>4.1</b> Initiation</a></li>
+<li class="chapter" data-level="4.2" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#elongation"><i class="fa fa-check"></i><b>4.2</b> Elongation</a></li>
+<li class="chapter" data-level="4.3" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#termination"><i class="fa fa-check"></i><b>4.3</b> Termination</a></li>
+<li class="chapter" data-level="4.4" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#inhibitors-of-transcription"><i class="fa fa-check"></i><b>4.4</b> Inhibitors of transcription</a></li>
+<li class="chapter" data-level="4.5" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#transcription-factors"><i class="fa fa-check"></i><b>4.5</b> Transcription factors</a></li>
+<li class="chapter" data-level="4.6" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#rna-processing"><i class="fa fa-check"></i><b>4.6</b> RNA Processing</a></li>
+<li class="chapter" data-level="4.7" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#mrna-processing"><i class="fa fa-check"></i><b>4.7</b> mRNA processing</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#processing"><i class="fa fa-check"></i><b>4.7.1</b> 5’ processing</a></li>
+<li class="chapter" data-level="4.7.2" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#processing-1"><i class="fa fa-check"></i><b>4.7.2</b> 3’ processing</a></li>
+<li class="chapter" data-level="4.7.3" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#intron-splicing"><i class="fa fa-check"></i><b>4.7.3</b> Intron splicing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="transcription-and-rna-processing.html"><a href="transcription-and-rna-processing.html#reverse-transcription"><i class="fa fa-check"></i><b>4.8</b> Reverse transcription</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html"><i class="fa fa-check"></i><b>5</b> Translation And The Genetic Code</a><ul>
+<li class="chapter" data-level="5.1" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#ribosomes"><i class="fa fa-check"></i><b>5.1</b> Ribosomes</a></li>
+<li class="chapter" data-level="5.2" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#bacterial-ribosomes"><i class="fa fa-check"></i><b>5.2</b> Bacterial ribosomes</a></li>
+<li class="chapter" data-level="5.3" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#eukaryotic-ribosomes"><i class="fa fa-check"></i><b>5.3</b> Eukaryotic ribosomes</a></li>
+<li class="chapter" data-level="5.4" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#translation"><i class="fa fa-check"></i><b>5.4</b> Translation</a></li>
+<li class="chapter" data-level="5.5" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#eukaryotic-translation"><i class="fa fa-check"></i><b>5.5</b> Eukaryotic translation</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#initiation-1"><i class="fa fa-check"></i><b>5.5.1</b> Initiation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#elongation-1"><i class="fa fa-check"></i><b>5.5.2</b> Elongation</a></li>
+<li class="chapter" data-level="5.5.3" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#termination-1"><i class="fa fa-check"></i><b>5.5.3</b> Termination</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="translation-and-the-genetic-code.html"><a href="translation-and-the-genetic-code.html#genetic-code"><i class="fa fa-check"></i><b>5.6</b> Genetic code</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html"><i class="fa fa-check"></i><b>6</b> Techniques Of Molecular Biology</a><ul>
+<li class="chapter" data-level="6.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#polymerase-chain-reaction"><i class="fa fa-check"></i><b>6.1</b> Polymerase chain reaction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#procedure"><i class="fa fa-check"></i><b>6.1.1</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#dna-sequencing-1"><i class="fa fa-check"></i><b>6.2</b> DNA Sequencing</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#sanger-sequencing"><i class="fa fa-check"></i><b>6.2.1</b> Sanger sequencing</a></li>
+<li class="chapter" data-level="6.2.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#high-throughput-sequencing-hts-methods"><i class="fa fa-check"></i><b>6.2.2</b> High-throughput sequencing (HTS) methods</a></li>
+<li class="chapter" data-level="6.2.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#pyrosequencing"><i class="fa fa-check"></i><b>6.2.3</b> 454 pyrosequencing</a></li>
+<li class="chapter" data-level="6.2.4" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#illumina-solexa-sequencing"><i class="fa fa-check"></i><b>6.2.4</b> Illumina (Solexa) sequencing</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#rna-seq"><i class="fa fa-check"></i><b>6.3</b> RNA-Seq</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#single-cell-rna-sequencing-scrna-seq"><i class="fa fa-check"></i><b>6.3.1</b> Single-cell RNA sequencing (scRNA-Seq)</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#dna-microarray"><i class="fa fa-check"></i><b>6.4</b> DNA microarray</a></li>
+<li class="chapter" data-level="6.5" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#recombinant-dna"><i class="fa fa-check"></i><b>6.5</b> Recombinant DNA</a></li>
+<li class="chapter" data-level="6.6" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#molecular-cloning"><i class="fa fa-check"></i><b>6.6</b> Molecular cloning</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#procedures"><i class="fa fa-check"></i><b>6.6.1</b> Procedures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#mutagenesis"><i class="fa fa-check"></i><b>6.7</b> Mutagenesis</a><ul>
+<li class="chapter" data-level="6.7.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#random-mutagenesis"><i class="fa fa-check"></i><b>6.7.1</b> Random mutagenesis</a></li>
+<li class="chapter" data-level="6.7.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#site-directed-mutagenesis"><i class="fa fa-check"></i><b>6.7.2</b> Site-directed mutagenesis</a></li>
+<li class="chapter" data-level="6.7.3" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-synthesis"><i class="fa fa-check"></i><b>6.7.3</b> Gene synthesis</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knockout"><i class="fa fa-check"></i><b>6.8</b> Gene knockout</a></li>
+<li class="chapter" data-level="6.9" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#conditional-gene-knockout"><i class="fa fa-check"></i><b>6.9</b> Conditional gene knockout</a></li>
+<li class="chapter" data-level="6.10" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knock-in"><i class="fa fa-check"></i><b>6.10</b> Gene knock-in</a></li>
+<li class="chapter" data-level="6.11" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#rna-interference"><i class="fa fa-check"></i><b>6.11</b> RNA interference</a><ul>
+<li class="chapter" data-level="6.11.1" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#transcriptional-silencing"><i class="fa fa-check"></i><b>6.11.1</b> Transcriptional silencing</a></li>
+<li class="chapter" data-level="6.11.2" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-knockdown"><i class="fa fa-check"></i><b>6.11.2</b> Gene knockdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6.12" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#cre-lox-recombination"><i class="fa fa-check"></i><b>6.12</b> Cre-Lox recombination</a></li>
+<li class="chapter" data-level="6.13" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#crispr-gene-editing"><i class="fa fa-check"></i><b>6.13</b> CRISPR gene editing</a></li>
+<li class="chapter" data-level="6.14" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-drive"><i class="fa fa-check"></i><b>6.14</b> Gene drive</a></li>
+<li class="chapter" data-level="6.15" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#human-germline-modification"><i class="fa fa-check"></i><b>6.15</b> Human germline modification</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> DNA sequence analysis</a><ul>
+<li class="chapter" data-level="7.1" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#experimental-procedures"><i class="fa fa-check"></i><b>7.1</b> Experimental procedures</a></li>
+<li class="chapter" data-level="7.2" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#blast-search"><i class="fa fa-check"></i><b>7.2</b> BLAST search</a></li>
+<li class="chapter" data-level="7.3" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#experimental-procedures-1"><i class="fa fa-check"></i><b>7.3</b> Experimental procedures</a></li>
+<li class="chapter" data-level="7.4" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#review-questions"><i class="fa fa-check"></i><b>7.4</b> Review Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR primer design</a></li>
+<li class="chapter" data-level="9" data-path="the-human-genome.html"><a href="the-human-genome.html"><i class="fa fa-check"></i><b>9</b> The Human Genome</a><ul>
+<li class="chapter" data-level="9.1" data-path="the-human-genome.html"><a href="the-human-genome.html#the-human-genome-project"><i class="fa fa-check"></i><b>9.1</b> The Human Genome Project</a></li>
+<li class="chapter" data-level="9.2" data-path="the-human-genome.html"><a href="the-human-genome.html#public-private-competition-around-the-human-genome-project"><i class="fa fa-check"></i><b>9.2</b> Public-Private Competition Around The Human Genome Project</a></li>
+<li class="chapter" data-level="9.3" data-path="the-human-genome.html"><a href="the-human-genome.html#genome-annotation-1"><i class="fa fa-check"></i><b>9.3</b> Genome Annotation</a></li>
+<li class="chapter" data-level="9.4" data-path="the-human-genome.html"><a href="the-human-genome.html#international-hapmap-project"><i class="fa fa-check"></i><b>9.4</b> International HapMap Project</a></li>
+<li class="chapter" data-level="9.5" data-path="the-human-genome.html"><a href="the-human-genome.html#the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variation"><i class="fa fa-check"></i><b>9.5</b> The Single Nucleotide Polymorphism Database (dbSNP) of Nucleotide Sequence Variation</a></li>
+<li class="chapter" data-level="9.6" data-path="the-human-genome.html"><a href="the-human-genome.html#the-1000-genomes-project"><i class="fa fa-check"></i><b>9.6</b> The 1000 Genomes Project</a></li>
+<li class="chapter" data-level="9.7" data-path="the-human-genome.html"><a href="the-human-genome.html#personal-genomics"><i class="fa fa-check"></i><b>9.7</b> Personal genomics</a></li>
+<li class="chapter" data-level="9.8" data-path="the-human-genome.html"><a href="the-human-genome.html#viewing-the-human-genome"><i class="fa fa-check"></i><b>9.8</b> Viewing The Human Genome</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="the-human-genome.html"><a href="the-human-genome.html#experimental-procedures-2"><i class="fa fa-check"></i><b>9.8.1</b> Experimental Procedures</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="the-human-genome.html"><a href="the-human-genome.html#review-questions-1"><i class="fa fa-check"></i><b>9.9</b> Review Questions</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LSAMP Bioinformatics Short Course at Roxbury Community College</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="translation-and-the-genetic-code" class="section level1">
+<h1><span class="header-section-number">5</span> Translation And The Genetic Code</h1>
+<p>In molecular biology and genetics, <a href="https://en.wikipedia.org/wiki/Translation_(biology)">translation</a> is the process in which ribosomes in the cytoplasm or endoplasmic reticulum (ER) synthesize proteins after the process of transcription of DNA to RNA in the cell’s nucleus. The entire process is called gene expression.</p>
+<div id="ribosomes" class="section level2">
+<h2><span class="header-section-number">5.1</span> Ribosomes</h2>
+<p><a href="https://en.wikipedia.org/wiki/Ribosome">Ribosomes</a> are complex macromolecular machines, found within all living cells, that serves as the site of biological protein synthesis. Ribosomes link amino acids together in the order specified by messenger RNA (RNA) molecules. Ribosomes consist of two major components: the small ribosomal subunits, which read the mRNA, and the large subunits, which join amino acids to form a polypeptide chain. Each subunit consists of one or more ribosomal RNA (rRNA) molecules and a variety of ribosomal proteins. The ribosomes and associated molecules are also known as the translational apparatus.</p>
+<p>The sequence of DNA, which encodes the sequence of the amino acids in a protein, is copied into a messenger RNA chain. It may be copied many times into RNA chains. Ribosomes can bind to a messenger RNA chain and use its sequence for determining the correct sequence of amino acids for generating a given protein. Amino acids are selected and collected and carried to the ribosome by transfer RNA (tRNA) molecules, which enter one part of the ribosome and bind to the messenger RNA chain. It is during this binding that the correct translation of nucleic acid sequence to amino acid sequence occurs. For each coding triplet in the messenger RNA there is a distinct transfer RNA that matches and which carries the correct amino acid for that coding triplet. The attached amino acids are then linked together by another part of the ribosome. Once the protein is produced, it can then fold to produce a specific functional three-dimensional structure although during synthesis some proteins start folding into their correct form.</p>
+<p>A ribosome is made from complexes of RNAs and proteins and is therefore a ribonucleoprotein. Each ribosome is divided into two subunits:</p>
+<ol style="list-style-type: decimal">
+<li>a smaller subunit which binds to a larger subunit and the mRNA pattern, and</li>
+<li>a larger subunit which binds to the tRNA, the amino acids, and the smaller subunit.</li>
+</ol>
+<p>When a ribosome finishes reading an mRNA molecule, these two subunits split apart. Ribosomes are ribozymes, because the catalytic peptidyl transferase activity that links amino acids together is performed by the ribosomal RNA. Ribosomes are often associated with the intracellular membranes that make up the rough endoplasmic reticulum.</p>
+<p>Ribosomes from bacteria, archaea and eukaryotes in the three-domain system, resemble each other to a remarkable degree, evidence of a common origin. They differ in their size, sequence, structure, and the ratio of protein to RNA. The differences in structure allow some antibiotics to kill bacteria by inhibiting their ribosomes, while leaving human ribosomes unaffected. In bacteria and archaea, more than one ribosome may move along a single mRNA chain at one time, each “reading” its sequence and producing a corresponding protein molecule.</p>
+<p>The mitochondrial ribosomes of eukaryotic cells, are produced from mitochondrial genes, and functionally resemble many features of those in bacteria, reflecting the likely evolutionary origin of mitochondria.</p>
+<p>Ribosomes were first observed in the mid-1950s by Romanian-American cell biologist <a href="https://en.wikipedia.org/wiki/George_Emil_Palade">George Emil Palade</a>, using an electron microscope, as dense particles or granules. The term “ribosome” was proposed by scientist Richard B. Roberts in the end of 1950s.</p>
+<p><a href="https://en.wikipedia.org/wiki/Albert_Claude">Albert Claude</a>, <a href="https://en.wikipedia.org/wiki/Christian_de_Duve">Christian de Duve</a>, and George Emil Palade were jointly awarded the Nobel Prize in Physiology or Medicine, in 1974, for the discovery of the ribosome. The Nobel Prize in Chemistry 2009 was awarded to <a href="https://en.wikipedia.org/wiki/Venki_Ramakrishnan">Venkatraman Ramakrishnan</a>, <a href="https://en.wikipedia.org/wiki/Thomas_A._Steitz">Thomas A. Steitz</a> and <a href="https://en.wikipedia.org/wiki/Ada_Yonath">Ada E. Yonath</a> for determining the detailed structure and mechanism of the ribosome.</p>
+</div>
+<div id="bacterial-ribosomes" class="section level2">
+<h2><span class="header-section-number">5.2</span> Bacterial ribosomes</h2>
+<p>Prokaryotic ribosomes are around 20 nm (200 Å) in diameter and are composed of 65% rRNA and 35% ribosomal proteins. Eukaryotic ribosomes are between 25 and 30 nm (250–300 Å) in diameter with an rRNA-to-protein ratio that is close to 1. Crystallographic work has shown that there are no ribosomal proteins close to the reaction site for polypeptide synthesis. This suggests that the protein components of ribosomes do not directly participate in peptide bond formation catalysis, but rather that these proteins act as a scaffold that may enhance the ability of rRNA to synthesize protein</p>
+
+<div class="figure" style="text-align: center"><span id="fig:ttribosome"></span>
+<img src="figures/translation/ttribosome.png" alt="Crystal structure of the bacterial 70S ribosome of the bacterium Thermus thermophilus. The 30S (small) ribosomal subunit proteins are colored in green, the 50S (large) subunit proteins are colored in blue, the ribosomal RNA is colored orange. The 30S subunits contains 3 tRNA molecules (based on atomic coordinates of PDB 1JGQ and PDB 1GIY rendered with open source molecular visualization tool PyMol.)" width="70%" />
+<p class="caption">
+Figure 5.1: Crystal structure of the bacterial 70S ribosome of the bacterium <em>Thermus thermophilus</em>. The 30S (small) ribosomal subunit proteins are colored in green, the 50S (large) subunit proteins are colored in blue, the ribosomal RNA is colored orange. The 30S subunits contains 3 tRNA molecules (based on atomic coordinates of <a href="https://www.rcsb.org/structure/1jgq">PDB 1JGQ</a> and <a href="(https://www.rcsb.org/structure/1jgq)">PDB 1GIY</a> rendered with open source molecular visualization tool PyMol.)
+</p>
+</div>
+<p>The unit of measurement used to describe the ribosomal subunits and the rRNA fragments is the Svedberg unit, a measure of the rate of sedimentation in centrifugation rather than size. This accounts for why fragment names do not add up: for example, bacterial 70S ribosomes are made of 50S and 30S subunits.</p>
+<p>Bacteria have 70S ribosomes, each consisting of a small (30S) and a large (50S) subunit. <em>Escherichia coli</em>, for example, has a 16S RNA subunit (consisting of 1540 nucleotides) that is bound to 21 proteins. The large subunit is composed of a 5S RNA subunit (120 nucleotides), a 23S RNA subunit (2900 nucleotides) and 31 proteins.</p>
+</div>
+<div id="eukaryotic-ribosomes" class="section level2">
+<h2><span class="header-section-number">5.3</span> Eukaryotic ribosomes</h2>
+<p>Eukaryotes have 80S ribosomes located in their cytosol, each consisting of a small (40S) and large (60S) subunit. Their 40S subunit has an 18S RNA (1900 nucleotides) and 33 proteins. The large subunit is composed of a 5S RNA (120 nucleotides), 28S RNA (4700 nucleotides), a 5.8S RNA (160 nucleotides) subunits and 46 proteins.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:ribosome"></span>
+<img src="figures/translation/human_ribosome.png" alt="Crystal structure of the human 80S ribosome (based on atomic coordinates of PDB 4V6X rendered with open source molecular visualization tool PyMol). The 40S (small) ribosomal subunit proteins are shown in lightblue, the 60S (large) subunit proteins in palegreen, the ribosomal RNA in orange." width="70%" />
+<p class="caption">
+Figure 5.2: Crystal structure of the human 80S ribosome (based on atomic coordinates of <a href="https://www.rcsb.org/structure/4v6x">PDB 4V6X</a> rendered with open source molecular visualization tool PyMol). The 40S (small) ribosomal subunit proteins are shown in lightblue, the 60S (large) subunit proteins in palegreen, the ribosomal RNA in orange.
+</p>
+</div>
+<p>The differences between the bacterial and eukaryotic ribosomes are exploited by pharmaceutical chemists to create antibiotics that can kill bacteria without harming eukaryotic cells. Due to the differences in their structures, the bacterial 70S ribosomes are vulnerable to these antibiotics while the eukaryotic 80S ribosomes are not.</p>
+<p>The various ribosomes share a core structure, which is quite similar despite the large differences in size. Much of the RNA is highly organized into various tertiary structural motifs, for example pseudoknots that exhibit coaxial stacking. The extra RNA in the larger ribosomes is in several long continuous insertions, such that they form loops out of the core structure without disrupting or changing it. All of the catalytic activity of the ribosome is carried out by the RNA; the proteins reside on the surface and seem to stabilize the structure.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:trnastruc"></span>
+<img src="figures/translation/trna.png" alt="Tertiary structure of tRNA (based on atomic coordinates of PDB 1ehz rendered with open source molecular visualization tool PyMol.)" width="70%" />
+<p class="caption">
+Figure 5.3: Tertiary structure of tRNA (based on atomic coordinates of <a href="https://www.rcsb.org/structure/1ehz">PDB 1ehz</a> rendered with open source molecular visualization tool PyMol.)
+</p>
+</div>
+<p>Aminoacyl tRNA synthetases (enzymes) catalyze the bonding between specific tRNAs and the amino acids that their anticodon sequences call for. The product of this reaction is an aminoacyl-tRNA. In prokaryotes, this aminoacyl-tRNA is carried to the ribosome by EF-Tu, where mRNA codons are matched through complementary base pairing to specific tRNA anticodons.</p>
+<p>The ribosome has three sites for tRNA to bind. They are the aminoacyl site (abbreviated A), the peptidyl site (abbreviated P) and the exit site (abbreviated E). With respect to the mRNA, the three sites are oriented 5’ to 3’ E-P-A, because ribosomes move toward the 3’ end of mRNA. The A-site binds the incoming tRNA with the complementary codon on the mRNA. The P-site holds the tRNA with the growing polypeptide chain. The E-site holds the tRNA without its amino acid, and the tRNA is then released. When an aminoacyl-tRNA initially binds to its corresponding codon on the mRNA, it is in the A site. Then, a peptide bond forms between the amino acid of the tRNA in the A site and the amino acid of the charged tRNA in the P site. The growing polypeptide chain is transferred to the tRNA in the A site. Translocation occurs, moving the tRNA in the P site, now without an amino acid, to the E site; the tRNA that was in the A site, now charged with the polypeptide chain, is moved to the P site. The tRNA in the E site leaves and another aminoacyl-tRNA enters the A site to repeat the process.</p>
+<p>After the new amino acid is added to the chain, and after the mRNA is released out of the nucleus and into the ribosome’s core, the energy provided by the hydrolysis of an ATP bound to the translocase EF-G (in prokaryotes) and eEF-2 (in eukaryotes) moves the ribosome down one codon towards the 3’ end. The energy required for translation of proteins is significant. For a protein containing n amino acids, the number of high-energy phosphate bonds required to translate it is 4n+1. The rate of translation varies; it is significantly higher in prokaryotic cells (up to 17-21 amino acid residues per second) than in eukaryotic cells (up to 6-9 amino acid residues per second).</p>
+<p>Even though the ribosomes are usually considered accurate, processive machines, the translation process is subject to errors that can lead either to the synthesis of erroneous proteins or to the premature abandonment of translation. The rate of error in synthesizing proteins has been estimated to be between 1/10<sup>5</sup> and 1/10<sup>3</sup> misincorporated amino acids, depending on the experimental conditions. The rate of premature translation abandonment, instead, has been estimated to be of the order of magnitude of 10<sup>−4</sup> events per translated codon. The correct amino acid is covalently bonded to the correct transfer RNA (tRNA) by amino acyl transferases. The amino acid is joined by its carboxyl group to the 3’ OH of the tRNA by an ester bond. When the tRNA has an amino acid linked to it, the tRNA is termed “charged”. Initiation involves the small subunit of the ribosome binding to the 5’ end of mRNA with the help of initiation factors (IF). In prokaryotes, initiation of protein synthesis involves the recognition of a purine-rich initiation sequence on the mRNA called the Shine-Dalgarno sequence. The Shine-Dalgarno sequence binds to a complementary pyrimidine-rich sequence on the 3’ end of the 16S rRNA part of the 30S ribosomal subunit. The binding of these complementary sequences ensures that the 30S ribosomal subunit is bound to the mRNA and is aligned such that the initiation codon is placed in the 30S portion of the P-site. Once the mRNA and 30S subunit are properly bound, an initiation factor brings the initiator tRNA-amino acid complex, f-Met-tRNA, to the 30S P site. The initiation phase is completed once a 50S subunit joins the 30 subunit, forming an active 70S ribosome. Termination of the polypeptide occurs when the A site of the ribosome is occupied by a stop codon (UAA, UAG, or UGA) on the mRNA. mRNA usually cannot recognize or bind to stop codons. Instead, the stop codon induces the binding of a release factor protein (RF1 &amp; RF2) that prompts the disassembly of the entire ribosome/mRNA complex by the hydrolysis of the polypeptide chain from the peptidyl transferase center of the ribosome. Drugs or special sequence motifs on the mRNA can change the ribosomal structure so that near-cognate tRNAs are bound to the stop codon instead of the release factors. In such cases of ‘translational readthrough’, translation continues until the ribosome encounters the next stop codon.</p>
+<p>The process of translation is highly regulated in prokaryotic and eukaryotic organisms. Regulation of translation can impact the global rate of protein synthesis which is closely coupled to the metabolic and proliferative state of a cell. In addition, recent work has revealed that genetic differences and their subsequent expression as mRNAs can also impact translation rate in an RNA-specific manner.</p>
+</div>
+<div id="translation" class="section level2">
+<h2><span class="header-section-number">5.4</span> Translation</h2>
+<p>In translation, messenger RNA (mRNA) is decoded in the ribosome decoding center to produce a specific amino acid chain, or polypeptide. The polypeptide later folds into an active protein and performs its functions in the cell. The ribosome facilitates decoding by inducing the binding of complementary tRNA anticodon sequences to mRNA codons. The tRNAs carry specific amino acids that are chained together into a polypeptide a the mRNA passes through and is read by the ribosome.</p>
+<p>Translation proceeds in three phases:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Initiation:</strong> The ribosome assembles around the target mRNA. The first tRNA is attached at the start codon.</li>
+<li><strong>Elongation:</strong> The tRNA transfers an amino acid to the tRNA corresponding to the next codon. The ribosome then moves (translocates) to the next mRNA codon to continue the process, creating an amino acid chain.</li>
+<li><strong>Termination:</strong> When a peptidyl tRNA encounters a stop codon, the ribosome detaches.</li>
+</ol>
+
+<div class="figure" style="text-align: center"><span id="fig:translation"></span>
+<img src="figures/translation/Ribosome_mRNA_translation_en.svg" alt="Diagram showing the translation of mRNA and the synthesis of proteins by a ribosome." width="70%" />
+<p class="caption">
+Figure 5.4: <a href="https://commons.wikimedia.org/wiki/File:Ribosome_mRNA_translation_en.svg">Diagram showing the translation of mRNA and the synthesis of proteins by a ribosome.</a>
+</p>
+</div>
+<p>In prokaryotes, translation occurs in the cytosol, where the medium and small subunits of the ribosome bind to the tRNA. In eukaryotes, translation occurs in the cytosol or across the membrane of the endoplasmic reticulum in a process called co-translational translocation. In co-translational translocation, the entire ribosome/mRNA complex binds to the outer membrane of the rough endoplasmic reticulum (ER) and the new protein is synthesized and released into the ER.</p>
+<p>Many types of transcribed RNA, such as transfer RNA, ribosomal RNA, and small nuclear RNA, do not undergo translation into proteins.</p>
+<p>A number of antibiotics act by inhibiting translation. These include clindamycin, anisomycin, cycloheximide, chloramphenicol, tetracycline, streptomycin, erythromycin, and puromycin. Prokaryotic ribosomes have a different structure from that of eukaryotic ribosomes, and thus antibiotics can specifically target bacterial infections without any harm to a eukaryotic host’s cells.</p>
+<p>In 1954, Zamecnik and Hoagland discovered tRNA. In 1955, George E. Palade discovered ribosomes.</p>
+</div>
+<div id="eukaryotic-translation" class="section level2">
+<h2><span class="header-section-number">5.5</span> Eukaryotic translation</h2>
+<div id="initiation-1" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Initiation</h3>
+<p>Initiation of translation usually involves the interaction of certain key proteins, the initiation factors, with a special tag bound to the 5’-end of an mRNA molecule, the 5’ cap, as well as with the 5’ UTR. These proteins bind the small (40S) ribosomal subunit and hold the mRNA in place. eIF3 is associated with the 40S ribosomal subunit and plays a role in keeping the large (60S) ribosomal subunit from prematurely binding. eIF3 also interacts with the eIF4F complex, which consists of three other initiation factors: eIF4A, eIF4E, and eIF4G. eIF4G is a scaffolding protein that directly associates with both eIF3 and the other two components. eIF4E is the cap-binding protein. Binding of the cap by eIF4E is often considered the rate-limiting step of cap-dependent initiation, and the concentration of eIF4E is a regulatory nexus of translational control. Certain viruses cleave a portion of eIF4G that binds eIF4E, thus preventing cap-dependent translation to hijack the host machinery in favor of the viral (cap-independent) messages. eIF4A is an ATP-dependent RNA helicase that aids the ribosome by resolving certain secondary structures formed along the mRNA transcript. The poly(A)-binding protein (PABP) also associates with the eIF4F complex via eIF4G, and binds the poly-A tail of most eukaryotic mRNA molecules. This 43S preinitiation complex (43S PIC) accompanied by the protein factors moves along the mRNA chain toward its 3’-end, in a process known as ‘scanning’, to reach the start codon (typically AUG). In eukaryotes and archaea, the amino acid encoded by the start codon is methionine. The Met-charged initiator tRNA (Met-tRNAiMet) is brought to the P-site of the small ribosomal subunit by eukaryotic initiation factor 2 (eIF2). It hydrolyzes GTP, and signals for the dissociation of several factors from the small ribosomal subunit, eventually leading to the association of the large subunit (or the 60S subunit). The complete ribosome (80S) then commences translation elongation. Regulation of protein synthesis is partly influenced by phosphorylation of eIF2 (via the α subunit), which is a part of the eIF2-GTP-Met-tRNAiMet ternary complex (eIF2-TC). When large numbers of eIF2 are phosphorylated, protein synthesis is inhibited. This occurs under amino acid starvation or after viral infection. However, a small fraction of this initiation factor is naturally phosphorylated. Another regulator is 4EBP, which binds to the initiation factor eIF4E and inhibits its interactions with eIF4G, thus preventing cap-dependent initiation. To oppose the effects of 4EBP, growth factors phosphorylate 4EBP, reducing its affinity for eIF4E and permitting protein synthesis. While protein synthesis is globally regulated by modulating the expression of key initiation factors as well as the number of ribosomes, individual mRNAs can have different translation rates due to the presence of regulatory sequence elements. This has been shown to be important in a variety of settings including yeast meiosis and ethylene response in plants. In addition, recent work in yeast and humans suggest that evolutionary divergence in cis-regulatory sequences can impact translation regulation. Additionally, RNA helicases such as DHX29 and Ded1/DDX3 may participate in the process of translation initiation, especially for mRNAs with structured 5’UTRs.</p>
+<p>Cap-independent initiation
+The best-studied example of cap-independent translation initiation in eukaryotes is that by the Internal ribosome entry site (IRES). What differentiates cap-independent translation from cap-dependent translation is that cap-independent translation does not require the 5’ cap to initiate scanning from the 5’ end of the mRNA until the start codon. The ribosome can be trafficked to the start site by direct binding, initiation factors, and/or ITAFs (IRES trans-acting factors) bypassing the need to scan the entire 5’ UTR. This method of translation has been found important in conditions that require the translation of specific mRNAs during cellular stress, when overall translation is reduced. Examples include factors responding to apoptosis and stress-induced responses.</p>
+</div>
+<div id="elongation-1" class="section level3">
+<h3><span class="header-section-number">5.5.2</span> Elongation</h3>
+<p>Elongation depends on eukaryotic elongation factors. At the end of the initiation step, the mRNA is positioned so that the next codon can be translated during the elongation stage of protein synthesis. The initiator tRNA occupies the P site in the ribosome, and the A site is ready to receive an aminoacyl-tRNA. During chain elongation, each additional amino acid is added to the nascent polypeptide chain in a three-step microcycle. The steps in this microcycle are (1) positioning the correct aminoacyl-tRNA in the A site of the ribosome, (2) forming the peptide bond and (3) shifting the mRNA by one codon relative to the ribosome. Unlike bacteria, in which translation initiation occurs as soon as the 5’ end of an mRNA is synthesized, in eukaryotes such tight coupling between transcription and translation is not possible because transcription and translation are carried out in separate compartments of the cell (the nucleus and cytoplasm). Eukaryotic mRNA precursors must be processed in the nucleus (e.g., capping, polyadenylation, splicing) before they are exported to the cytoplasm for translation.</p>
+</div>
+<div id="termination-1" class="section level3">
+<h3><span class="header-section-number">5.5.3</span> Termination</h3>
+<p>Termination of elongation depends on eukaryotic release factors. The process is similar to that of prokaryotic termination, but unlike prokaryotic termination, there is a universal release factor, eRF1, that recognizes all three stop codons. Upon termination, the ribosome is disassembled and the completed polypeptide is released. eRF3 is a ribosome-dependent GTPase that helps eRF1 release the completed polypeptide.</p>
+</div>
+</div>
+<div id="genetic-code" class="section level2">
+<h2><span class="header-section-number">5.6</span> Genetic code</h2>
+<p>Whereas other aspects such as the 3D structure, called tertiary structure, of protein can only be predicted using sophisticated algorithms, the amino acid sequence, called primary structure, can be determined solely from the nucleic acid sequence with the aid of a translation table.</p>
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:geneticcode">Table 5.1: </span>The genetic code: RNA codons.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+</th>
+<th style="text-align:center;">
+U
+</th>
+<th style="text-align:center;">
+C
+</th>
+<th style="text-align:center;">
+A
+</th>
+<th style="text-align:center;">
+G
+</th>
+<th style="text-align:center;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
+U
+</td>
+<td style="text-align:center;">
+UUU Phenylalanine (Phe)
+</td>
+<td style="text-align:center;">
+UCU Serine (Ser)
+</td>
+<td style="text-align:center;">
+UAU Tyrosine (Tyr)
+</td>
+<td style="text-align:center;">
+UGU Cysteine (Cys)
+</td>
+<td style="text-align:center;font-weight: bold;">
+U
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+UUC Phe
+</td>
+<td style="text-align:center;">
+UCC Ser
+</td>
+<td style="text-align:center;">
+UAC Tyr
+</td>
+<td style="text-align:center;">
+UGC Cys
+</td>
+<td style="text-align:center;font-weight: bold;">
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+UUA Leucine (Leu)
+</td>
+<td style="text-align:center;">
+UCA Ser
+</td>
+<td style="text-align:center;">
+UAA STOP
+</td>
+<td style="text-align:center;">
+UGA STOP
+</td>
+<td style="text-align:center;font-weight: bold;">
+A
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+UUG Leu
+</td>
+<td style="text-align:center;">
+UCG Ser
+</td>
+<td style="text-align:center;">
+UAG STOP
+</td>
+<td style="text-align:center;">
+UGG Tryptophan (Trp)
+</td>
+<td style="text-align:center;font-weight: bold;">
+G
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
+C
+</td>
+<td style="text-align:center;">
+CUU Leucine (Leu)
+</td>
+<td style="text-align:center;">
+CCU Proline (Pro)
+</td>
+<td style="text-align:center;">
+CAU Histidine (His)
+</td>
+<td style="text-align:center;">
+CGU Arginine (Arg)
+</td>
+<td style="text-align:center;font-weight: bold;">
+U
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CUC Leu
+</td>
+<td style="text-align:center;">
+CCC Pro
+</td>
+<td style="text-align:center;">
+CAC His
+</td>
+<td style="text-align:center;">
+CGC Arg
+</td>
+<td style="text-align:center;font-weight: bold;">
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CUA Leu
+</td>
+<td style="text-align:center;">
+CCA Pro
+</td>
+<td style="text-align:center;">
+CAA Glutamine (Gln)
+</td>
+<td style="text-align:center;">
+CGA Arg
+</td>
+<td style="text-align:center;font-weight: bold;">
+A
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+CUG Leu
+</td>
+<td style="text-align:center;">
+CCG Pro
+</td>
+<td style="text-align:center;">
+CAG Gln
+</td>
+<td style="text-align:center;">
+CGG Arg
+</td>
+<td style="text-align:center;font-weight: bold;">
+G
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
+A
+</td>
+<td style="text-align:center;">
+AUU Isoleucine (Ile)
+</td>
+<td style="text-align:center;">
+ACU Threonine (Thr)
+</td>
+<td style="text-align:center;">
+AAU Asparagine (Asn)
+</td>
+<td style="text-align:center;">
+AGU Serine (Ser)
+</td>
+<td style="text-align:center;font-weight: bold;">
+U
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+AUC Ile
+</td>
+<td style="text-align:center;">
+ACC Thr
+</td>
+<td style="text-align:center;">
+AAC Asn
+</td>
+<td style="text-align:center;">
+AGC Ser
+</td>
+<td style="text-align:center;font-weight: bold;">
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+AUA Ile
+</td>
+<td style="text-align:center;">
+ACA Thr
+</td>
+<td style="text-align:center;">
+AAA Lysine (Lys)
+</td>
+<td style="text-align:center;">
+AGA Arginine (Arg)
+</td>
+<td style="text-align:center;font-weight: bold;">
+A
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+AUG Methionine (Met) or START
+</td>
+<td style="text-align:center;">
+ACG Thr
+</td>
+<td style="text-align:center;">
+AAG Lys
+</td>
+<td style="text-align:center;">
+AGG Arg
+</td>
+<td style="text-align:center;font-weight: bold;">
+G
+</td>
+</tr>
+<tr>
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
+G
+</td>
+<td style="text-align:center;">
+GUU Valine Val
+</td>
+<td style="text-align:center;">
+GCU Alanine (Ala)
+</td>
+<td style="text-align:center;">
+GAU Aspartic acid (Asp)
+</td>
+<td style="text-align:center;">
+GGU Glycine (Gly)
+</td>
+<td style="text-align:center;font-weight: bold;">
+U
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+GUC (Val)
+</td>
+<td style="text-align:center;">
+GCC Ala
+</td>
+<td style="text-align:center;">
+GAC Asp
+</td>
+<td style="text-align:center;">
+GGC Gly
+</td>
+<td style="text-align:center;font-weight: bold;">
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+GUA Val
+</td>
+<td style="text-align:center;">
+GCA Ala
+</td>
+<td style="text-align:center;">
+GAA Glutamic acid (Glu)
+</td>
+<td style="text-align:center;">
+GGA Gly
+</td>
+<td style="text-align:center;font-weight: bold;">
+A
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+GUG Val
+</td>
+<td style="text-align:center;">
+GCG Ala
+</td>
+<td style="text-align:center;">
+GAG Glu
+</td>
+<td style="text-align:center;">
+GGG Gly
+</td>
+<td style="text-align:center;font-weight: bold;">
+G
+</td>
+</tr>
+</tbody>
+</table>
+<p>There are many computer programs capable of translating a DNA/RNA sequence into a protein sequence. Normally this is performed using the Standard Genetic Code (Table <a href="translation-and-the-genetic-code.html#tab:geneticcode">5.1</a>), however, few programs can handle all the “special” cases, such as the use of the alternative initiation codons. For instance, the rare alternative start codon CTG codes for Methionine when used as a start codon, and for Leucine in all other positions.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="transcription-and-rna-processing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="techniques-of-molecular-biology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/nikolaussucher/bioinformatics/edit/master/translation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

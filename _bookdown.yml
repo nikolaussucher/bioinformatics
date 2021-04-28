@@ -2,8 +2,13 @@ new_session: yes
 rmd_files:   [ "index.Rmd",
                "acknowledgements.Rmd",
                "course_description.Rmd",
-               "how_to.Rmd",
                "bioinformatics.Rmd",
+               "DNA_and_RNA.Rmd",
+               "transcription.Rmd",
+               "translation.Rmd",
+               "techniques.Rmd",
+               "sequence_analysis.Rmd",
+               "pcr_primer_design.Rmd",
                "human_genome.Rmd"
              ]
 output_dir: docs
