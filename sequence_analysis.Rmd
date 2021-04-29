@@ -18,7 +18,7 @@ knitr::include_graphics("./figures/sequencing/chromatogram.png")
 
 ## Experimental procedures
 
-1. Download the [sequence data](/home/nikolaussucher/R/bioinformatics/data/lsamp_sequence.txt) file (right click on the "sequence data" link).
+1. Download the [sequence data](./lsamp_sequence.txt) file (right click on the "sequence data" link).
 1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the [SnapGene](http://www.snapgene.com/products/snapgene_viewer/) web site in a new tab. Otherwise enter the link in your browser manually. 
 2. Download SnapGene by clicking on the button corresponding to the operating
    system of your computer.
