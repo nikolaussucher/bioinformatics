@@ -108,8 +108,17 @@ knitr::include_graphics("./figures/bioinformatics/alignment.png")
 
 13. What is the name of the gene that matches this sequence? Does the query sequence correspond to a partial or the full-length sequence of this gene?
 
+14. Go back to the list of sequence alignments produced by BLAST. Look for the sequnce with GenBank accession AY348551.1 (accession identifiers are listed in the left most column). Click on it. A new page will open. Towards the top left of the page, just above the title, click on "Send to" (Fig. \@ref(fig:fasta)), in the pop-up, make sure that "Complete Record" is highlighted, and under "Choose Destination", click on "File", then under "Format", choose "Fasta", and then click on "Create File". Save the file for use in the "Design PCR Primers" exercise. 
+.
+
+```{r fasta, fig.cap='Save the gene sequence in FASTA format', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/save-fasta.png")
+`````
+
 14. On which chromosome is this gene located? How many nucleotides does this chromosome have?
 
 14. How many amino acids does the full-lenght gene code for?
+
+14. Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber correspondin to the the beginning of the start codon. Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise ("Design of PCR Primers").
 
 15. What is the function of this gene in the organism?
