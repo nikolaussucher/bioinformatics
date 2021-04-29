@@ -13,8 +13,6 @@ fig:pcrcartoon
 fig:cloningdiagram
 fig:sirnacartoon
 fig:crisprdiagram
-fig:sanger
-fig:chromatogram
 fig:nlm
 fig:blast
 fig:sequence
@@ -147,10 +145,7 @@ crispr-gene-editing
 gene-drive
 human-germline-modification
 dna-sequence-analysis
-experimental-procedures
 blast-search
-experimental-procedures-1
-review-questions
 pcr-primer-design
 the-human-genome
 the-human-genome-project
@@ -161,5 +156,5 @@ the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variati
 the-1000-genomes-project
 personal-genomics
 viewing-the-human-genome
-experimental-procedures-2
-review-questions-1
+experimental-procedures
+review-questions
