@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 DNA sequence analysis | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
-  <meta name="description" content="7 DNA sequence analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <title>7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
+  <meta name="description" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 DNA sequence analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta property="og:title" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="cover.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nikolaussuchert/bioinformatics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 DNA sequence analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="twitter:title" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="twitter:site" content="@NikolausSucher" />
   
   <meta name="twitter:image" content="cover.jpg" />
@@ -69,7 +69,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><strong><a href="./">LSAP Bioinformatics Worshop at RCC</a></strong></li>
+<li><strong><a href="./">LSAMP Bioinformatics Worshop at RCC</a></strong></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
@@ -198,10 +198,10 @@
 <li class="chapter" data-level="6.14" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-drive"><i class="fa fa-check"></i><b>6.14</b> Gene drive</a></li>
 <li class="chapter" data-level="6.15" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#human-germline-modification"><i class="fa fa-check"></i><b>6.15</b> Human germline modification</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> DNA sequence analysis</a><ul>
+<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> Dna Sequence Analysis</a><ul>
 <li class="chapter" data-level="7.1" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#blast-search"><i class="fa fa-check"></i><b>7.1</b> BLAST search</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR primer design</a></li>
+<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR Primer Design</a></li>
 <li class="chapter" data-level="9" data-path="the-human-genome.html"><a href="the-human-genome.html"><i class="fa fa-check"></i><b>9</b> The Human Genome</a><ul>
 <li class="chapter" data-level="9.1" data-path="the-human-genome.html"><a href="the-human-genome.html#the-human-genome-project"><i class="fa fa-check"></i><b>9.1</b> The Human Genome Project</a></li>
 <li class="chapter" data-level="9.2" data-path="the-human-genome.html"><a href="the-human-genome.html#public-private-competition-around-the-human-genome-project"><i class="fa fa-check"></i><b>9.2</b> Public-Private Competition Around The Human Genome Project</a></li>
@@ -233,7 +233,7 @@
 
             <section class="normal" id="section-">
 <div id="dna-sequence-analysis" class="section level1">
-<h1><span class="header-section-number">7</span> DNA sequence analysis</h1>
+<h1><span class="header-section-number">7</span> Dna Sequence Analysis</h1>
 <p>In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. Specifically, we will use the BLAST (Basic Local Alignment Tool) program to compare a DNA sequence that was obtained in previous research with all DNA sequences stored in Genbank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a> is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.</p>
 <p>There are several ways to search and retrieve data from GenBank:</p>
 <ol style="list-style-type: decimal">
@@ -364,8 +364,19 @@ Figure 7.9: Alignment of the best retrieved sequence with the query sequence.
 <li><p>Is this sequence linked to a scientific publication? If so, download the original paper.</p></li>
 <li><p>What is the scientific name of the organism that has a matching sequence? What is the common English name of this organism? What type of organism is it?</p></li>
 <li><p>What is the name of the gene that matches this sequence? Does the query sequence correspond to a partial or the full-length sequence of this gene?</p></li>
+<li><p>Go back to the list of sequence alignments produced by BLAST. Look for the sequnce with GenBank accession AY348551.1 (accession identifiers are listed in the left most column). Click on it. A new page will open. Towards the top left of the page, just above the title, click on “Send to” (Fig. <a href="dna-sequence-analysis.html#fig:fasta">7.10</a>), in the pop-up, make sure that “Complete Record” is highlighted, and under “Choose Destination”, click on “File”, then under “Format”, choose “Fasta”, and then click on “Create File”. Save the file for use in the “Design PCR Primers” exercise.
+.</p></li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:fasta"></span>
+<img src="figures/bioinformatics/save-fasta.png" alt="Save the gene sequence in FASTA format" width="70%" />
+<p class="caption">
+Figure 7.10: Save the gene sequence in FASTA format
+</p>
+</div>
+<ol start="14" style="list-style-type: decimal">
 <li><p>On which chromosome is this gene located? How many nucleotides does this chromosome have?</p></li>
 <li><p>How many amino acids does the full-lenght gene code for?</p></li>
+<li><p>Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber correspondin to the the beginning of the start codon. Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise (“Design of PCR Primers”).</p></li>
 <li><p>What is the function of this gene in the organism?</p></li>
 </ol>
 

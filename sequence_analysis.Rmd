@@ -1,4 +1,4 @@
-# DNA sequence analysis
+# Dna Sequence Analysis
 
 In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. Specifically, we will use the BLAST (Basic Local Alignment Tool) program to compare a DNA sequence that was obtained in previous research with all DNA sequences stored in Genbank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.
 

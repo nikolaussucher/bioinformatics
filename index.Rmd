@@ -13,7 +13,7 @@ lot: yes
 
 # Welcome {-}
 
-This is the __Laboratory Manual__ for the Bioinformatics Short course at RCC.
+This is the __Laboratory Manual__ for the LSAMP Bioinformatics Short course at RCC.
 
 
 

@@ -35,44 +35,26 @@ knitr::include_graphics("./figures/bioinformatics/nlm.png")
 knitr::include_graphics("./figures/bioinformatics/primer-blast.png")
 `````
 
-4. A new page will open (Fig. \@ref(fig:primer)). Click on "Choose File" and upload the sequence that you saved during the "DNA Sequence Analysis" exercise. 
+4. A new page will open (Fig. \@ref(fig:primentry)). Click on "Choose File" and upload the sequence that you saved during the "DNA Sequence Analysis" exercise. 
 
-(ref:primer) Primer-BLAST sequence entry form.
+(ref:primerentry) Primer-BLAST sequence entry form.
 
-```{r sequence, fig.cap='(ref:sequence)', echo=FALSE, message=FALSE, warning=FALSE}
+```{r primentry, fig.cap='(ref:primerentry)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/primer-entry.png")
 `````
 
-5. Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the "From" position should always be smaller than the "To" position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer "From" to 100 and reverse primer "To" to 1000 (but leave the forward primer "To" and reverse primer "From" empty). Note that the position range of forward primer may not overlap with that of reverse primer. Leave all other fields in their default settings. Click on the "Get Primers" button (Fig. \@ref(fig:primer).
+5. Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the "From" position should always be smaller than the "To" position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer "From" to 100 and reverse primer "To" to 1000 (but leave the forward primer "To" and reverse primer "From" empty). Note that the position range of forward primer may not overlap with that of reverse primer. Set the appropriate length, choose, "" in the "organism" field. Click on the "Get Primers" button (Fig. \@ref(fig:primer).
 
-6. A new page will open that will be updated every 2 seconds while your query is being processed (Fig. \@ref(fig:status)). 
+6. A new page will open that will be updated every 2 seconds while your query is being processed (Fig. \@ref(fig:primerstatus)). 
 
-```{r status, fig.cap='The BLASTN query status updated page.', echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("./figures/bioinformatics/job_id.png")
+```{r primerstatus, fig.cap='The BLASTN query status updated page.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/primer_job_id.png")
 `````
 
 7. Once the search has completed, the BLASTN results page will open (Fig. \@ref(fig:results)).
 
-```{r results, fig.cap='The BLASTN results page.', echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("./figures/bioinformatics/results.png")
-`````
-
-8. Click on the "+" sign in front of "Graphic Summary" (Fig. \@ref(fig:results)). A graphical summary of your results will be shown (Fig. \@ref(fig:graphic). The light green line on top represents your query sequence, below are shown any retreived sequences that align with your sequence.
-
-```{r graphic, fig.cap='Graphic summary of the BLASTN search results.', echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("./figures/bioinformatics/graphic_summary.png")
-`````
-
-9. Click on the "+" sign in front of "Description" (Fig. \@ref(fig:description)). A list of sequences that align with your query sequence will be shown (Fig. \@ref(fig:description).
-
-```{r description, fig.cap='List of sequences producing significant alignments with your query sequence.', echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("./figures/bioinformatics/results_description.png")
-`````
-
-10. Click on the first sequence. A new page will showing the alignment of the query sequence with the retrieved sequence (Fig. \@ref(fig:alignment)).
-
-```{r alignment, fig.cap='Alignment of the best retrieved sequence with the query sequence.', echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("./figures/bioinformatics/alignment.png")
+```{r results, fig.cap='The Primer-BLAST results page.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/primer_results.png")
 `````
 
 

@@ -5,7 +5,7 @@ bookdown::gitbook:
     toc:
       collapse:           section
       before:             |
-        <li><strong><a href="./">LSAP Bioinformatics Worshop at RCC</a></strong></li>
+        <li><strong><a href="./">LSAMP Bioinformatics Worshop at RCC</a></strong></li>
     edit:
       link:               https://github.com/nikolaussucher/bioinformatics/edit/master/%s
       text:               "Edit"
