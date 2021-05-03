@@ -1,6 +1,56 @@
 # Dna Sequence Analysis
 
-In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. Specifically, we will use the BLAST (Basic Local Alignment Tool) program to compare a DNA sequence that was obtained in previous research with all DNA sequences stored in Genbank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.
+In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. In a previous experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is used for "barcoding" of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were used for DNA sequencing using the Sanger method. 
+
+```{r sequencingdata, out.width='75%', echo=FALSE, message=FALSE, warning=FALSE, results=FALSE}
+
+#Install Bioconductor
+
+#function testing if packages are installed
+installBiocManager <- function(x){
+if(x %in% rownames(installed.packages())==FALSE) {
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
+  BiocManager::install(x,ask = FALSE)
+  }  
+}
+
+#install necessary Bioconductor packages
+required_packages  <- c("BiocManager", "sangerseqR", "Biostrings")
+lapply(required_packages,installBiocManager)
+
+#load packages
+library(tidyverse)
+library(sangerseqR)
+library(Biostrings)
+
+#set working directory
+setwd("~/Dropbox/R/bioinformatics")
+
+#read sequence file
+sequence <- readsangerseq("data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1")
+#save the chromatogram to a pdf file
+chromatogram(sequence, width = 100, height = 2, 
+             filename = "data/sequence_chromatogram.pdf")                    
+
+seq_text <- primarySeq(sequence, string = TRUE)
+write_file(seq_text, "./data/seq_text.txt")
+```
+
+(ref:chromatogram) The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism.
+
+```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./data/sequence_chromatogram.pdf")
+`````
+
+```{r ,engine='bash', echo=FALSE, comment = ''}
+cat ./data/seq_text.txt | fold -w 40 | sed 's/#>//'
+`````
+
+
+## BLAST search
+
+We will use the BLAST (Basic Local Alignment Tool) program to compare our DNA with all DNA sequences stored in Genbank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.
 
 There are several ways to search and retrieve data from GenBank:
 
@@ -13,7 +63,6 @@ There are several ways to search and retrieve data from GenBank:
 We will use BLAST to search te CoreNucleotide main collection.
 
 
-## BLAST search
 
 1. Copy the following sequence to your clipboard:
 

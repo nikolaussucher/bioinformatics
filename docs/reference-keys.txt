@@ -13,6 +13,7 @@ fig:pcrcartoon
 fig:cloningdiagram
 fig:sirnacartoon
 fig:crisprdiagram
+fig:chrom
 fig:nlm
 fig:blast
 fig:sequence
