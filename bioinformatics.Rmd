@@ -1,8 +1,8 @@
 # Bioinformatics
 
-Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data, in particular when the data sets are large and complex. As an interdisciplinary field of science, bioinformatics combines biology, computer science, information engineering, mathematics and statistics to analyze and interpret the biological data. Bioinformatics has been used for *in silico* analyses of biological queries using mathematical and statistical techniques.
+Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data, in particular when the data sets are large and complex. As an interdisciplinary field of science, bioinformatics combines biology, computer science, information engineering, mathematics and statistics to analyze and interpret the biological data. Bioinformatics has been used for [in silico](https://en.wikipedia.org/wiki/In_silico) analyses of biological queries using mathematical and statistical techniques.
 
-Bioinformatics includes biological studies that use computer programming as part of their methodology, as well as a specific analysis "pipelines" that are repeatedly used, particularly in the field o genomics. Common uses of bioinformatics include the identification of candidates genes and single nucleotide polymorphisms (SNPs). Often, such identification is made with the aim of better understanding the genetic basis of disease, unique adaptations, desirable properties (esp. in agricultural species), or differences between populations. In a less formal way, bioinformatics also tries to understand the organizational principles within nucleic acid and protein sequences, called proteomics.
+Bioinformatics includes biological studies that use computer programming as part of their methodology, as well as a specific analysis "pipelines" that are repeatedly used, particularly in the field of [genomics](https://en.wikipedia.org/wiki/Genomics). Common uses of bioinformatics include the identification of candidates genes and single nucleotide polymorphisms (SNPs). Often, such identification is made with the aim of better understanding the genetic basis of disease, unique adaptations, desirable properties (esp. in agricultural species), or differences between populations. In a less formal way, bioinformatics also tries to understand the organizational principles within nucleic acid and protein sequences, called [proteomics](https://en.wikipedia.org/wiki/Genomics).
 
 Bioinformatics has become an important part of many areas of biology. In experimental molecular biology, bioinformatics techniques such as image and signal processing allow extraction of useful results from large amounts of raw data. In the field of genetics, it aids in sequencing and annotating genomes and their observed mutations. It plays a role in the text mining of biological literature and the development of biological and gene ontologies to organize and query biological data. It also plays a role in the analysis of gene and protein expression and regulation. Bioinformatics tools aid in comparing, analyzing and interpreting genetic and genomic data and more generally in the understanding of evolutionary aspects of molecular biology. At a more inegrative level, it helps analyze and catalogue the biological pathways and networks that are an important part of systems biology. In structural biology, it aids in the simulation and modeling of DNA, RNA, proteins as well as biomolecular interactions.
 
@@ -28,7 +28,7 @@ Analyzing biological data to produce meaningful information involves writing and
 
 ## Sequence analysis
 
-Since the Phage Φ-X174 was sequenced in 1977, the DNA sequences of thousands of organisms have been decoded and stored in databases. This sequence information is analyzed to determine genes that encode proteins, RNA genes, regulatory sequences, structural motifs, and repetitive sequences. A comparison of genes within a species or between different species can show similarities between protein functions, or relations between species (the use of molecular systematics to construct phylogenetic trees). With the growing amount of data, it long ago became impractical to analyze DNA sequences manually. Computer programs such as BLAST are used routinely to search sequences—as of 2008, from more than 260,000 organisms, containing over 190 billion nucleotides.
+Since the Phage Φ-X174 was sequenced in 1977, the DNA sequences of thousands of organisms have been decoded and stored in databases. This sequence information is analyzed to determine genes that encode proteins, RNA genes, regulatory sequences, structural motifs, and repetitive sequences. A comparison of genes within a species or between different species can show similarities between protein functions, or relations between species (the use of molecular systematics to construct phylogenetic trees). With the growing amount of data, it long ago became impractical to analyze DNA sequences manually. Computer programs such as [BLAST](https://en.wikipedia.org/wiki/BLAST_(biotechnology)) are used routinely to search sequences—as of 2008, from more than 260,000 organisms, containing over 190 billion nucleotides.
 
 ### DNA sequencing
 
@@ -76,7 +76,7 @@ With the advent of next-generation sequencing we are obtaining enough sequence d
 
 ## Analysis of mutations in cancer
 
-In cancer, the genomes of affected cells are rearranged in complex or even unpredictable ways. Massive sequencing efforts are used to identify previously unknown point mutations in a variety of genes in cancer. Bioinformaticians continue to produce specialized automated systems to manage the sheer volume of sequence data produced, and they create new algorithms and software to compare the sequencing results to the growing collection of human genome sequences and germline polymorphisms. New physical detection technologies are employed, such as oligonucleotide microarrays to identify chromosomal gains and losses (called comparative genomic hybridization), and single-nucleotide polymorphism arrays to detect known point mutations. These detection methods simultaneously measure several hundred thousand sites throughout the genome, and when used in high-throughput to measure thousands of samples, generate terabytes of data per experiment. Again the massive amounts and new types of data generate new opportunities for bioinformaticians. The data is often found to contain considerable variability, or noise, and thus Hidden Markov model and change-point analysis methods are being developed to infer real copy number changes.
+In cancer, the genomes of affected cells are rearranged in complex or even unpredictable ways. Massive sequencing efforts are used to identify previously unknown point mutations in a variety of genes in cancer. Bioinformaticians continue to produce specialized automated systems to manage the sheer volume of sequence data produced, and they create new algorithms and software to compare the sequencing results to the growing collection of human genome sequences and germline polymorphisms. New physical detection technologies are employed, such as oligonucleotide [microarrays](https://en.wikipedia.org/wiki/DNA_microarray) to identify chromosomal gains and losses (called comparative genomic hybridization), and single-nucleotide polymorphism arrays to detect known point mutations. These detection methods simultaneously measure several hundred thousand sites throughout the genome, and when used in high-throughput to measure thousands of samples, generate terabytes of data per experiment. Again the massive amounts and new types of data generate new opportunities for bioinformaticians. The data is often found to contain considerable variability, or noise, and thus Hidden Markov model and change-point analysis methods are being developed to infer real copy number changes.
 
 Two important principles can be used in the analysis of cancer genomes bioinformatically pertaining to the identification of mutations in the exome. First, cancer is a disease of accumulated somatic mutations in genes. Second cancer contains driver mutations which need to be distinguished from passengers.
 
@@ -127,7 +127,7 @@ One example of this is hemoglobin in humans and the hemoglobin in legumes (leghe
 
 Other techniques for predicting protein structure include protein threading and de novo (from scratch) physics-based modeling.
 
-Another aspect of structural bioinformatics include the use of protein structures for Virtual Screening models such as Quantitative Structure-Activity Relationship models and proteochemometric models (PCM). Furthermore, a protein's crystal structure can be used in simulation of for example ligand-binding studies and in silico mutagenesis studies.
+Another aspect of structural bioinformatics include the use of protein structures for Virtual Screening models such as Quantitative Structure-Activity Relationship models and proteochemometric models (PCM). Furthermore, a protein's crystal structure can be used in simulation of for example ligand-binding studies and [in silico](https://en.wikipedia.org/wiki/In_silico) mutagenesis studies.
 
 ## Network and systems biology
 
@@ -182,12 +182,12 @@ Databases are essential for bioinformatics research and applications. Many datab
 
 Some of the most commonly used databases are listed below. For a more comprehensive list, please check the link at the beginning of the subsection.
 
-Used in biological sequence analysis: Genbank, UniProt
-Used in structure analysis: Protein Data Bank (PDB)
-Used in finding Protein Families and Motif Finding: InterPro, Pfam
-Used for Next Generation Sequencing: Sequence Read Archive
-Used in Network Analysis: Metabolic Pathway Databases (KEGG, BioCyc), Interaction Analysis Databases, Functional Networks
-Used in design of synthetic genetic circuits: GenoCAD
+Used in biological sequence analysis: [Genbank](https://en.wikipedia.org/wiki/GenBank), [UniProt](https://en.wikipedia.org/wiki/UniProt)
+Used in structure analysis: [Protein Data Bank](https://en.wikipedia.org/wiki/Protein_Data_Bank) (PDB)
+Used in finding Protein Families and Motif Finding: [InterPro](https://en.wikipedia.org/wiki/InterPro), [Pfam](https://en.wikipedia.org/wiki/Pfam)
+Used for Next Generation Sequencing: [Sequence Read Archive](https://en.wikipedia.org/wiki/Sequence_Read_Archive)
+Used in Network Analysis: Metabolic Pathway Databases ([KEGG](https://en.wikipedia.org/wiki/KEGG), [BioCyc](https://en.wikipedia.org/wiki/BioCyc_database_collection)), Interaction Analysis Databases, Functional Networks
+Used in design of synthetic genetic circuits: [GenoCAD](https://en.wikipedia.org/wiki/GenoCAD)
 Software and tools
 Software tools for bioinformatics range from simple command-line tools, to more complex graphical programs and standalone web-services available from various bioinformatics companies or public institutions.
 
@@ -195,7 +195,7 @@ Software tools for bioinformatics range from simple command-line tools, to more 
 
 Many free and open-source software tools have existed and continued to grow since the 1980s. The combination of a continued need for new algorithms for the analysis of emerging types of biological readouts, the potential for innovative in silico experiments, and freely available open code bases have helped to create opportunities for all research groups to contribute to both bioinformatics and the range of open-source software available, regardless of their funding arrangements. The open source tools often act as incubators of ideas, or community-supported plug-ins in commercial applications. They may also provide de facto standards and shared object models for assisting with the challenge of bioinformation integration.
 
-The range of open-source software packages includes titles such as Bioconductor, BioPerl, Biopython, BioJava, BioJS, BioRuby, Bioclipse, EMBOSS, .NET Bio, Orange with its bioinformatics add-on, Apache Taverna, UGENE and GenoCAD. To maintain this tradition and create further opportunities, the non-profit Open Bioinformatics Foundation have supported the annual Bioinformatics Open Source Conference (BOSC) since 2000.
+The range of open-source software packages includes titles such as [Bioconductor](https://en.wikipedia.org/wiki/Bioconductor), BioPerl, Biopython, BioJava, BioJS, BioRuby, Bioclipse, EMBOSS, .NET Bio, Orange with its bioinformatics add-on, Apache Taverna, UGENE and GenoCAD. To maintain this tradition and create further opportunities, the non-profit Open Bioinformatics Foundation have supported the annual Bioinformatics Open Source Conference (BOSC) since 2000.
 
 An alternative method to build public bioinformatics databases is to use the MediaWiki engine with the WikiOpener extension. This system allows the database to be accessed and updated by all experts in the field.
 
