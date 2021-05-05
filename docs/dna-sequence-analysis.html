@@ -243,70 +243,22 @@
 Figure 7.1: The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism.
 </p>
 </div>
-<pre><code>NNNNNNNNNNNNNNNNNNNNNNNNNNNTAANNNANNCTTC
-TTTTTTACATTTAACAAGATTTTTTNTACATGAATATAAA
-GAAAGGTCTAAAAATGAAAAATTGATTTATTCTTTTAATA
-AAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTA
-TATTTTTGAATTGGAATTTTTTTTAACTTCTCTTTTGACT
-AGGTTTNTAAATAATTTAGTTCTATCCAACTTATTCGATC
-AAATTAATCTATTAGAAAAAATAAATAATAATAATAAAAG
-TCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAAT
-TCCTGTATTCATTATGTACGGTATCAAAATCGTTGTATTA
-TGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGAT
-ATATTTTATATTGAATATTTGGCAATTTTTTATGCATTTA
-TGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAA
-AGCAGAGTTTTTTTTTTCTGGGTTATCAATTTGGCAGAGA
-ATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAA
-TCACCTACAATTTATTCACGTTTAAAAAAAAATCTTTTAA
-AAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAGA
-GGGTTTTTGTGATATTTCAGGTTATCCTATTAGTAGATCG
-ACTTGGACTACNTCGACNGATGAAGAANTTTTATTGAATT
-TTAATAAAATTTGNAAAAGCTTTTATTTTTATTATGGGGG
-GTTGATAAAAAAAGACATTTTATANNNAATCANNTATATC
-CTCCGATTTTCATGTGCAAAAACNCTANCTCGTAANCNNN
-NAANNNNNAANNNNNNA</code></pre>
 <div id="blast-search" class="section level2">
 <h2><span class="header-section-number">7.1</span> BLAST search</h2>
-<p>We will use the BLAST (Basic Local Alignment Tool) program to compare our DNA with all DNA sequences stored in Genbank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a> is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.</p>
-<p>There are several ways to search and retrieve data from GenBank:</p>
+<p>We will use the BLAST (basic local alignment tool) program to compare our dna with all dna sequences stored in genbank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">Genbank</a> is the nih genetic sequence database, an annotated collection of all publicly available dna sequences. genbank is part of the international nucleotide sequence database collaboration, which comprises the dna databank of japan (ddbj), the european nucleotide archive (ena), and genbank at ncbi. these three organizations exchange data on a daily basis.</p>
+<p>There are several ways to search and retrieve data from genbank:</p>
 <ol style="list-style-type: decimal">
-<li>Search GenBank for sequence identifiers and annotations with Entrez Nucleotide, which is divided into three divisions:
+<li>Search genbank for sequence identifiers and annotations with entrez nucleotide, which is divided into three divisions:
 <ul>
-<li>CoreNucleotide (the main collection)</li>
-<li>dbEST (Expressed Sequence Tags)</li>
-<li>dbGSS (Genome Survey Sequences).</li>
+<li>corenucleotide (the main collection)</li>
+<li>dbest (expressed sequence tags)</li>
+<li>dbgss (genome survey sequences).</li>
 </ul></li>
-<li>Search and align GenBank sequences to a query sequence using BLAST (Basic Local Alignment Search Tool).</li>
+<li>Search and align genbank sequences to a query sequence using BLAST (basic local alignment search tool).</li>
 </ol>
-<p>We will use BLAST to search te CoreNucleotide main collection.</p>
+<p>We will use BLAST to search te corenucleotide main collection.</p>
 <ol style="list-style-type: decimal">
-<li>Copy the following sequence to your clipboard:</li>
-</ol>
-<blockquote>
-<p>NNNNNNNNNNNTCGCNANNNATAAAAGANGCTTCTTTTTT
-ACNTTTAACAAGATTTTTTNTACATGAATATAAAGAAAGGT
-CTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAAT
-AAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTGA
-ATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTATAA
-ATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTA
-TTAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTT
-ATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATT
-ATGTACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGC
-TTTTATTTTCATGATACGAACTGGATATATTATATATTGAA
-TATTTGGCAATTTTTTATGCATTTATGGATTCAACCTTTCA
-GGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTT
-CTGGGTTATCAATTTGGCAGAGAATCCAAACTGCTAAAAGT
-TCGATCTATTTCACTTGATAAATCACCTACAATTTATTCAC
-GTTTAAAAAAAAATATTTTAAAAACACAAATTGTATATCCA
-ATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGG
-TTATCCTATTAGTAGATCGACTTGGACTACATCGACAGATG
-AAGAAATTTTATTGAATTTTAATAAANTTTGGAAAAGCTTT
-TATTTTTATTATGGGGGGTTGATAAAAAAAGACATTTTATA
-TAGAATCAAATATATCCTCCGATTTTCATGTGCAAAACNCT
-AGCTNNNNNNNNNNNNNNNNNNNNNNNNNN</p>
-</blockquote>
-<ol style="list-style-type: decimal">
-<li>Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the <a href="https://www.nlm.nih.gov">U.S. National Library of Medicine</a> in a new tab (Fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>). Otherwise enter the link in your browser manually.</li>
+<li>Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the <a href="https://www.nlm.nih.gov">U.S. National Library of Medicine</a> in a new tab (fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>). otherwise enter the link in your browser manually.</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:nlm"></span>
@@ -316,17 +268,31 @@ Figure 7.2: The web page of the U.S. National Library of Medicine.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>On the U.S. National Library of Medicine web page (Fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>), click on the right most square with the DNA icon and BLAST (Basic Local Alignment Tool) written on it.</li>
-<li>On the newly opened page (Fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. Click on the left most square that has Nucleotide Blast written on it.</li>
+<li>On the U.S. National Library of Medicine web page (fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>), click on the right most square with the dna icon and BLAST (basic local alignment tool) written on it.</li>
+<li>On the newly opened page (fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. click on the left most square that has nucleotide BLAST written on it.</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:blast"></span>
-<img src="figures/bioinformatics/blast.png" alt="The Basic Local Alignment Search Tool (BLAST) start page." width="70%" />
+<img src="figures/bioinformatics/blast.png" alt="The basic local alignment search tool (BLAST) start page." width="70%" />
 <p class="caption">
-Figure 7.3: The Basic Local Alignment Search Tool (BLAST) start page.
+Figure 7.3: The basic local alignment search tool (BLAST) start page.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
+<li>Copy the following sequence to your clipboard:</li>
+</ol>
+<pre><code>NNNNNNNNNNNNNNNNNNNNNNNNNNNTAANNNANNCTTCTTTTTTACATTTAACAAGATTTTTTNTACATGAATATAAAGAAA
+GGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTG
+AATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTNTAAATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTAT
+TAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATTATG
+TACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGATATATTTTATATTGAATATTT
+GGCAATTTTTTATGCATTTATGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTTCTGGGTT
+ATCAATTTGGCAGAGAATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAATCACCTACAATTTATTCACGTTTAAAAA
+AAAATCTTTTAAAAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGGTTATCCTATTA
+GTAGATCGACTTGGACTACNTCGACNGATGAAGAANTTTTATTGAATTTTAATAAAATTTGNAAAAGCTTTTATTTTTATTATG
+GGGGGTTGATAAAAAAAGACATTTTATANNNAATCANNTATATCCTCCGATTTTCATGTGCAAAAACNCTANCTCGTAANCNNN
+NAANNNNNAANNNNNNA</code></pre>
+<ol start="5" style="list-style-type: decimal">
 <li>A new page will open. Paste your DNA sequence into the white box on the top left (Fig. <a href="dna-sequence-analysis.html#fig:sequence">7.4</a>).</li>
 </ol>
 
@@ -336,7 +302,7 @@ Figure 7.3: The Basic Local Alignment Search Tool (BLAST) start page.
 Figure 7.4: Nucleotide BLAST (BLASTN) sequence entry form.
 </p>
 </div>
-<ol start="5" style="list-style-type: decimal">
+<ol start="6" style="list-style-type: decimal">
 <li>Leave the default values unchanged and click on the oval blue button at the lower left that has BLAST written on it (Fig. <a href="dna-sequence-analysis.html#fig:click">7.5</a>). This will upload your sequence (referred to from now on as the <strong>Query</strong> sequence) to the server where it will be compared to all sequences on record.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:click"></span>
@@ -345,7 +311,7 @@ Figure 7.4: Nucleotide BLAST (BLASTN) sequence entry form.
 Figure 7.5: After you have pasted your sequence into the sequence entry field, click the BLAST button at the lower left of the page.
 </p>
 </div>
-<ol start="6" style="list-style-type: decimal">
+<ol start="7" style="list-style-type: decimal">
 <li>A new page will open that will be updated every 2 seconds while your query is being processed (Fig. <a href="dna-sequence-analysis.html#fig:status">7.6</a>).</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:status"></span>
@@ -354,7 +320,7 @@ Figure 7.5: After you have pasted your sequence into the sequence entry field, c
 Figure 7.6: The BLASTN query status updated page.
 </p>
 </div>
-<ol start="7" style="list-style-type: decimal">
+<ol start="8" style="list-style-type: decimal">
 <li>Once the search has completed, the BLASTN results page will open (Fig. <a href="dna-sequence-analysis.html#fig:results">7.7</a>).</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:results"></span>
@@ -363,7 +329,7 @@ Figure 7.6: The BLASTN query status updated page.
 Figure 7.7: The BLASTN results page.
 </p>
 </div>
-<ol start="8" style="list-style-type: decimal">
+<ol start="9" style="list-style-type: decimal">
 <li>Click on the “+” sign in front of “Graphic Summary” (Fig. <a href="dna-sequence-analysis.html#fig:results">7.7</a>). A graphical summary of your results will be shown (Fig. <a href="dna-sequence-analysis.html#fig:graphic">7.8</a>. The light green line on top represents your query sequence, below are shown any retreived sequences that align with your sequence.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:graphic"></span>
@@ -372,7 +338,7 @@ Figure 7.7: The BLASTN results page.
 Figure 7.8: Graphic summary of the BLASTN search results.
 </p>
 </div>
-<ol start="9" style="list-style-type: decimal">
+<ol start="10" style="list-style-type: decimal">
 <li>Click on the “+” sign in front of “Description” (Fig. <a href="dna-sequence-analysis.html#fig:description">7.9</a>). A list of sequences that align with your query sequence will be shown (Fig. <a href="dna-sequence-analysis.html#fig:description">7.9</a>.</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:description"></span>
@@ -381,7 +347,7 @@ Figure 7.8: Graphic summary of the BLASTN search results.
 Figure 7.9: List of sequences producing significant alignments with your query sequence.
 </p>
 </div>
-<ol start="10" style="list-style-type: decimal">
+<ol start="11" style="list-style-type: decimal">
 <li>Click on the first sequence. A new page will showing the alignment of the query sequence with the retrieved sequence (Fig. <a href="dna-sequence-analysis.html#fig:alignment">7.10</a>).</li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:alignment"></span>
@@ -390,7 +356,7 @@ Figure 7.9: List of sequences producing significant alignments with your query s
 Figure 7.10: Alignment of the best retrieved sequence with the query sequence.
 </p>
 </div>
-<ol start="11" style="list-style-type: decimal">
+<ol start="12" style="list-style-type: decimal">
 <li><p>Which sequence matches our query sequence?</p></li>
 <li><p>Is this sequence linked to a scientific publication? If so, download the original paper.</p></li>
 <li><p>What is the scientific name of the organism that has a matching sequence? What is the common English name of this organism? What type of organism is it?</p></li>

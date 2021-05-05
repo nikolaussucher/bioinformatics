@@ -20,7 +20,6 @@ required_packages  <- c("BiocManager", "sangerseqR", "Biostrings")
 lapply(required_packages,installBiocManager)
 
 #load packages
-library(tidyverse)
 library(sangerseqR)
 library(Biostrings)
 
@@ -41,54 +40,25 @@ write_file(seq_text, "./data/seq_text.txt")
 
 ```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
-`````
 
-```{r ,engine='bash', echo=FALSE, comment = ''}
-cat ./data/seq_text.txt | fold -w 40 | sed 's/#>//'
-`````
+```
 
 
 ## BLAST search
 
-We will use the BLAST (Basic Local Alignment Tool) program to compare our DNA with all DNA sequences stored in Genbank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the International Nucleotide Sequence Database Collaboration, which comprises the DNA DataBank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. These three organizations exchange data on a daily basis.
+We will use the BLAST (basic local alignment tool) program to compare our dna with all dna sequences stored in genbank. [Genbank](https://www.ncbi.nlm.nih.gov/genbank/) is the nih genetic sequence database, an annotated collection of all publicly available dna sequences. genbank is part of the international nucleotide sequence database collaboration, which comprises the dna databank of japan (ddbj), the european nucleotide archive (ena), and genbank at ncbi. these three organizations exchange data on a daily basis.
 
-There are several ways to search and retrieve data from GenBank:
+There are several ways to search and retrieve data from genbank:
 
-1. Search GenBank for sequence identifiers and annotations with Entrez Nucleotide, which is divided into three divisions:
-    * CoreNucleotide (the main collection)
-    * dbEST (Expressed Sequence Tags)
-    * dbGSS (Genome Survey Sequences).
-2. Search and align GenBank sequences to a query sequence using BLAST (Basic Local Alignment Search Tool).
+1. Search genbank for sequence identifiers and annotations with entrez nucleotide, which is divided into three divisions:
+    * corenucleotide (the main collection)
+    * dbest (expressed sequence tags)
+    * dbgss (genome survey sequences).
+2. Search and align genbank sequences to a query sequence using BLAST (basic local alignment search tool).
 
-We will use BLAST to search te CoreNucleotide main collection.
+We will use BLAST to search te corenucleotide main collection.
 
-
-
-1. Copy the following sequence to your clipboard:
-
->NNNNNNNNNNNTCGCNANNNATAAAAGANGCTTCTTTTTT
-ACNTTTAACAAGATTTTTTNTACATGAATATAAAGAAAGGT
-CTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAAT
-AAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTGA
-ATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTATAA
-ATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTA
-TTAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTT
-ATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATT
-ATGTACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGC
-TTTTATTTTCATGATACGAACTGGATATATTATATATTGAA
-TATTTGGCAATTTTTTATGCATTTATGGATTCAACCTTTCA
-GGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTT
-CTGGGTTATCAATTTGGCAGAGAATCCAAACTGCTAAAAGT
-TCGATCTATTTCACTTGATAAATCACCTACAATTTATTCAC
-GTTTAAAAAAAAATATTTTAAAAACACAAATTGTATATCCA
-ATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGG
-TTATCCTATTAGTAGATCGACTTGGACTACATCGACAGATG
-AAGAAATTTTATTGAATTTTAATAAANTTTGGAAAAGCTTT
-TATTTTTATTATGGGGGGTTGATAAAAAAAGACATTTTATA
-TAGAATCAAATATATCCTCCGATTTTCATGTGCAAAACNCT
-AGCTNNNNNNNNNNNNNNNNNNNNNNNNNN
-
-1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the [U.S. National Library of Medicine](https://www.nlm.nih.gov) in a new tab (Fig. \@ref(fig:nlm)). Otherwise enter the link in your browser manually. 
+1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the [U.S. National Library of Medicine](https://www.nlm.nih.gov) in a new tab (fig. \@ref(fig:nlm)). otherwise enter the link in your browser manually. 
 
 (ref:nlm) The web page of the U.S. National Library of Medicine.
 
@@ -96,16 +66,22 @@ AGCTNNNNNNNNNNNNNNNNNNNNNNNNNN
 knitr::include_graphics("./figures/bioinformatics/nlm.png")
 `````
 
-2. On the U.S. National Library of Medicine web page (Fig. \@ref(fig:nlm)), click on the right most square with the DNA icon and BLAST (Basic Local Alignment Tool) written on it.
-3. On the newly opened page (Fig. \@ref(fig:blast)), you will see a row of squares displaying various titles. Click on the left most square that has Nucleotide Blast written on it.
+2. On the U.S. National Library of Medicine web page (fig. \@ref(fig:nlm)), click on the right most square with the dna icon and BLAST (basic local alignment tool) written on it.
+3. On the newly opened page (fig. \@ref(fig:blast)), you will see a row of squares displaying various titles. click on the left most square that has nucleotide BLAST written on it.
 
-(ref:blast) The Basic Local Alignment Search Tool (BLAST) start page.
+(ref:blast) The basic local alignment search tool (BLAST) start page.
 
 ```{r blast, fig.cap='(ref:blast)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/blast.png")
 `````
 
-4. A new page will open. Paste your DNA sequence into the white box on the top left (Fig. \@ref(fig:sequence)). 
+4. Copy the following sequence to your clipboard:
+
+```{bash, echo=FALSE, warning=FALSE, comment = ""}
+cat ./data/seq_text.txt | fold -w 84 | sed 's/#>//'
+```
+
+5. A new page will open. Paste your DNA sequence into the white box on the top left (Fig. \@ref(fig:sequence)). 
 
 (ref:sequence) Nucleotide BLAST (BLASTN) sequence entry form.
 
@@ -113,43 +89,43 @@ knitr::include_graphics("./figures/bioinformatics/blast.png")
 knitr::include_graphics("./figures/bioinformatics/sequence_entry.png")
 `````
 
-5. Leave the default values unchanged and click on the oval blue button at the lower left that has BLAST written on it (Fig. \@ref(fig:click)). This will upload your sequence (referred to from now on as the **Query** sequence) to the server where it will be compared to all sequences on record. 
+6. Leave the default values unchanged and click on the oval blue button at the lower left that has BLAST written on it (Fig. \@ref(fig:click)). This will upload your sequence (referred to from now on as the **Query** sequence) to the server where it will be compared to all sequences on record. 
 
 ```{r click, fig.cap='After you have pasted your sequence into the sequence entry field, click the BLAST button at the lower left of the page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/click_blast.png")
 `````
 
-6. A new page will open that will be updated every 2 seconds while your query is being processed (Fig. \@ref(fig:status)). 
+7. A new page will open that will be updated every 2 seconds while your query is being processed (Fig. \@ref(fig:status)). 
 
 ```{r status, fig.cap='The BLASTN query status updated page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/job_id.png")
 `````
 
-7. Once the search has completed, the BLASTN results page will open (Fig. \@ref(fig:results)).
+8. Once the search has completed, the BLASTN results page will open (Fig. \@ref(fig:results)).
 
 ```{r results, fig.cap='The BLASTN results page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/results.png")
 `````
 
-8. Click on the "+" sign in front of "Graphic Summary" (Fig. \@ref(fig:results)). A graphical summary of your results will be shown (Fig. \@ref(fig:graphic). The light green line on top represents your query sequence, below are shown any retreived sequences that align with your sequence.
+9. Click on the "+" sign in front of "Graphic Summary" (Fig. \@ref(fig:results)). A graphical summary of your results will be shown (Fig. \@ref(fig:graphic). The light green line on top represents your query sequence, below are shown any retreived sequences that align with your sequence.
 
 ```{r graphic, fig.cap='Graphic summary of the BLASTN search results.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/graphic_summary.png")
 `````
 
-9. Click on the "+" sign in front of "Description" (Fig. \@ref(fig:description)). A list of sequences that align with your query sequence will be shown (Fig. \@ref(fig:description).
+10. Click on the "+" sign in front of "Description" (Fig. \@ref(fig:description)). A list of sequences that align with your query sequence will be shown (Fig. \@ref(fig:description).
 
 ```{r description, fig.cap='List of sequences producing significant alignments with your query sequence.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/results_description.png")
 `````
 
-10. Click on the first sequence. A new page will showing the alignment of the query sequence with the retrieved sequence (Fig. \@ref(fig:alignment)).
+11. Click on the first sequence. A new page will showing the alignment of the query sequence with the retrieved sequence (Fig. \@ref(fig:alignment)).
 
 ```{r alignment, fig.cap='Alignment of the best retrieved sequence with the query sequence.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/alignment.png")
 `````
 
-11. Which sequence matches our query sequence?
+12. Which sequence matches our query sequence?
 
 13. Is this sequence linked to a scientific publication? If so, download the original paper.
 
