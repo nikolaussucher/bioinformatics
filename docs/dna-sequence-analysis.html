@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
-  <meta name="description" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <title>7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
+  <meta name="description" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta property="og:title" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/cover.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nikolaussuchert/bioinformatics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 Dna Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="twitter:title" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="twitter:site" content="@NikolausSucher" />
   
   <meta name="twitter:image" content="/cover.jpg" />
@@ -199,7 +199,7 @@
 <li class="chapter" data-level="6.14" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#gene-drive"><i class="fa fa-check"></i><b>6.14</b> Gene drive</a></li>
 <li class="chapter" data-level="6.15" data-path="techniques-of-molecular-biology.html"><a href="techniques-of-molecular-biology.html#human-germline-modification"><i class="fa fa-check"></i><b>6.15</b> Human germline modification</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> Dna Sequence Analysis</a><ul>
+<li class="chapter" data-level="7" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html"><i class="fa fa-check"></i><b>7</b> DNA Sequence Analysis</a><ul>
 <li class="chapter" data-level="7.1" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#blast-search"><i class="fa fa-check"></i><b>7.1</b> BLAST search</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR Primer Design</a></li>
@@ -234,27 +234,33 @@
 
             <section class="normal" id="section-">
 <div id="dna-sequence-analysis" class="section level1">
-<h1><span class="header-section-number">7</span> Dna Sequence Analysis</h1>
-<p>In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. In a previous experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is used for “barcoding” of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were used for DNA sequencing using the Sanger method.</p>
+<h1><span class="header-section-number">7</span> DNA Sequence Analysis</h1>
+<p>In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. We will use a DNA sequence that was obtained in a previous experiment. In this experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is used for “barcoding” of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were used for DNA sequencing using the Sanger method. The sequencing facility sent the results back in the form of two types of files for each sequenced sample: one type of file has the file extension <a href="https://projects.nfstc.org/workshops/resources/articles/ABIF_File_Format.pdf">.ab1</a>. Files of this type are binary files and contain DNA sequence information recorded by an <a href="https://en.wikipedia.org/wiki/Applied_Biosystems">Applied Biosystems</a> DNA sequencer and associated software; also known as a electropherogram file or DNA trace file; can be be viewed graphically by a ABI file viewer to analyze and compare DNA sequences. For conveniencem a second file with the file extension <em>.seq</em> or .txt contains the DNA sequence in <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> (American Standard Code for Information Interchange) format. Files of this type can be read by any program that can read simple text.</p>
+<p>The electropherogram of the sequence that we will be using in this exercise is shown in Figure <a href="dna-sequence-analysis.html#fig:chrom">7.1</a> below. An <a href="https://en.wikipedia.org/wiki/Electropherogram">electropherogram</a>, or electrophoregram, is a record or chart produced by an automated <a href="https://en.wikipedia.org/wiki/DNA_sequencer">DNA sequencer</a> used to separate the labled DNA produced in the Sanger sequencing procedure.</p>
+<ol style="list-style-type: decimal">
+<li>Inspect the electrophoregram shown in Fig. <a href="dna-sequence-analysis.html#fig:chrom">7.1</a>.</li>
+<li>Notice peaks of four different colors (green, blue, black and red) corresponding to the bases adenine (A), cytosine (C), guanine (G), and thymine (T) in the sequenced DNA. Narrow, well separated peaks indicate a good signal and high confidence in “calling the base”, broad, overlapping peaks signify low quality data. If the sofware algorithm used cannot decide which base to call, the letter “N” is used.</li>
+<li>Notice how the peaks are broad and overlapping both at the very beginning and end of the sequence. This is typical.</li>
+</ol>
 
 <div class="figure" style="text-align: center"><span id="fig:chrom"></span>
-<img src="data/sequence_chromatogram.pdf" alt="The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism." width="70%" />
+<img src="data/sequence_chromatogram.pdf" alt="The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs R and Bioconductor package sangerseqR." width="70%" />
 <p class="caption">
-Figure 7.1: The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism.
+Figure 7.1: The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>.
 </p>
 </div>
 <div id="blast-search" class="section level2">
 <h2><span class="header-section-number">7.1</span> BLAST search</h2>
-<p>We will use the BLAST (basic local alignment tool) program to compare our dna with all dna sequences stored in genbank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">Genbank</a> is the nih genetic sequence database, an annotated collection of all publicly available dna sequences. genbank is part of the international nucleotide sequence database collaboration, which comprises the dna databank of japan (ddbj), the european nucleotide archive (ena), and genbank at ncbi. these three organizations exchange data on a daily basis.</p>
-<p>There are several ways to search and retrieve data from genbank:</p>
+<p>We will use the BLAST (basic local alignment tool) program to compare our dna with all dna sequences stored in GenBank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a> is the NIH genetic sequence database, an annotated collection of all publicly available dna sequences. GenBank is part of the international nucleotide sequence database collaboration, which comprises the DNA Databank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. these three organizations exchange data on a daily basis.</p>
+<p>There are several ways to search and retrieve data from GenBank:</p>
 <ol style="list-style-type: decimal">
-<li>Search genbank for sequence identifiers and annotations with entrez nucleotide, which is divided into three divisions:
+<li>Search GenBank for sequence identifiers and annotations with entrez nucleotide, which is divided into three divisions:
 <ul>
 <li>corenucleotide (the main collection)</li>
 <li>dbest (expressed sequence tags)</li>
 <li>dbgss (genome survey sequences).</li>
 </ul></li>
-<li>Search and align genbank sequences to a query sequence using BLAST (basic local alignment search tool).</li>
+<li>Search and align GenBank sequences to a query sequence using BLAST (basic local alignment search tool).</li>
 </ol>
 <p>We will use BLAST to search te corenucleotide main collection.</p>
 <ol style="list-style-type: decimal">
@@ -269,17 +275,17 @@ Figure 7.2: The web page of the U.S. National Library of Medicine.
 </div>
 <ol start="2" style="list-style-type: decimal">
 <li>On the U.S. National Library of Medicine web page (fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>), click on the right most square with the dna icon and BLAST (basic local alignment tool) written on it.</li>
-<li>On the newly opened page (fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. click on the left most square that has nucleotide BLAST written on it.</li>
+<li>On the newly opened page (fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. Click on the left most square that has nucleotide BLAST written on it. A new page will open.</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:blast"></span>
-<img src="figures/bioinformatics/blast.png" alt="The basic local alignment search tool (BLAST) start page." width="70%" />
+<img src="figures/bioinformatics/blast.png" alt="The Basic Local Alignment Search Tool (BLAST) start page." width="70%" />
 <p class="caption">
-Figure 7.3: The basic local alignment search tool (BLAST) start page.
+Figure 7.3: The Basic Local Alignment Search Tool (BLAST) start page.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>Copy the following sequence to your clipboard:</li>
+<li>Here is the text only version of DNA electropherogram shown in Figure <a href="dna-sequence-analysis.html#fig:chrom">7.1</a> above. Copy the sequence to your clipboard:</li>
 </ol>
 <pre><code>NNNNNNNNNNNNNNNNNNNNNNNNNNNTAANNNANNCTTCTTTTTTACATTTAACAAGATTTTTTNTACATGAATATAAAGAAA
 GGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTG
@@ -293,7 +299,7 @@ GTAGATCGACTTGGACTACNTCGACNGATGAAGAANTTTTATTGAATTTTAATAAAATTTGNAAAAGCTTTTATTTTTAT
 GGGGGTTGATAAAAAAAGACATTTTATANNNAATCANNTATATCCTCCGATTTTCATGTGCAAAAACNCTANCTCGTAANCNNN
 NAANNNNNAANNNNNNA</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>A new page will open. Paste your DNA sequence into the white box on the top left (Fig. <a href="dna-sequence-analysis.html#fig:sequence">7.4</a>).</li>
+<li>Paste the copied DNA sequence into the white box on the top left (Fig. <a href="dna-sequence-analysis.html#fig:sequence">7.4</a>).</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:sequence"></span>
@@ -370,7 +376,7 @@ Figure 7.10: Alignment of the best retrieved sequence with the query sequence.
 Figure 7.11: Save the gene sequence in FASTA format
 </p>
 </div>
-<ol start="14" style="list-style-type: decimal">
+<ol start="15" style="list-style-type: decimal">
 <li><p>On which chromosome is this gene located? How many nucleotides does this chromosome have?</p></li>
 <li><p>How many amino acids does the full-lenght gene code for?</p></li>
 <li><p>Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber correspondin to the the beginning of the start codon. Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise (“Design of PCR Primers”).</p></li>
