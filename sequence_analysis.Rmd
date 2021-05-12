@@ -40,14 +40,13 @@ chromatogram(sequence, width = 100, height = 2,
              filename = "data/sequence_chromatogram.pdf")                    
 
 seq_text <- primarySeq(sequence, string = TRUE)
-write_file(seq_text, "./data/seq_text.txt")
+write(seq_text, "./data/seq_text.txt")
 ```
 
 (ref:chromatogram) The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
 
 ```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
-
 ```
 
 ## BLAST search

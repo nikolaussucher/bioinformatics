@@ -1,28 +1,24 @@
 # Course Description
 
+## Prerequisites
+
+* Basic background in molecular biology
+* Access to a computer with an internet browser
+
 ## Instructional Objectives:
 
-At the end of the course, students will be able to
+* Provide an introduction to bioinformatics 
+* Provide an overview of the application areas of bioinformatics, with a focus on DNA sequence analysis, and the human genome.
+* Provide an introduction to major biolmedical and genomnic databases.
+* Explain how to locate and extract data from key bioinformatics databases and resources
 
-*  	contrast the role of mitosis and meiosis in cellular reproduction in eukaryotes.
-*  	describe how the concept of the “gene” has originated and evolved over time.
-*  	identify eukaryotic chromosomes and describe their structure and function.
-*  	explain how DNA stores information, read the genetic code, and describe how it is translated and transmitted to the offspring.
-*  	define genetic mutations and describe how they happen and how they can be prevented and give examples of how they influence the function of cells and can lead to disease.
-*  	outline how we can isolate, sequence, manipulate and move DNA between cells and organisms.
-*  	define the terms genome and genomics, evaluate genomics-related information and discuss the far-reaching consequences for our society of the use of genomics.
-*  	outline molecular mechanisms of gene expression.
-*  	give examples of complex traits and discuss current models of their genetic basis.
-*  	outline the role of genes in the development of organisms and give some specific examples.
-*  	discuss how variation in the types and frequencies of “genes” in organisms and populations forms the substrate for natural selection and evolution.
-
-## Student Learning Outcomes:
+## Student Learning Outcomes (measureable skills):
 
 At successful completion of the course, students will be able to
 
-*  	describe the molecular and cellular mechanisms explaining why children resemble their parents to a certain degree yet are also distinctly different both from them and (if applicable) their own siblings.
-*  	give examples and evaluate the strength of the relationship between specific genes and health disorders.
-*  	demonstrate “information literacy” and critically analyze reports describing genetics-related research.
-*  	discuss the science underlying purported or real medical and scientific breakthroughs or doomsday scenarios related to the manipulation of cells and organisms at the level of DNA.
-*  	articulate and appraise the personal and societal implications of genetic testing and genetic engineering.
-*  	embark on the next level of training or start work in the life sciences or related fields.
+* Locate and use the main databases at the [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov) and [European Bioinformatics Institute (EBI)](https://www.ebi.ac.uk) resources
+* Know the difference between databases, tools, repositories and be able to use each one to extract specific information
+* Extract data from specific databases using accessions numbers, gene names etc.
+* Use selected tools at NCBI and EBI to run simple analyses on genomic sequences
+* Identify features on the sequence such as coding regions, restriction enzyme sites, etc.
+* Interpret sequence analysis results and what functional regions mean biologically

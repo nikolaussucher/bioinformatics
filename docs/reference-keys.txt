@@ -1,3 +1,11 @@
+fig:genview
+fig:ribosome
+fig:phage
+fig:phagegenome
+fig:cellsignaling
+fig:treeoflife
+fig:heat
+fig:metabolnet
 fig:dnastructure
 fig:basestruc
 fig:groove
@@ -5,7 +13,6 @@ fig:pairing
 fig:trnastruc1
 fig:elongation
 fig:ttribosome
-fig:ribosome
 fig:trnastruc
 fig:translation
 tab:geneticcode

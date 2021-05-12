@@ -2,19 +2,49 @@
 
 Bioinformatics is an interdisciplinary field that develops methods and software tools for understanding biological data, in particular when the data sets are large and complex. As an interdisciplinary field of science, bioinformatics combines biology, computer science, information engineering, mathematics and statistics to analyze and interpret the biological data. Bioinformatics has been used for [in silico](https://en.wikipedia.org/wiki/In_silico) analyses of biological queries using mathematical and statistical techniques.
 
+(ref:genomeviewer) [Map of the human X chromosome (from the National Center for Biotechnology Information website)](https://commons.wikimedia.org/wiki/File:Genome_viewer_screenshot_small.png)
+
+```{r genview, fig.cap='(ref:genomeviewer)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Genome_viewer_screenshot_small.png")
+```
+
 Bioinformatics includes biological studies that use computer programming as part of their methodology, as well as a specific analysis "pipelines" that are repeatedly used, particularly in the field of [genomics](https://en.wikipedia.org/wiki/Genomics). Common uses of bioinformatics include the identification of candidates genes and single nucleotide polymorphisms (SNPs). Often, such identification is made with the aim of better understanding the genetic basis of disease, unique adaptations, desirable properties (esp. in agricultural species), or differences between populations. In a less formal way, bioinformatics also tries to understand the organizational principles within nucleic acid and protein sequences, called [proteomics](https://en.wikipedia.org/wiki/Genomics).
 
 Bioinformatics has become an important part of many areas of biology. In experimental molecular biology, bioinformatics techniques such as image and signal processing allow extraction of useful results from large amounts of raw data. In the field of genetics, it aids in sequencing and annotating genomes and their observed mutations. It plays a role in the text mining of biological literature and the development of biological and gene ontologies to organize and query biological data. It also plays a role in the analysis of gene and protein expression and regulation. Bioinformatics tools aid in comparing, analyzing and interpreting genetic and genomic data and more generally in the understanding of evolutionary aspects of molecular biology. At a more inegrative level, it helps analyze and catalogue the biological pathways and networks that are an important part of systems biology. In structural biology, it aids in the simulation and modeling of DNA, RNA, proteins as well as biomolecular interactions.
 
+(ref:ribo) Crystal structure of the human 80S ribosome (based on atomic coordinates of [PDB 4V6X](https://www.rcsb.org/structure/4v6x) rendered with open source molecular visualization tool PyMol). The 40S (small) ribosomal subunit proteins are shown in lightblue, the 60S (large) subunit proteins in palegreen, the ribosomal RNA in orange. 3-dimensional protein structures such as this one are common subjects in bioinformatic analyses.
+
+```{r ribosome, fig.cap='(ref:ribo)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/translation/human_ribosome.png")
+```
+
 Historically, the term bioinformatics did not mean what it means today. Paulien Hogeweg and Ben Hesper coined it in 1970 to refer to the study of information processes in biotic systems. This definition placed bioinformatics as a field parallel to biochemistry (the study of chemical processes in biological systems).
 
-Computers became essential in molecular biology when protein sequences became available after Frederick Sanger determined the sequence of insulin in the early 1950s. Comparing multiple sequences manually turned out to be impractical. A pioneer in the field was Margaret Oakley Dayhoff. She compiled one of the first protein sequence databases, initially published as books and pioneered methods of sequence alignment and molecular evolution. Another early contributor to bioinformatics was Elvin A. Kabat, who pioneered biological sequence analysis in 1970 with his comprehensive volumes of antibody sequences released with Tai Te Wu between 1980 and 1991. In the 1970’s, new techniques for sequencing DNA were applied to bacteriophage MS2 and ø174, and the extended nucleotide sequences were then parsed with informational and statistical algorithms. These studies illustrated that well known features, such as the coding segments and the triplet code, are revealed in straightforward statistical analyses and were thus proof of the concept that bioinformatics would be insightful.
+Computers became essential in molecular biology when protein sequences became available after Frederick Sanger determined the sequence of insulin in the early 1950s. Comparing multiple sequences manually turned out to be impractical. A pioneer in the field was Margaret Oakley Dayhoff. She compiled one of the first protein sequence databases, initially published as books and pioneered methods of sequence alignment and molecular evolution. Another early contributor to bioinformatics was Elvin A. Kabat, who pioneered biological sequence analysis in 1970 with his comprehensive volumes of antibody sequences released with Tai Te Wu between 1980 and 1991. In the 1970’s, new techniques for sequencing DNA were applied to bacteriophage [MS2](https://en.wikipedia.org/wiki/Escherichia_virus_MS2) and [ø174](https://en.wikipedia.org/wiki/Phi_X_174), and the extended nucleotide sequences were then parsed with informational and statistical algorithms. These studies illustrated that well known features, such as the coding segments and the triplet code, are revealed in straightforward statistical analyses and were thus proof of the concept that bioinformatics would be insightful.
+
+(ref:phage174) [Electronmicrograp showing bacteriophage Phi X 174.](https://commons.wikimedia.org/wiki/File:Bacteriophage_Phi_X_174_Electron_micrograph.gif)
+
+```{r phage, fig.cap='(ref:phage174)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Bacteriophage_Phi_X_174_Electron_micrograph.gif")
+```
+
+(ref:ph174genome) [The map shows the complete circular single-stranded DNA genome (5386 bp) of Enterobacteria phage ΦX174 (accession NC_001422).](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Genome_map_of_the_bacteriophage_ΦX174_showing_overlapping_genes.svg/1907px-Genome_map_of_the_bacteriophage_ΦX174_showing_overlapping_genes.svg) This DNA genome was the first one ever sequenced. This genome contains 11 genes (A, A*, B-H, J, K). Genes B, K, E are overlapping with genes A, C, D. Gene A* is nested within the larger A gene, with internal translation initiation in the same reading frame as gene A.
+
+```{r phagegenome, fig.cap='(ref:ph174genome)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Genome_map_of_the_bacteriophage_ΦX174_showing_overlapping_genes.svg")
+```
 
 To study how normal cellular activities are altered in different disease states, the biological data must be combined to form a comprehensive picture of these activities. Therefore, the field of bioinformatics has evolved such that the most pressing task now involves the analysis and interpretation of various types of data. This includes nucleotide and amino acid sequences, protein domains, and protein structures. The actual process of analyzing and interpreting data is referred to as computational biology. Important sub-disciplines within bioinformatics and computational biology include:
 
 Development and implementation of computer programs that enable efficient access to, management and use of, various types of information.
 Development of new algorithms (mathematical formulas) and statistical measures that assess relationships among members of large data sets. For example, there are methods to locate a gene within a sequence, to predict protein structure and/or function, and to cluster protein sequences into families of related sequences.
 The primary goal of bioinformatics is to increase the understanding of biological processes. What sets it apart from other approaches, however, is its focus on developing and applying computationally intensive techniques to achieve this goal. Examples include: pattern recognition, data mining, machine learning algorithms, and visualization. Major research efforts in the field include sequence alignment, gene finding, genome assembly, drug design, drug discovery, protein structure alignment, protein structure prediction, prediction of gene expression and protein–protein interactions, genome-wide association studies, the modeling of evolution and cell division/mitosis.
+
+(ref:cellsig) [A diagram of some of the key cellular signalling pathways controlling gene regulation, cell proliferation, and apoptosis. ](https://commons.wikimedia.org/wiki/File:Signal_transduction_pathways.svg)
+
+```{r cellsignaling, fig.cap='(ref:cellsig)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Signal_transduction_pathways.svg")
+```
 
 Bioinformatics now entails the creation and advancement of databases, algorithms, computational and statistical techniques, and theory to solve formal and practical problems arising from the management and analysis of biological data.
 
@@ -56,7 +86,12 @@ Evolutionary biology is the study of the origin and descent of species, as well 
 * build complex computational population genetics models to predict the outcome of the system over time
 * track and share information on an increasingly large number of species and organisms
 
-Future work endeavours to reconstruct the now more complex tree of life.[according to whom?]
+
+(ref:tree) [A highly resolved Tree Of Life, based on completely sequenced genomes.](https://commons.wikimedia.org/wiki/File:Tree_of_life_int.svg) Evolutionary tree showing the common ancestry of organisms from all three domains of life. Bacteria are colored blue, eukaryotes red, and archaea green. Relative positions of some of the phyla included are shown around the tree.
+
+```{r treeoflife, fig.cap='(ref:tree)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Tree_of_life_int.svg")
+```
 
 The area of research within computer science that uses genetic algorithms is sometimes confused with computational evolutionary biology, but the two areas are not necessarily related.
 
@@ -85,9 +120,16 @@ With the breakthroughs that this next-generation sequencing technology is provid
 Another type of data that requires novel informatics development is the analysis of lesions found to be recurrent among many tumors.
 
 ## Gene and protein expression
+
 ### Analysis of gene expression
 
 The expression of many genes can be determined by measuring mRNA levels with multiple techniques including microarrays, expressed cDNA sequence tag (EST) sequencing, serial analysis of gene expression (SAGE) tag sequencing, massively parallel signature sequencing (MPSS), RNA-Seq, also known as "Whole Transcriptome Shotgun Sequencing" (WTSS), or various applications of multiplexed in-situ hybridization. All of these techniques are extremely noise-prone and/or subject to bias in the biological measurement, and a major research area in computational biology involves developing statistical tools to separate signal from noise in high-throughput gene expression studies. Such studies are often used to determine the genes implicated in a disorder: one might compare microarray data from cancerous epithelial cells to data from non-cancerous cells to determine the transcripts that are up-regulated and down-regulated in a particular population of cancer cells.
+
+(ref:heatmap) Heat maps and dendrograms are often used to visualize changes in gene expression. In this example, genes (rows) were clustered based on their distance in Pearson product–moment correlation (left dendrogram); DNA microarrays (columns) were clustered based on their distance in using Spearman rank correlation (top dendrogram). From Cook, R., Hennell, J.R., Lee, S. et al. The Saccharomyces cerevisiae transcriptome as a mirror of phytochemical variation in complex extracts of *Equisetum arvense* from America, China, Europe and India. [BMC Genomics 14, 445 (2013)](https://doi.org/10.1186/1471-2164-14-445)
+
+```{r heat, fig.cap='(ref:heatmap)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/Figure 4.pdf")
+```
 
 ### Analysis of protein expression
 
@@ -133,6 +175,12 @@ Another aspect of structural bioinformatics include the use of protein structure
 
 Network analysis seeks to understand the relationships within biological networks such as metabolic or protein–protein interaction networks. Although biological networks can be constructed from a single type of molecule or entity (such as genes), network biology often attempts to integrate many different data types, such as proteins, small molecules, gene expression data, and others, which are all connected physically, functionally, or both.
 
+(ref:metnet) [Metabolic network](https://commons.wikimedia.org/wiki/File:A_thaliana_metabolic_network.png) showing the links between enzymes and metabolites that interact with the Arabidopsis TCA cycle KEGG classification M00009. Enzymes and metabolites are the nodes (red), interactions are the lines. In total, 43 enzymes and 40 metabolites are shown. Created on [Cytoscape](http://www.cytoscape.org) using data from [VirtualPlant 0.9.](http://virtualplant.bio.nyu.edu/cgi-bin/vpweb/) 
+
+```{r metabolnet, fig.cap='(ref:metnet)', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioinformatics/A_thaliana_metabolic_network.png")
+```
+
 Systems biology involves the use of computer simulations of cellular subsystems (such as the networks of metabolites and enzymes that comprise metabolism, signal transduction pathways and gene regulatory networks) to both analyze and visualize the complex connections of these cellular processes. Artificial life or virtual evolution attempts to understand evolutionary processes via the computer simulation of simple (artificial) life forms.
 
 Tens of thousands of three-dimensional protein structures have been determined by X-ray crystallography and protein nuclear magnetic resonance spectroscopy (protein NMR) and a central question in structural bioinformatics is whether it is practical to predict possible protein–protein interactions only based on these 3D shapes, without performing protein–protein interaction experiments. A variety of methods have been developed to tackle the protein–protein docking problem, though it seems that there is still much work to be done in this field.
@@ -174,7 +222,7 @@ Biodiversity informatics deals with the collection and analysis of biodiversity 
 
 Biological ontologies are directed acyclic graphs of controlled vocabularies. They are designed to capture biological concepts and descriptions in a way that can be easily categorised and analysed with computers. When categorised in this way, it is possible to gain added value from holistic and integrated analysis.
 
-The OBO Foundry was an effort to standardise certain ontologies. One of the most widespread is the Gene ontology which describes gene function. There are also ontologies which describe phenotypes.
+The OBO Foundry was an effort to standardise certain ontologies. One of the most widespread is the [Gene ontology](https://en.wikipedia.org/wiki/Gene_ontology) which describes gene function. There are also ontologies which describe phenotypes.
 
 ## Databases
 
