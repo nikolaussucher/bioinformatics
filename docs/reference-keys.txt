@@ -41,8 +41,9 @@ tab:stats
 fig:pca
 fig:ensembl
 course-description
+prerequisites
 instructional-objectives
-student-learning-outcomes
+student-learning-outcomes-measureable-skills
 bioinformatics
 sequence-analysis
 dna-sequencing

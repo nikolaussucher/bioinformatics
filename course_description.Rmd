@@ -9,16 +9,17 @@
 
 * Provide an introduction to bioinformatics 
 * Provide an overview of the application areas of bioinformatics, with a focus on DNA sequence analysis, and the human genome.
-* Provide an introduction to major biolmedical and genomnic databases.
+* Provide an introduction to major biolmedical and genomic databases.
 * Explain how to locate and extract data from key bioinformatics databases and resources
 
-## Student Learning Outcomes (measureable skills):
+## Student Learning Outcomes:
 
 At successful completion of the course, students will be able to
 
 * Locate and use the main databases at the [National Center for Biotechnology Information (NCBI)](https://www.ncbi.nlm.nih.gov) and [European Bioinformatics Institute (EBI)](https://www.ebi.ac.uk) resources
-* Know the difference between databases, tools, repositories and be able to use each one to extract specific information
+* Know the major databases and tools and be able to use them to extract and analyse specific information.
 * Extract data from specific databases using accessions numbers, gene names etc.
 * Use selected tools at NCBI and EBI to run simple analyses on genomic sequences
-* Identify features on the sequence such as coding regions, restriction enzyme sites, etc.
-* Interpret sequence analysis results and what functional regions mean biologically
+* Identify features on the sequence such as coding regions and restriction enzyme sites.
+* Interpret sequence analysis results.
+* Design PCR primers.
