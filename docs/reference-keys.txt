@@ -30,7 +30,9 @@ fig:results
 fig:graphic
 fig:description
 fig:alignment
+fig:fastap
 fig:fasta
+fig:graphicsview
 fig:primentry
 fig:primerstatus
 tab:chr
@@ -157,6 +159,7 @@ crispr-gene-editing
 gene-drive
 human-germline-modification
 dna-sequence-analysis
+dna-sequence-files
 blast-search
 pcr-primer-design
 the-human-genome
