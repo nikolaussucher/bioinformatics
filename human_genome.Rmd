@@ -1,6 +1,6 @@
 # The Human Genome
 
-In this lab session, we will take a closer look at the human genome and known variations that distinguish different populations and variations that have been linked to increased risk for certain diseases.
+In this exercise, we will take a closer look at the human genome and known variations that distinguish different populations and variations that have been linked to increased risk for certain diseases.
 
 The [human genome](https://en.wikipedia.org/wiki/Human_genome) is the complete set of nucleic acid sequences for humans, encoded as DNA within the 23 chromosome pairs in cell nuclei and in a small DNA molecule found within mitochondria. The human genome includes both protein-coding DNA genes and noncoding DNA. The haploid human genome in egg and sperm cells consists of more than three billion DNA base pairs (Table \@ref(tab:chr)), while the diploid genome in somatic cells has twice the DNA content. The Human Genome Project (HGP) produced the first (almost) complete sequence of the human genome, with the first draft sequence and initial analysis being published in 2001.
 

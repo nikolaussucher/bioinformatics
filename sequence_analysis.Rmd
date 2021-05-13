@@ -1,10 +1,14 @@
 # DNA Sequence Analysis
 
-In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various offline and online bioinformatics software tools. We will use a DNA sequence that was obtained in a previous experiment. In this experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is used for "barcoding" of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were used for DNA sequencing using the Sanger method. The sequencing facility sent the results back in the form of two types of files for each sequenced sample: one type of file has the file extension [.ab1](https://projects.nfstc.org/workshops/resources/articles/ABIF_File_Format.pdf ). Files of this type are binary files and contain DNA sequence information recorded by an [Applied Biosystems](https://en.wikipedia.org/wiki/Applied_Biosystems) DNA sequencer and associated software; also known as a electropherogram file or DNA trace file; can be be viewed graphically by a ABI file viewer to analyze and compare DNA sequences. For conveniencem a second file with the file extension *.seq* or .txt contains the DNA sequence in [ASCII](https://en.wikipedia.org/wiki/ASCII) (American Standard Code for Information Interchange) format. Files of this type can be read by any program that can read simple text.
+In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various online bioinformatics software tools. We will use a DNA sequence that was obtained in a previous experiment. In the experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is commonly used for "barcoding" of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were sent to a commercial DNA sequencing facility for sequencing by the Sanger method.
+
+## DNA Sequence Files
+
+The sequencing facility sent the results back in the form of two types of files for each sequenced sample: one type of file has the file extension [.ab1](https://projects.nfstc.org/workshops/resources/articles/ABIF_File_Format.pdf ). Files of this type are binary files and contain DNA sequence information recorded by an [Applied Biosystems](https://en.wikipedia.org/wiki/Applied_Biosystems) DNA sequencer and associated software; also known as a electropherogram file or DNA trace file; can be be viewed graphically by a ABI file viewer to analyze and compare DNA sequences. For conveniencem a second file with the file extension *.seq* or .txt contains the DNA sequence in [ASCII](https://en.wikipedia.org/wiki/ASCII) (American Standard Code for Information Interchange) format. Files of this type can be read by any program that can read simple text.
 
 The electropherogram of the sequence that we will be using in this exercise is shown in Figure \@ref(fig:chrom) below. An [electropherogram](https://en.wikipedia.org/wiki/Electropherogram), or electrophoregram, is a record or chart produced by an automated [DNA sequencer](https://en.wikipedia.org/wiki/DNA_sequencer) used to separate the labled DNA produced in the Sanger sequencing procedure.
 
-1. Inspect the electrophoregram shown in Fig. \@ref(fig:chrom).
+1. Inspect the electropherograme (electrophoregram) shown in Fig. \@ref(fig:chrom).
 1. Notice peaks of four different colors (green, blue, black and red) corresponding to the bases adenine (A), cytosine (C), guanine (G), and thymine (T) in the sequenced DNA. Narrow, well separated peaks indicate a good signal and high confidence in "calling the base", broad, overlapping peaks signify low quality data. If the sofware algorithm used cannot decide which base to call, the letter "N" is used.
 1. Notice how the peaks are broad and overlapping both at the very beginning and end of the sequence. This is typical. 
 
@@ -43,15 +47,15 @@ seq_text <- primarySeq(sequence, string = TRUE)
 write(seq_text, "./data/seq_text.txt")
 ```
 
-(ref:chromatogram) The DNA sequence chromatorgram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
+(ref:chromatogram) The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
 
 ```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
 ```
 
-## BLAST search
+## BLAST Search
 
-We will use the BLAST (basic local alignment tool) program to compare our dna with all dna sequences stored in GenBank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available dna sequences. GenBank is part of the international nucleotide sequence database collaboration, which comprises the DNA Databank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. these three organizations exchange data on a daily basis.
+We will use the BLAST (Basic Local Alignment Tool) program to compare our DNA with all DNA sequences stored in GenBank. [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the international nucleotide sequence database collaboration, which comprises the DNA Databank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. these three organizations exchange data on a daily basis.
 
 There are several ways to search and retrieve data from GenBank:
 
@@ -63,7 +67,7 @@ There are several ways to search and retrieve data from GenBank:
 
 We will use BLAST to search te corenucleotide main collection.
 
-1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the [U.S. National Library of Medicine](https://www.nlm.nih.gov) in a new tab (fig. \@ref(fig:nlm)). otherwise enter the link in your browser manually. 
+1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the [U.S. National Library of Medicine](https://www.nlm.nih.gov) in a new tab (fig. \@ref(fig:nlm)). Otherwise enter the link in your browser manually. 
 
 (ref:nlm) The web page of the U.S. National Library of Medicine.
 
@@ -71,7 +75,7 @@ We will use BLAST to search te corenucleotide main collection.
 knitr::include_graphics("./figures/bioinformatics/nlm.png")
 `````
 
-2. On the U.S. National Library of Medicine web page (fig. \@ref(fig:nlm)), click on the right most square with the dna icon and BLAST (basic local alignment tool) written on it.
+2. On the U.S. National Library of Medicine web page (fig. \@ref(fig:nlm)), click on the right most square with the DNA icon and BLAST (basic local alignment tool) written on it.
 3. On the newly opened page (fig. \@ref(fig:blast)), you will see a row of squares displaying various titles. Click on the left most square that has nucleotide BLAST written on it. A new page will open. 
 
 (ref:blast) The Basic Local Alignment Search Tool (BLAST) start page.
@@ -145,10 +149,18 @@ knitr::include_graphics("./figures/bioinformatics/alignment.png")
 knitr::include_graphics("./figures/bioinformatics/save-fasta.png")
 `````
 
+In bioinformatics and biochemistry, the [FASTA format](https://en.wikipedia.org/wiki/FASTA_format) is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The format originates from the [FASTA software package](https://en.wikipedia.org/wiki/FASTA), but has now become a near universal standard in the field of bioinformatics.
+
+In the original format, a sequence was represented as a series of lines, each of which was no longer than 120 characters and usually did not exceed 80 characters. This probably was to allow for preallocation of fixed line sizes in software: at the time most users relied on Digital Equipment Corporation (DEC) VT220 (or compatible) terminals which could display 80 or 132 characters per line.[citation needed] Most people preferred the bigger font in 80-character modes and so it became the recommended fashion to use 80 characters or less (often 70) in FASTA lines. Also, the width of a standard printed page is 70 to 80 characters (depending on the font). Hence, 80 characters became the norm.
+
+The first line in a FASTA file started either with a ">" (greater-than) symbol or, less frequently, a ";" (semicolon) was taken as a comment. Subsequent lines starting with a semicolon would be ignored by software. Since the only comment used was the first, it quickly became used to hold a summary description of the sequence, often starting with a unique library accession number, and with time it has become commonplace to always use ">" for the first line and to not use ";" comments (which would otherwise be ignored).
+
+Following the initial line (used for a unique description of the sequence) was the actual sequence itself in standard one-letter character string. Anything other than a valid character would be ignored (including spaces, tabulators, asterisks, etc...). It was also common to end the sequence with an "*" (asterisk) character (in analogy with use in PIR formatted sequences) and, for the same reason, to leave a blank line between the description and the sequence. 
+
 15. On which chromosome is this gene located? How many nucleotides does this chromosome have?
 
 16. How many amino acids does the full-lenght gene code for?
 
-17. Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber correspondin to the the beginning of the start codon. Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise ("Design of PCR Primers").
+17. Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber corresponding to the the first base of the start codon (**A**TG). Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise ("Design of PCR Primers").
 
 18. What is the function of this gene in the organism?
