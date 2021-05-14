@@ -11,6 +11,7 @@
 * Provide an overview of the application areas of bioinformatics, with a focus on DNA sequence analysis, and the human genome.
 * Provide an introduction to major biolmedical and genomic databases.
 * Explain how to locate and extract data from key bioinformatics databases and resources
+* Introduce R, RStudio and BioConductor
 
 ## Student Learning Outcomes:
 
@@ -23,3 +24,4 @@ At successful completion of the course, students will be able to
 * Identify features on the sequence such as coding regions and restriction enzyme sites.
 * Interpret sequence analysis results.
 * Design PCR primers.
+* Use BioConductor R packages to perform elementary DNA sequence analysis. 

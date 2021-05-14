@@ -1,4 +1,6 @@
-# R, RStudioCloud, And BioConductor
+# R, RStudio Cloud, And BioConductor
+
+In this exercise, we will learn how to use R, RStudio Cloud and BioConductor. While you can download R and RStudio for free and install the programs on your own computer, it is easier and convenient to use RStudio in the cloud. It is free for personal use. But let's start with a quick overview first.
 
 [R](https://www.r-project.org) is a programming language and free software environment for statistical computing and graphics supported by the R Foundation for Statistical Computing. The R language is widely used among statisticians and data miners for developing statistical software and data analysis. Polls, data mining surveys, and studies of scholarly literature databases show substantial increases in popularity; as of April 2021, R ranks 16th in the TIOBE index, a measure of popularity of programming languages.
 
@@ -13,6 +15,8 @@ While computational methods continue to be developed to interpret biological dat
 The project was started in the Fall of 2001 and is overseen by the Bioconductor core team, based primarily at the Fred Hutchinson Cancer Research Center, with other members coming from international institutions.
 
 Most Bioconductor components are distributed as R packages, which are add-on modules for R. Initially most of the Bioconductor software packages focused on the analysis of single channel Affymetrix and two or more channel cDNA/Oligo microarrays. As the project has matured, the functional scope of the software packages broadened to include the analysis of all types of genomic data, such as SAGE, sequence, or SNP data.
+
+## An Overview of R, RStudio and BioConductor
 
 R is an interpreted language; users typically access it through a command-line interpreter. If a user types 2+2 at the R command prompt and presses enter, the computer replies with 4, as shown below:
 
@@ -37,6 +41,47 @@ The "Task Views" page (subject list) on the CRAN website lists a wide range of t
 A group of packages called the Tidyverse, which can be considered a "dialect of the R language", is increasingly popular in the R ecosystem. The group of packages strives to provide a cohesive collection of functions to deal with common data science tasks, including data import, cleaning, transformation and visualisation (notably with the ggplot2 package).
 
 The official R software environment is a [GNU](https://en.wikipedia.org/wiki/GNU_Project) package. It is written primarily in C, Fortran, and R itself (thus, it is partially self-hosting) and is freely available under the GNU General Public License. Pre-compiled executables are provided fr various operating systems. Although R has a command line interface, there are several third-party graphical user interfaces, such as [RStudio](https://www.rstudio.com), an integrated development environment, and Jupyter, a notebook interface.
+
+## RStudio Cloud
+
+RStudio Cloud allows anyone to do, share, teach and learn data science online. We will use it to learn how to use BioConductor.
+
+There is nothing to configure and no dedicated hardware, installation or annual purchase contract required. We only need a browser.
+
+Open a web browser and go to: https://rstudio.cloud
+
+When the page opens, click on "GET STARTED FOR FREE".
+
+```{r rstudiocloud, fig.cap='The RStudio Cloud landing page.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/RStudio_cloud.png")
+```
+
+On the next page, click on "Sign Up" on the bottom right.
+
+```{r getstarted, fig.cap='The RStudio Cloud "Get started" page.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/SignUp.png")
+```
+Fill in the required information on the next page.
+
+```{r signup, fig.cap='The RStudio Cloud sign-up page.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/SignUpForm.png")
+```
+
+Once you are logged in, click on "New Project" on the top right. You can name the project anything you like, for example "Bioinformatics".
+
+```{r newproject, fig.cap='Create a new poject.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/NewProject.png")
+```
+
+Then, click on the project. The RStudio workspace page will open.
+
+```{r workspace, fig.cap='The RStudio Workspace.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/Workspace.png")
+```
+
+
+
+
 
 ## Basic syntax of R
 
@@ -75,8 +120,6 @@ new_df
 
 ```
 
-### Structure of a function
-
 One of R's strengths is the ease of creating new functions. Objects in the function body remain local to the function, and any data type may be returned. Here is an example user-created function:
 
 ```{r function, echo=TRUE, message=TRUE, warning=TRUE}
@@ -94,7 +137,7 @@ f(c(1,2,3), c(5,3,4))
 f(1:3, 4)
 ```
 
-## Install Bioconductor and Bioconductor packages
+## Install Bioconductor and Bioconductor Packages
 
 Install latest version of Bioconductor by entering the commands below (the lines starting with "#>" are the outpunt produced by the commands listed at the top):
 
@@ -112,21 +155,24 @@ BiocManager::install(c("sangerseqR", "Biostrings"))
 
 ```
 
-
+Now, we are ready to read a AB1 sequence file, save the chromatogram (electropherogram) as PDF file and the sequence as a text file:
 
 ```{r rwseq, echo=TRUE, message=TRUE, warning=TRUE}
 #load packages
 library(sangerseqR)
 library(Biostrings)
 
-#read sequence file
+#read the ab1 sequence file
 sequence <- readsangerseq("./data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1")
 #save the chromatogram to a pdf file
 chromatogram(sequence, width = 100, height = 2, 
              filename = "./data/sequence_chromatogram.pdf")                    
+#save the sequence as a text file
+str(sequence)
+primarySeq(sequence, string=TRUE)
 
-seq_text <- primarySeq(sequence, string = TRUE)
-write(seq_text, "./data/seq_text.txt")
+makeBaseCalls(sequence, ratio = 0.33)
+
 ```
 
 (ref:chromatogram) The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 

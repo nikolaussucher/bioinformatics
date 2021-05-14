@@ -42,6 +42,11 @@ tab:thousand
 tab:stats
 fig:pca
 fig:ensembl
+fig:rstudiocloud
+fig:getstarted
+fig:signup
+fig:newproject
+fig:workspace
 course-description
 prerequisites
 instructional-objectives
@@ -173,7 +178,8 @@ personal-genomics
 viewing-the-human-genome
 experimental-procedures
 review-questions
-r-rstudiocloud-and-bioconductor
+r-rstudio-cloud-and-bioconductor
+an-overview-of-r-rstudio-and-bioconductor
+rstudio-cloud
 basic-syntax-of-r
-structure-of-a-function
-install-bioconductor
+install-bioconductor-and-bioconductor-packages
