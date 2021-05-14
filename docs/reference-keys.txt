@@ -173,3 +173,7 @@ personal-genomics
 viewing-the-human-genome
 experimental-procedures
 review-questions
+r-rstudiocloud-and-bioconductor
+basic-syntax-of-r
+structure-of-a-function
+install-bioconductor

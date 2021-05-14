@@ -9,7 +9,8 @@ rmd_files:   [ "index.Rmd",
                "techniques.Rmd",
                "sequence_analysis.Rmd",
                "pcr_primer_design.Rmd",
-               "human_genome.Rmd"
+               "human_genome.Rmd",
+               "bioconductor.Rmd"
              ]
 output_dir: docs
 before_chapter_script:  "_common.R"

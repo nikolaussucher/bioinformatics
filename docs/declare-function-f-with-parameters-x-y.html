@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
-  <meta name="description" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <title>11 Declare function “f” with parameters “x”, “y“ | LSAMP Bioinformatics Short Course at Roxbury Community College</title>
+  <meta name="description" content="11 Declare function “f” with parameters “x”, “y“ | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta property="og:title" content="11 Declare function “f” with parameters “x”, “y“ | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/cover.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="nikolaussuchert/bioinformatics" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7 DNA Sequence Analysis | LSAMP Bioinformatics Short Course at Roxbury Community College" />
+  <meta name="twitter:title" content="11 Declare function “f” with parameters “x”, “y“ | LSAMP Bioinformatics Short Course at Roxbury Community College" />
   <meta name="twitter:site" content="@NikolausSucher" />
   
   <meta name="twitter:image" content="/cover.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="techniques-of-molecular-biology.html"/>
-<link rel="next" href="pcr-primer-design.html"/>
+<link rel="prev" href="r-rstudiocloud-and-bioconductor.html"/>
+<link rel="next" href="that-returns-a-linear-combination-of-x-and-y-.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -282,12 +282,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9.9" data-path="the-human-genome.html"><a href="the-human-genome.html#review-questions"><i class="fa fa-check"></i><b>9.9</b> Review Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="r-rstudiocloud-and-bioconductor.html"><a href="r-rstudiocloud-and-bioconductor.html"><i class="fa fa-check"></i><b>10</b> R, RStudioCloud, And BioConductor</a><ul>
-<li class="chapter" data-level="10.1" data-path="r-rstudiocloud-and-bioconductor.html"><a href="r-rstudiocloud-and-bioconductor.html#basic-syntax-of-r"><i class="fa fa-check"></i><b>10.1</b> Basic syntax of R</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="r-rstudiocloud-and-bioconductor.html"><a href="r-rstudiocloud-and-bioconductor.html#structure-of-a-function"><i class="fa fa-check"></i><b>10.1.1</b> Structure of a function</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="r-rstudiocloud-and-bioconductor.html"><a href="r-rstudiocloud-and-bioconductor.html#install-bioconductor"><i class="fa fa-check"></i><b>10.2</b> Install Bioconductor</a></li>
-</ul></li>
+<li class="chapter" data-level="10" data-path="r-rstudiocloud-and-bioconductor.html"><a href="r-rstudiocloud-and-bioconductor.html"><i class="fa fa-check"></i><b>10</b> R, RStudioCloud, And BioConductor</a></li>
+<li class="chapter" data-level="11" data-path="declare-function-f-with-parameters-x-y.html"><a href="declare-function-f-with-parameters-x-y.html"><i class="fa fa-check"></i><b>11</b> Declare function “f” with parameters “x”, “y“</a></li>
+<li class="chapter" data-level="12" data-path="that-returns-a-linear-combination-of-x-and-y-.html"><a href="that-returns-a-linear-combination-of-x-and-y-.html"><i class="fa fa-check"></i><b>12</b> that returns a linear combination of x and y.</a></li>
 </ul>
 
       </nav>
@@ -305,190 +302,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dna-sequence-analysis" class="section level1">
-<h1><span class="header-section-number">7</span> DNA Sequence Analysis</h1>
-<p>In this exercise, we will learn how to work with DNA sequence data. We will learn how to use various online bioinformatics software tools. We will use a DNA sequence that was obtained in a previous experiment. In the experiment, genomic DNA was isolated from an organism and used as template in a polymerase change reaction (PCR). The primers for the PCR were chosen in the coding region of a gene that is commonly used for “barcoding” of biological species belonging to one of the four kingdoms of eykaryotic organisms. The PCR products were sent to a commercial DNA sequencing facility for sequencing by the Sanger method.</p>
-<div id="dna-sequence-files" class="section level2">
-<h2><span class="header-section-number">7.1</span> DNA Sequence Files</h2>
-<p>The sequencing facility sent the results back in the form of two types of files for each sequenced sample: one type of file has the file extension <a href="https://projects.nfstc.org/workshops/resources/articles/ABIF_File_Format.pdf">.ab1</a>. Files of this type are binary files and contain DNA sequence information recorded by an <a href="https://en.wikipedia.org/wiki/Applied_Biosystems">Applied Biosystems</a> DNA sequencer and associated software; also known as a electropherogram file or DNA trace file; can be be viewed graphically by a ABI file viewer to analyze and compare DNA sequences. For conveniencem a second file with the file extension <em>.seq</em> or .txt contains the DNA sequence in <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> (American Standard Code for Information Interchange) format. Files of this type can be read by any program that can read simple text.</p>
-<p>The electropherogram of the sequence that we will be using in this exercise is shown in Figure <a href="dna-sequence-analysis.html#fig:chrom">7.1</a> below. An <a href="https://en.wikipedia.org/wiki/Electropherogram">electropherogram</a>, or electrophoregram, is a record or chart produced by an automated <a href="https://en.wikipedia.org/wiki/DNA_sequencer">DNA sequencer</a> used to separate the labled DNA produced in the Sanger sequencing procedure.</p>
-<ol style="list-style-type: decimal">
-<li>Inspect the electropherograme (electrophoregram) shown in Fig. <a href="dna-sequence-analysis.html#fig:chrom">7.1</a>.</li>
-<li>Notice peaks of four different colors (green, blue, black and red) corresponding to the bases adenine (A), cytosine (C), guanine (G), and thymine (T) in the sequenced DNA. Narrow, well separated peaks indicate a good signal and high confidence in “calling the base”, broad, overlapping peaks signify low quality data. If the sofware algorithm used cannot decide which base to call, the letter “N” is used.</li>
-<li>Notice how the peaks are broad and overlapping both at the very beginning and end of the sequence. This is typical.</li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:chrom"></span>
-<img src="data/sequence_chromatogram.pdf" alt="The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs R and Bioconductor package sangerseqR." width="70%" />
-<p class="caption">
-Figure 7.1: The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>.
-</p>
-</div>
-</div>
-<div id="blast-search" class="section level2">
-<h2><span class="header-section-number">7.2</span> BLAST Search</h2>
-<p>We will use the BLAST (Basic Local Alignment Tool) program to compare our DNA with all DNA sequences stored in GenBank. <a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a> is the NIH genetic sequence database, an annotated collection of all publicly available DNA sequences. GenBank is part of the international nucleotide sequence database collaboration, which comprises the DNA Databank of Japan (DDBJ), the European Nucleotide Archive (ENA), and GenBank at NCBI. these three organizations exchange data on a daily basis.</p>
-<p>There are several ways to search and retrieve data from GenBank:</p>
-<ol style="list-style-type: decimal">
-<li>Search GenBank for sequence identifiers and annotations with entrez nucleotide, which is divided into three divisions:
-<ul>
-<li>corenucleotide (the main collection)</li>
-<li>dbest (expressed sequence tags)</li>
-<li>dbgss (genome survey sequences).</li>
-</ul></li>
-<li>Search and align GenBank sequences to a query sequence using BLAST (basic local alignment search tool).</li>
-</ol>
-<p>We will use BLAST to search te corenucleotide main collection.</p>
-<ol style="list-style-type: decimal">
-<li>Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the <a href="https://www.nlm.nih.gov">U.S. National Library of Medicine</a> in a new tab (fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>). Otherwise enter the link in your browser manually.</li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:nlm"></span>
-<img src="figures/bioinformatics/nlm.png" alt="The web page of the U.S. National Library of Medicine." width="70%" />
-<p class="caption">
-Figure 7.2: The web page of the U.S. National Library of Medicine.
-</p>
-</div>
-<ol start="2" style="list-style-type: decimal">
-<li>On the U.S. National Library of Medicine web page (fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>), click on the right most square with the DNA icon and BLAST (basic local alignment tool) written on it.</li>
-<li>On the newly opened page (fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. Click on the left most square that has nucleotide BLAST written on it. A new page will open.</li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:blast"></span>
-<img src="figures/bioinformatics/blast.png" alt="The Basic Local Alignment Search Tool (BLAST) start page." width="70%" />
-<p class="caption">
-Figure 7.3: The Basic Local Alignment Search Tool (BLAST) start page.
-</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>Here is the text only version of DNA electropherogram shown in Figure <a href="dna-sequence-analysis.html#fig:chrom">7.1</a> above. Copy the sequence to your clipboard:</li>
-</ol>
-<pre><code>NNNNNNNNNNNNNNNNNNNNNNNNNNNTAANNNANNCTTCTTTTTTACATTTAACAAGATTTTTTNTACATGAATATAAAGAAA
-GGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTG
-AATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTNTAAATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTAT
-TAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATTATG
-TACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGATATATTTTATATTGAATATTT
-GGCAATTTTTTATGCATTTATGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTTCTGGGTT
-ATCAATTTGGCAGAGAATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAATCACCTACAATTTATTCACGTTTAAAAA
-AAAATCTTTTAAAAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGGTTATCCTATTA
-GTAGATCGACTTGGACTACNTCGACNGATGAAGAANTTTTATTGAATTTTAATAAAATTTGNAAAAGCTTTTATTTTTATTATG
-GGGGGTTGATAAAAAAAGACATTTTATANNNAATCANNTATATCCTCCGATTTTCATGTGCAAAAACNCTANCTCGTAANCNNN
-NAANNNNNAANNNNNNA</code></pre>
-<ol start="5" style="list-style-type: decimal">
-<li>Paste the copied DNA sequence into the white box on the top left (Fig. <a href="dna-sequence-analysis.html#fig:sequence">7.4</a>).</li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:sequence"></span>
-<img src="figures/bioinformatics/sequence_entry.png" alt="Nucleotide BLAST (BLASTN) sequence entry form." width="70%" />
-<p class="caption">
-Figure 7.4: Nucleotide BLAST (BLASTN) sequence entry form.
-</p>
-</div>
-<ol start="6" style="list-style-type: decimal">
-<li>Leave the default values unchanged and click on the oval blue button at the lower left that has BLAST written on it (Fig. <a href="dna-sequence-analysis.html#fig:click">7.5</a>). This will upload your sequence (referred to from now on as the <strong>Query</strong> sequence) to the server where it will be compared to all sequences on record.</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:click"></span>
-<img src="figures/bioinformatics/click_blast.png" alt="After you have pasted your sequence into the sequence entry field, click the BLAST button at the lower left of the page." width="70%" />
-<p class="caption">
-Figure 7.5: After you have pasted your sequence into the sequence entry field, click the BLAST button at the lower left of the page.
-</p>
-</div>
-<ol start="7" style="list-style-type: decimal">
-<li>A new page will open that will be updated every 2 seconds while your query is being processed (Fig. <a href="dna-sequence-analysis.html#fig:status">7.6</a>).</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:status"></span>
-<img src="figures/bioinformatics/job_id.png" alt="The BLASTN query status updated page." width="70%" />
-<p class="caption">
-Figure 7.6: The BLASTN query status updated page.
-</p>
-</div>
-<ol start="8" style="list-style-type: decimal">
-<li>Once the search has completed, the BLASTN results page will open (Fig. <a href="dna-sequence-analysis.html#fig:results">7.7</a>).</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:results"></span>
-<img src="figures/bioinformatics/results.png" alt="The BLASTN results page." width="70%" />
-<p class="caption">
-Figure 7.7: The BLASTN results page.
-</p>
-</div>
-<ol start="9" style="list-style-type: decimal">
-<li>Click on the “+” sign in front of “Graphic Summary” (Fig. <a href="dna-sequence-analysis.html#fig:results">7.7</a>). A graphical summary of your results will be shown (Fig. <a href="dna-sequence-analysis.html#fig:graphic">7.8</a>. The light green line on top represents your query sequence, below are shown any retreived sequences that align with your sequence.</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:graphic"></span>
-<img src="figures/bioinformatics/graphic_summary.png" alt="Graphic summary of the BLASTN search results." width="70%" />
-<p class="caption">
-Figure 7.8: Graphic summary of the BLASTN search results.
-</p>
-</div>
-<ol start="10" style="list-style-type: decimal">
-<li>Click on the “+” sign in front of “Description” (Fig. <a href="dna-sequence-analysis.html#fig:description">7.9</a>). A list of sequences that align with your query sequence will be shown (Fig. <a href="dna-sequence-analysis.html#fig:description">7.9</a>.</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:description"></span>
-<img src="figures/bioinformatics/results_description.png" alt="List of sequences producing significant alignments with your query sequence." width="70%" />
-<p class="caption">
-Figure 7.9: List of sequences producing significant alignments with your query sequence.
-</p>
-</div>
-<ol start="11" style="list-style-type: decimal">
-<li>Click on the first sequence. A new page will showing the alignment of the query sequence with the retrieved sequence (Fig. <a href="dna-sequence-analysis.html#fig:alignment">7.10</a>).</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:alignment"></span>
-<img src="figures/bioinformatics/alignment.png" alt="Alignment of the best retrieved sequence with the query sequence." width="70%" />
-<p class="caption">
-Figure 7.10: Alignment of the best retrieved sequence with the query sequence.
-</p>
-</div>
-<ol start="12" style="list-style-type: decimal">
-<li><p>Which sequence matches our query sequence?</p></li>
-<li><p>Is this sequence linked to a scientific publication? If so, download the original paper.</p></li>
-<li><p>What is the scientific name of the organism that has a matching sequence? What is the common English name of this organism? What type of organism is it?</p></li>
-<li><p>What is the name of the gene that matches this sequence? Does the query sequence correspond to a partial or the full-length sequence of this gene?</p></li>
-<li><p>Go back to the list of sequence alignments produced by BLAST. Look for the sequnce with GenBank accession AY348551.1 (accession identifiers are listed in the left most column). Click on it. A new page will open. 15. On which chromosome is this gene located? How many nucleotides does this chromosome have?</p></li>
-<li><p>How many amino acids does the full-lenght gene code for?</p></li>
-<li><p>Find open reading frame (ORF) in the sequence. Write down the nucleotide mumber corresponding to the the first base of the start codon (<strong>A</strong>TG). Find the stop codon. Write down the number of the last nucleotide of the stop codon. You will need those numbers in the next exercise (“Design of PCR Primers”).</p></li>
-<li><p>What is the function of this gene in the organism?</p></li>
-<li><p>Click on the “GenBank” link on the top left of the page and choose “FASTA”.</p></li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:fastap"></span>
-<img src="figures/bioinformatics/NCBI_FASTA_view.png" alt="View of the DNA seuence with GenBank accession # AY348551.1 in FASTA format." width="70%" />
-<p class="caption">
-Figure 7.11: View of the DNA seuence with GenBank accession # AY348551.1 in FASTA format.
-</p>
-</div>
-<p>In bioinformatics and biochemistry, the <a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA format</a> is a text-based format for representing either nucleotide sequences or amino acid (protein) sequences, in which nucleotides or amino acids are represented using single-letter codes. The format also allows for sequence names and comments to precede the sequences. The format originates from the <a href="https://en.wikipedia.org/wiki/FASTA">FASTA software package</a>, but has now become a near universal standard in the field of bioinformatics.</p>
-<p>In the original format, a sequence was represented as a series of lines, each of which was no longer than 120 characters and usually did not exceed 80 characters. This probably was to allow for preallocation of fixed line sizes in software: at the time most users relied on Digital Equipment Corporation (DEC) VT220 (or compatible) terminals which could display 80 or 132 characters per line.[citation needed] Most people preferred the bigger font in 80-character modes and so it became the recommended fashion to use 80 characters or less (often 70) in FASTA lines. Also, the width of a standard printed page is 70 to 80 characters (depending on the font). Hence, 80 characters became the norm.</p>
-<p>The first line in a FASTA file started either with a “&gt;” (greater-than) symbol or, less frequently, a “;” (semicolon) was taken as a comment. Subsequent lines starting with a semicolon would be ignored by software. Since the only comment used was the first, it quickly became used to hold a summary description of the sequence, often starting with a unique library accession number, and with time it has become commonplace to always use “&gt;” for the first line and to not use “;” comments (which would otherwise be ignored).</p>
-<p>Following the initial line (used for a unique description of the sequence) was the actual sequence itself in standard one-letter character string. Anything other than a valid character would be ignored (including spaces, tabulators, asterisks, etc…). It was also common to end the sequence with an "*" (asterisk) character (in analogy with use in PIR formatted sequences) and, for the same reason, to leave a blank line between the description and the sequence.</p>
-<ol start="21" style="list-style-type: decimal">
-<li>Towards the top left of the page, just above the title, click on “Send to” (Fig. <a href="dna-sequence-analysis.html#fig:fasta">7.12</a>), in the pop-up, make sure that “Complete Record” is highlighted, and under “Choose Destination”, click on “File”, then under “Format”, choose “Fasta”, and then click on “Create File”. Save the file to your computer.</li>
-</ol>
-<div class="figure" style="text-align: center"><span id="fig:fasta"></span>
-<img src="figures/bioinformatics/save-fasta.png" alt="Save the gene sequence in FASTA format" width="70%" />
-<p class="caption">
-Figure 7.12: Save the gene sequence in FASTA format
-</p>
-</div>
-<ol start="22" style="list-style-type: decimal">
-<li>Click on the “GenBank” link on the top left of the page and choose “Graphics”. Click on the different buttons and explore the many options and tools available. For example, show the open reading frames in all six frames. Find the open reading frame for the matK protein.</li>
-</ol>
-
-<div class="figure" style="text-align: center"><span id="fig:graphicsview"></span>
-<img src="figures/bioinformatics/NCBI_graphics_view.png" alt="Graphics view of the DNA seuence with GenBank accession # AY348551.1." width="70%" />
-<p class="caption">
-Figure 7.13: Graphics view of the DNA seuence with GenBank accession # AY348551.1.
-</p>
-</div>
-
-</div>
+<div id="declare-function-f-with-parameters-x-y" class="section level1">
+<h1><span class="header-section-number">11</span> Declare function “f” with parameters “x”, “y“</h1>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="techniques-of-molecular-biology.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pcr-primer-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-rstudiocloud-and-bioconductor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="that-returns-a-linear-combination-of-x-and-y-.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -510,7 +333,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/nikolaussucher/bioinformatics/edit/master/sequence_analysis.Rmd",
+"link": "https://github.com/nikolaussucher/bioinformatics/edit/master/bioconductor.Rmd",
 "text": "Edit"
 },
 "history": {
