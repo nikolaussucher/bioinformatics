@@ -183,3 +183,4 @@ an-overview-of-r-rstudio-and-bioconductor
 rstudio-cloud
 basic-syntax-of-r
 install-bioconductor-and-bioconductor-packages
+blast-from-r

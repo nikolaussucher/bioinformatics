@@ -150,14 +150,13 @@ BiocManager::install(version = "3.12")
 Next, install specific packages:
 
 ```{r biocpack, echo=TRUE, message=TRUE, warning=TRUE}
-
 BiocManager::install(c("sangerseqR", "Biostrings"))
 
 ```
 
 Now, we are ready to read a AB1 sequence file, save the chromatogram (electropherogram) as PDF file and the sequence as a text file:
 
-```{r rwseq, echo=TRUE, message=TRUE, warning=TRUE}
+```{r rwseq, echo=TRUE, message=TRUE, warning=TRUE, tidy=TRUE}
 #load packages
 library(sangerseqR)
 library(Biostrings)
@@ -165,10 +164,8 @@ library(Biostrings)
 #read the ab1 sequence file
 sequence <- readsangerseq("./data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1")
 #save the chromatogram to a pdf file
-chromatogram(sequence, width = 100, height = 2, 
-             filename = "./data/sequence_chromatogram.pdf")                    
+chromatogram(sequence,0,0, width = 100, height = 2, filename = "./data/sequence_chromatogram.pdf")                    
 #save the sequence as a text file
-str(sequence)
 primarySeq(sequence, string=TRUE)
 
 makeBaseCalls(sequence, ratio = 0.33)
@@ -180,3 +177,75 @@ makeBaseCalls(sequence, ratio = 0.33)
 ```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
 ```
+
+
+## BLAST From R
+
+
+```{r blastseq, echo=TRUE, message=TRUE, warning=TRUE, tidy=TRUE}
+#BLAST search in R
+
+#set working directory
+setwd("~/Dropbox/R/bioinformatics")
+
+#function testing if Bioconductor packages are installed
+installBiocManager <- function(x){
+  if(x %in% rownames(installed.packages())==FALSE) {
+    if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
+    BiocManager::install(x,ask = FALSE)
+  }  
+  else{
+    paste(x,"is already installed!")
+  }
+}
+
+#install necessary Bioconductor packages
+required_packages  <- c("BiocManager", "sangerseqR", "Biostrings", "annotate",
+                       "msa", "ggmsa")
+lapply(required_packages,installBiocManager)
+
+#load packages
+library(Biostrings)
+library(annotate)
+library(msa)
+library(ggmsa)
+library(ggplot2)
+#load the file that contains the query sequence for the BLAST
+
+query <- readDNAStringSet("data/seq.fasta")
+
+#BLAST the sequence
+#blast_output <- blastSequences(query, as="data.frame")
+
+#Inspect the result
+#detail(blast_output)
+#print(blast_output, show = "complete")
+
+#save the returned matches as a DNA string set class
+#fasta <- DNAStringSet(c(blast_output$Hsp_qseq[1], blast_output$Hsp_hseq[c(1,3,5,7,9)]))
+#add the names of the returned sequences
+#names(fasta) <- c(rep("query",1), blast_output$Hit_id[c(1,3,5,7,9)])
+
+fasta <- readDNAStringSet("Equisetum_blast.fasta")
+
+#perform multiple sequence alignment
+aln <- msa(fasta)
+#look at the result
+DNAStringSet(aln)
+#write the alignment to a file
+#writeXStringSet(fasta, file="Equisetum_blast.fasta", format="fasta", width=80)
+
+#plot the alignment
+#ggmsa(fasta, color = "Chemistry_NT", font = "DroidSansMono", start = 1, end = 600,
+#      char_width = 0.5, seq_name = TRUE)  + 
+#      facet_msa(field = 80)
+#ggsave("Equisetum_alignment.pdf", dpi = "print", width = 8.5, height = 11, units = "in")
+
+```
+
+```{r alignment, fig.cap='The sequence alingment.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./Equisetum_alignment.pdf")
+```
+
+
