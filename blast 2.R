@@ -4,7 +4,7 @@
 setwd("~/Dropbox/R/bioinformatics")
 
 #function testing if Bioconductor packages are installed
-installBiocManager <- function(x){
+installBiocManager <- function(x)
   if(x %in% rownames(installed.packages())==FALSE) {
     if (!requireNamespace("BiocManager", quietly = TRUE))
       install.packages("BiocManager")

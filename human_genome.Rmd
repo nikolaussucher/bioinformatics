@@ -258,7 +258,10 @@ Starting in 2005 as a pilot experiment with 10 individuals, the [Harvard Persona
 PGP participants consent to publicly share their genomic and trait data in a free and open manner to be used for unimpeded research and other scientific, patient care and commercial purposes worldwide. Consistent with this consent, the project organizers seek to lower as many barriers as possible to access PGP data and cells to empower and engage the scientific community to drive new knowledge about human biology. The project now has over 5,000 participants.
 
 
-## Viewing The Human Genome
+## Exploring The Human Genome
+
+In this exercise, we will learn how to use the [The Ensembl genome browser](http://useast.ensembl.org/Homo_sapiens/Info/Index).
+to find information on specific genes and single nucleotide polymorphisms (SNPs).
 
 ### Experimental Procedures
 
@@ -269,6 +272,50 @@ PGP participants consent to publicly share their genomic and trait data in a fre
 ```{r ensembl, fig.cap='(ref:genomebrowser)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/human_genome/ensembl_browser.png")
 `````
+
+2. In the search field on the top left of the page, enter GRIN1 and hit Enter (Return). A new page with the search results will open.
+
+```{r search, fig.cap='Page displaying pointers to pages containing information on GRIN1A', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/human_genome/grin1a_search.png")
+`````
+
+3. Click on the first result "GRIN1 Human Gene". A new page opens.
+
+```{r grin1aresults, fig.cap='Page displaying summary information of the search results for GRIN1A.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/human_genome/gene_grin1a.png")
+`````
+
+4. Click on "Show transcript table". Use the information on this page to answer the following questions:
+
+   * What is the function of the protein(s) this gene codes for?
+   * What are the common synonyms used to refer to this gene in the scientific literatue?
+   * On which chromosome and which strand is this gene located?
+   * How many RNA transcripts (splice variants) are transcribed from this gene?
+   * How mnay different protein versions are translated from these transcripts?
+   * What are orthologues and paralogues of this gene?
+   * What phenotypes are associated with different variants of this gene?
+
+5. Go back to the [start page](http://useast.ensembl.org/Homo_sapiens/Info/Index) and enter GRIN3A into the search field and press enter.
+6. Click on the first result "GRIN3A Human Gene". A new page opens.
+7. Click on "Show transcript table". Use the information on this page to answer the following questions:
+
+    * What is the function of the protein(s) this gene codes for?
+    * What are the common synonyms used to refer to this gene in the scientific literatue?
+    * On which chromosome and which strand is this gene located?
+    * Compare the location (chromosome and strant) of this gene with GRIN1A. What do you observe?
+    * How many RNA transcripts (splice variants) are transcribed from this gene?
+    * How mnay different protein versions are translated from these transcripts?
+    * What are orthologues and paralogues of this gene?
+    * What phenotypes are associated with different variants of this gene?
+
+    
+8. Go back to the [start page](http://useast.ensembl.org/Homo_sapiens/Info/Index) and enter "rs12913832" (without the qoutes) into the search field and press enter.
+
+
+9. Use the information on this page to answer the following questions:
+
+     * What gene(s) is this SNP associated with?
+     * What phenotypes have been associated with this SNP?
 
 
 ## Review Questions

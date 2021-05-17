@@ -42,6 +42,8 @@ tab:thousand
 tab:stats
 fig:pca
 fig:ensembl
+fig:search
+fig:grin1aresults
 fig:rstudiocloud
 fig:getstarted
 fig:signup
@@ -175,7 +177,7 @@ international-hapmap-project
 the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variation
 the-1000-genomes-project
 personal-genomics
-viewing-the-human-genome
+exploring-the-human-genome
 experimental-procedures
 review-questions
 r-rstudio-cloud-and-bioconductor
