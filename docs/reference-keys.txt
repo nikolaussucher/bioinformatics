@@ -35,9 +35,12 @@ fig:fasta
 fig:graphicsview
 fig:primentry
 fig:primerstatus
+fig:karyo
 tab:chr
+fig:genes
 tab:gene
 tab:cds
+fig:manhattan
 tab:thousand
 tab:stats
 fig:pca
@@ -171,10 +174,10 @@ blast-search
 pcr-primer-design
 the-human-genome
 the-human-genome-project
-public-private-competition-around-the-human-genome-project
 genome-annotation-1
-international-hapmap-project
+single-nucleotide-polymorphism
 the-single-nucleotide-polymorphism-database-dbsnp-of-nucleotide-sequence-variation
+international-hapmap-project
 the-1000-genomes-project
 personal-genomics
 exploring-the-human-genome
