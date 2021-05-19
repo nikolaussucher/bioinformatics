@@ -16,6 +16,8 @@ Degenerate primers are widely used and extremely useful in the field of microbia
 
 Many online tools are freely available for primer design, some of which focus on specific applications of PCR. The popular tools Primer3Plus and PrimerQuest can be used to find primers matching a wide variety of specifications. Highly degenerate primers for targeting a wide variety of DNA templates can be interactively designed using GeneFISHER. Primers with high specificity for a subset of DNA templates in the presence of many similar variants can be designed using DECIPHER. Primer design aims to generate a balance between specificity and efficiency of amplification.
 
+## Primer-BLAST
+
 In this exercise, our task will be to design primers for the amplification of the protein coding sequence of the matK gene that we identified in the previous exercise.
 
 1. Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the [U.S. National Library of Medicine](https://www.nlm.nih.gov) in a new tab (Fig. \@ref(fig:nlm)). Otherwise enter the link in your browser manually. 
@@ -43,7 +45,7 @@ knitr::include_graphics("./figures/bioinformatics/primer-blast.png")
 knitr::include_graphics("./figures/bioinformatics/primer-entry.png")
 `````
 
-5. Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the "From" position should always be smaller than the "To" position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer "From" to 100 and reverse primer "To" to 1000 (but leave the forward primer "To" and reverse primer "From" empty). Note that the position range of forward primer may not overlap with that of reverse primer. Set the appropriate length, choose, "" in the "organism" field. Click on the "Get Primers" button (Fig. \@ref(fig:primer).
+5. Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the "From" position should always be smaller than the "To" position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer "From" to 100 and reverse primer "To" to 1000 (but leave the forward primer "To" and reverse primer "From" empty). Note that the position range of forward primer may not overlap with that of reverse primer. Set the appropriate length, choose, "" in the "organism" field. Click on the "Get Primers" button (Fig. \@ref(fig:primentry).
 
 6. A new page will open that will be updated every 2 seconds while your query is being processed (Fig. \@ref(fig:primerstatus)). 
 
@@ -57,4 +59,6 @@ knitr::include_graphics("./figures/bioinformatics/primer_job_id.png")
 knitr::include_graphics("./figures/bioinformatics/primer_results.png")
 `````
 
+8. Did the program return suitable forward and reverse primers? If not, why not? You may have to repeat the search with modified paramaters. Which parameters can you modify? Which parameters do you need to leave unchanged?
 
+9. If, after several tries you still don't get suitable primers, you may have to choose primers "by hand". You can then use the program to determine their T_m_ and G/C content.
