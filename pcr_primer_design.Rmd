@@ -61,4 +61,4 @@ knitr::include_graphics("./figures/bioinformatics/primer_results.png")
 
 8. Did the program return suitable forward and reverse primers? If not, why not? You may have to repeat the search with modified paramaters. Which parameters can you modify? Which parameters do you need to leave unchanged?
 
-9. If, after several tries you still don't get suitable primers, you may have to choose primers "by hand". You can then use the program to determine their T_m_ and G/C content.
+9. If, after several tries you still don't get suitable primers, you may have to choose primers "by hand". You can then use the program to determine their T~m~ and G/C content.
