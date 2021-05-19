@@ -268,7 +268,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.1" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#dna-sequence-files"><i class="fa fa-check"></i><b>7.1</b> DNA Sequence Files</a></li>
 <li class="chapter" data-level="7.2" data-path="dna-sequence-analysis.html"><a href="dna-sequence-analysis.html#blast-search"><i class="fa fa-check"></i><b>7.2</b> BLAST Search</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR Primer Design</a></li>
+<li class="chapter" data-level="8" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html"><i class="fa fa-check"></i><b>8</b> PCR Primer Design</a><ul>
+<li class="chapter" data-level="8.1" data-path="pcr-primer-design.html"><a href="pcr-primer-design.html#primer-blast"><i class="fa fa-check"></i><b>8.1</b> Primer-BLAST</a></li>
+</ul></li>
 <li class="chapter" data-level="9" data-path="the-human-genome.html"><a href="the-human-genome.html"><i class="fa fa-check"></i><b>9</b> The Human Genome</a><ul>
 <li class="chapter" data-level="9.1" data-path="the-human-genome.html"><a href="the-human-genome.html#the-human-genome-project"><i class="fa fa-check"></i><b>9.1</b> The Human Genome Project</a></li>
 <li class="chapter" data-level="9.2" data-path="the-human-genome.html"><a href="the-human-genome.html#genome-annotation-1"><i class="fa fa-check"></i><b>9.2</b> Genome Annotation</a></li>
@@ -316,15 +318,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Some situations may call for the use of degenerate primers. These are mixtures of primers that are similar, but not identical. These may be convenient when amplifying the same gene from different organisms, as the sequences are probably similar but not identical. This technique is useful because the genetic code itself is degenerate, meaning several different codons can code for the same amino acid. This allows different organisms to have a significantly different genetic sequence that code for a highly similar protein. For this reason, degenerate primers are also used when primer design is based on protein sequence, as the specific sequence of codons are not known. Therefore, primer sequence corresponding to the amino acid isoleucine might be “ATH”, where A stands for adenine, T for thymine, and H for adenine, thymine, or cytosine, according to the genetic code for each codon, using the IUPAC symbols for degenerate bases. Degenerate primers may not perfectly hybridize with a target sequence, which can greatly reduce the specificity of the PCR amplification.</p>
 <p>Degenerate primers are widely used and extremely useful in the field of microbial ecology. They allow for the amplification of genes from thus far uncultivated microorganisms or allow the recovery of genes from organisms where genomic information is not available. Usually, degenerate primers are designed by aligning gene sequencing found in GenBank. Differences among sequences are accounted for by using IUPAC degeneracies for individual bases. PCR primers are then synthesized as a mixture of primers corresponding to all permutations of the codon sequence.</p>
 <p>Many online tools are freely available for primer design, some of which focus on specific applications of PCR. The popular tools Primer3Plus and PrimerQuest can be used to find primers matching a wide variety of specifications. Highly degenerate primers for targeting a wide variety of DNA templates can be interactively designed using GeneFISHER. Primers with high specificity for a subset of DNA templates in the presence of many similar variants can be designed using DECIPHER. Primer design aims to generate a balance between specificity and efficiency of amplification.</p>
+<div id="primer-blast" class="section level2">
+<h2><span class="header-section-number">8.1</span> Primer-BLAST</h2>
 <p>In this exercise, our task will be to design primers for the amplification of the protein coding sequence of the matK gene that we identified in the previous exercise.</p>
 <ol style="list-style-type: decimal">
 <li>Open a web browser on your computer. If you are reading this in your browser, right click on the highlighted link to open the web site of the <a href="https://www.nlm.nih.gov">U.S. National Library of Medicine</a> in a new tab (Fig. <a href="dna-sequence-analysis.html#fig:nlm">7.2</a>). Otherwise enter the link in your browser manually.</li>
 </ol>
 <p>The web page of the U.S. National Library of Medicine. The web page of the U.S. National Library of Medicine.</p>
-<div class="figure" style="text-align: center"><span id="fig:nlm"></span>
+<div class="figure" style="text-align: center"><span id="fig:nlmpage"></span>
 <img src="figures/bioinformatics/nlm.png" alt="The web page of the U.S. National Library of Medicine." width="70%" />
 <p class="caption">
-Figure 7.2: The web page of the U.S. National Library of Medicine.
+Figure 8.1: The web page of the U.S. National Library of Medicine.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -332,30 +336,30 @@ Figure 7.2: The web page of the U.S. National Library of Medicine.
 <li>On the newly opened page (Fig. <a href="dna-sequence-analysis.html#fig:blast">7.3</a>), you will see a row of squares displaying various titles. Scroll down to “Specialized Searches”. Click on the second square that has Primer-Blast written on it.</li>
 </ol>
 <p>The Basic Local Alignment Search Tool (BLAST) start page. The Basic Local Alignment Search Tool (BLAST) start page.</p>
-<div class="figure" style="text-align: center"><span id="fig:blast"></span>
+<div class="figure" style="text-align: center"><span id="fig:blastpage"></span>
 <img src="figures/bioinformatics/primer-blast.png" alt="The Basic Local Alignment Search Tool (BLAST) start page." width="70%" />
 <p class="caption">
-Figure 7.3: The Basic Local Alignment Search Tool (BLAST) start page.
+Figure 8.2: The Basic Local Alignment Search Tool (BLAST) start page.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>A new page will open (Fig. <a href="pcr-primer-design.html#fig:primentry">8.1</a>). Click on “Choose File” and upload the sequence that you saved during the “DNA Sequence Analysis” exercise.</li>
+<li>A new page will open (Fig. <a href="pcr-primer-design.html#fig:primentry">8.3</a>). Click on “Choose File” and upload the sequence that you saved during the “DNA Sequence Analysis” exercise.</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:primentry"></span>
 <img src="figures/bioinformatics/primer-entry.png" alt="Primer-BLAST sequence entry form." width="70%" />
 <p class="caption">
-Figure 8.1: Primer-BLAST sequence entry form.
+Figure 8.3: Primer-BLAST sequence entry form.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li><p>Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the “From” position should always be smaller than the “To” position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer “From” to 100 and reverse primer “To” to 1000 (but leave the forward primer “To” and reverse primer “From” empty). Note that the position range of forward primer may not overlap with that of reverse primer. Set the appropriate length, choose, "" in the “organism” field. Click on the “Get Primers” button (Fig. <a href="#fig:primer"><strong>??</strong></a>.</p></li>
-<li><p>A new page will open that will be updated every 2 seconds while your query is being processed (Fig. <a href="pcr-primer-design.html#fig:primerstatus">8.2</a>).</p></li>
+<li><p>Enter the position ranges for the forward and reverse primes surrounding the protein coding sequence of the gene. The positions refer to the base numbers on the plus strand of your template (i.e., the “From” position should always be smaller than the “To” position for a given primer). Partial ranges are allowed. For example, if you want the PCR product to be located between position 100 and position 1000 on the template, you can set forward primer “From” to 100 and reverse primer “To” to 1000 (but leave the forward primer “To” and reverse primer “From” empty). Note that the position range of forward primer may not overlap with that of reverse primer. Set the appropriate length, choose, "" in the “organism” field. Click on the “Get Primers” button (Fig. <a href="pcr-primer-design.html#fig:primentry">8.3</a>.</p></li>
+<li><p>A new page will open that will be updated every 2 seconds while your query is being processed (Fig. <a href="pcr-primer-design.html#fig:primerstatus">8.4</a>).</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:primerstatus"></span>
 <img src="figures/bioinformatics/primer_job_id.png" alt="The BLASTN query status updated page." width="70%" />
 <p class="caption">
-Figure 8.2: The BLASTN query status updated page.
+Figure 8.4: The BLASTN query status updated page.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
@@ -367,7 +371,12 @@ Figure 8.2: The BLASTN query status updated page.
 Figure 7.7: The Primer-BLAST results page.
 </p>
 </div>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Did the program return suitable forward and reverse primers? If not, why not? You may have to repeat the search with modified paramaters. Which parameters can you modify? Which parameters do you need to leave unchanged?</p></li>
+<li><p>If, after several tries you still don’t get suitable primers, you may have to choose primers “by hand”. You can then use the program to determine their T_m_ and G/C content.</p></li>
+</ol>
 
+</div>
 </div>
             </section>
 
