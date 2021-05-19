@@ -70,7 +70,7 @@ The "genome" of any given individual is unique; mapping the "human genome" invol
 
 A gene (from genos  (Greek) meaning generation or birth  or gender) is a basic unit of heredity and a sequence of nucleotides in DNA or RNA that encodes the synthesis of a gene product, either RNA or protein.
 
-(ref:gene) [ A gene is a region of DNA that encodes function. A chromosome consists of a long strand of DNA containing many genes. A human chromosome can be up to 250 mega base pairs of DNA and contain thousands of genes.](https://en.wikipedia.org/wiki/File:Chromosome_DNA_Gene.svg) 
+(ref:gene) [A gene is a region of DNA that encodes function. A chromosome consists of a long strand of DNA containing many genes. A human chromosome can be up to 250 mega base pairs of DNA and contain thousands of genes.](https://en.wikipedia.org/wiki/File:Chromosome_DNA_Gene.svg) 
 
 ```{r genes, fig.cap='(ref:gene)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/human_genome/Chromosome_DNA_Gene.svg")
