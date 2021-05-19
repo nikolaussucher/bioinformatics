@@ -22,7 +22,7 @@ In this exercise, our task will be to design primers for the amplification of th
 
 (ref:nlm) The web page of the U.S. National Library of Medicine.
 
-```{r nlm, fig.cap='(ref:nlm)', echo=FALSE, message=FALSE, warning=FALSE}
+```{r nlmpage, fig.cap='(ref:nlm)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/nlm.png")
 `````
 
@@ -31,7 +31,7 @@ knitr::include_graphics("./figures/bioinformatics/nlm.png")
 
 (ref:blast) The Basic Local Alignment Search Tool (BLAST) start page.
 
-```{r blast, fig.cap='(ref:blast)', echo=FALSE, message=FALSE, warning=FALSE}
+```{r blastpage, fig.cap='(ref:blast)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/primer-blast.png")
 `````
 
