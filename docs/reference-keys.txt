@@ -190,5 +190,6 @@ r-rstudio-cloud-and-bioconductor
 an-overview-of-r-rstudio-and-bioconductor
 rstudio-cloud
 basic-syntax-of-r
+download-ab1-sequence-file
 install-bioconductor-and-bioconductor-packages
 blast-from-r

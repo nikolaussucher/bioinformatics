@@ -137,6 +137,26 @@ f(c(1,2,3), c(5,3,4))
 f(1:3, 4)
 ```
 
+## Download AB1 Sequence File
+
+1. Download the sequence file in ab1 format.
+
+```{r download, echo=FALSE, message=FALSE, warning=FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://github.com/nikolaussucher/bioinformatics/raw/main/data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1",
+  button_label = "Download pdf file",
+  button_type = "danger",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
+```
+
+
+2. Upload the file to RStudio Cloud.
+
 ## Install Bioconductor and Bioconductor Packages
 
 Install latest version of Bioconductor by entering the commands below (the lines starting with "#>" are the outpunt produced by the commands listed at the top):
@@ -178,9 +198,7 @@ makeBaseCalls(sequence, ratio = 0.33)
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
 ```
 
-
 ## BLAST From R
-
 
 ```{r blastseq, echo=TRUE, message=TRUE, warning=TRUE, tidy=TRUE}
 #BLAST search in R

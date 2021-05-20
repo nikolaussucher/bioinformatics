@@ -53,6 +53,7 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/font-awesome-5.13.0/js/script.js"></script>
 
 
 <style type="text/css">
@@ -288,8 +289,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#an-overview-of-r-rstudio-and-bioconductor"><i class="fa fa-check"></i><b>10.1</b> An Overview of R, RStudio and BioConductor</a></li>
 <li class="chapter" data-level="10.2" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#rstudio-cloud"><i class="fa fa-check"></i><b>10.2</b> RStudio Cloud</a></li>
 <li class="chapter" data-level="10.3" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#basic-syntax-of-r"><i class="fa fa-check"></i><b>10.3</b> Basic syntax of R</a></li>
-<li class="chapter" data-level="10.4" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#install-bioconductor-and-bioconductor-packages"><i class="fa fa-check"></i><b>10.4</b> Install Bioconductor and Bioconductor Packages</a></li>
-<li class="chapter" data-level="10.5" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#blast-from-r"><i class="fa fa-check"></i><b>10.5</b> BLAST From R</a></li>
+<li class="chapter" data-level="10.4" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-ab1-sequence-file"><i class="fa fa-check"></i><b>10.4</b> Download AB1 Sequence File</a></li>
+<li class="chapter" data-level="10.5" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#install-bioconductor-and-bioconductor-packages"><i class="fa fa-check"></i><b>10.5</b> Install Bioconductor and Bioconductor Packages</a></li>
+<li class="chapter" data-level="10.6" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#blast-from-r"><i class="fa fa-check"></i><b>10.6</b> BLAST From R</a></li>
 </ul></li>
 </ul>
 
@@ -431,7 +433,7 @@ G
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center;font-weight: bold;">
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
 U
 </td>
 <td style="text-align:center;">
@@ -451,9 +453,6 @@ U
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-U
-</td>
 <td style="text-align:center;">
 UUC Phe
 </td>
@@ -471,9 +470,6 @@ C
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-U
-</td>
 <td style="text-align:center;">
 UUA Leucine (Leu)
 </td>
@@ -491,9 +487,6 @@ A
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-U
-</td>
 <td style="text-align:center;">
 UUG Leu
 </td>
@@ -511,7 +504,7 @@ G
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
 C
 </td>
 <td style="text-align:center;">
@@ -531,9 +524,6 @@ U
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-C
-</td>
 <td style="text-align:center;">
 CUC Leu
 </td>
@@ -551,9 +541,6 @@ C
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-C
-</td>
 <td style="text-align:center;">
 CUA Leu
 </td>
@@ -571,9 +558,6 @@ A
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-C
-</td>
 <td style="text-align:center;">
 CUG Leu
 </td>
@@ -591,7 +575,7 @@ G
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
 A
 </td>
 <td style="text-align:center;">
@@ -611,9 +595,6 @@ U
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-A
-</td>
 <td style="text-align:center;">
 AUC Ile
 </td>
@@ -631,9 +612,6 @@ C
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-A
-</td>
 <td style="text-align:center;">
 AUA Ile
 </td>
@@ -651,9 +629,6 @@ A
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-A
-</td>
 <td style="text-align:center;">
 AUG Methionine (Met) or START
 </td>
@@ -671,7 +646,7 @@ G
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
+<td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="4">
 G
 </td>
 <td style="text-align:center;">
@@ -691,9 +666,6 @@ U
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-G
-</td>
 <td style="text-align:center;">
 GUC (Val)
 </td>
@@ -711,9 +683,6 @@ C
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-G
-</td>
 <td style="text-align:center;">
 GUA Val
 </td>
@@ -731,9 +700,6 @@ A
 </td>
 </tr>
 <tr>
-<td style="text-align:center;font-weight: bold;">
-G
-</td>
 <td style="text-align:center;">
 GUG Val
 </td>
