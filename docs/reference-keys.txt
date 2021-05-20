@@ -54,6 +54,8 @@ fig:getstarted
 fig:signup
 fig:newproject
 fig:workspace
+fig:newfolder
+fig:upload
 course-description
 prerequisites
 instructional-objectives
@@ -191,5 +193,4 @@ an-overview-of-r-rstudio-and-bioconductor
 rstudio-cloud
 basic-syntax-of-r
 download-ab1-sequence-file
-install-bioconductor-and-bioconductor-packages
-blast-from-r
+download-and-run-the-r-program

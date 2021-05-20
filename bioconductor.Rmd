@@ -48,44 +48,49 @@ RStudio Cloud allows anyone to do, share, teach and learn data science online. W
 
 There is nothing to configure and no dedicated hardware, installation or annual purchase contract required. We only need a browser.
 
-Open a web browser and go to: https://rstudio.cloud
+1. Open a web browser and go to: https://rstudio.cloud
 
-When the page opens, click on "GET STARTED FOR FREE".
+2. When the page opens, click on "GET STARTED FOR FREE".
 
 ```{r rstudiocloud, fig.cap='The RStudio Cloud landing page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioconductor/RStudio_cloud.png")
 ```
 
-On the next page, click on "Sign Up" on the bottom right.
+3. On the next page, click on "Sign Up" on the bottom right.
 
 ```{r getstarted, fig.cap='The RStudio Cloud "Get started" page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioconductor/SignUp.png")
 ```
-Fill in the required information on the next page.
+
+4.Fill in the required information on the next page.
 
 ```{r signup, fig.cap='The RStudio Cloud sign-up page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioconductor/SignUpForm.png")
 ```
 
-Once you are logged in, click on "New Project" on the top right. You can name the project anything you like, for example "Bioinformatics".
+5. Once you are logged in, click on "New Project" on the top right. You can name the project anything you like, for example "Bioinformatics".
 
 ```{r newproject, fig.cap='Create a new poject.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioconductor/NewProject.png")
 ```
 
-Then, click on the project. The RStudio workspace page will open.
+6. Then, click on the project. The RStudio workspace page will open.
 
 ```{r workspace, fig.cap='The RStudio Workspace.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioconductor/Workspace.png")
 ```
 
+7. On the right, click on the "Files" tab, then on "New Folder". In the pop-up window, enter "data" (without the quotes) and click "OK".
 
-
-
+```{r newfolder, fig.cap='Create a new folder.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/new_folder.png")
+```
 
 ## Basic syntax of R
 
 The following examples illustrate the basic syntax of the language and use of the command-line interface. (An expanded list of standard language features can be found in the R manual, "An Introduction to R".)
+
+1. Copy the first three lines below and paste them into the "Console" pane on the lower left side of your RStudio workspace window and hit "return". You should see the output printed beginning with "#>" below. You can continue and enter the remaining commands listed below and observe the output that is generated.
 
 In R, the generally preferred assignment operator is an arrow made from two characters <-, although = can be used in some cases.
 
@@ -117,7 +122,6 @@ attributes(new_df) #print attributes information about the new_df object
 
 attributes(new_df)$row.names <- c('one','two') ## access and then change the row.names attribute; can also be done using rownames()
 new_df
-
 ```
 
 One of R's strengths is the ease of creating new functions. Objects in the function body remain local to the function, and any data type may be returned. Here is an example user-created function:
@@ -139,14 +143,14 @@ f(1:3, 4)
 
 ## Download AB1 Sequence File
 
-1. Download the sequence file in ab1 format.
+1. Now that you have a basic understanding of the R syntax, download the sequence file in ab1 format.
 
-```{r download, echo=FALSE, message=FALSE, warning=FALSE}
+```{r ab1, echo=FALSE, message=FALSE, warning=FALSE}
 library(downloadthis)
 ## Link in Github repo
 download_link(
   link = "https://github.com/nikolaussucher/bioinformatics/raw/main/data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1",
-  button_label = "Download pdf file",
+  button_label = "Download AB1 file",
   button_type = "danger",
   has_icon = TRUE,
   icon = "fa fa-save",
@@ -154,112 +158,38 @@ download_link(
 )
 ```
 
+2. On the right, click on the "Files" tab, ,click on the "data" folder. Once you are in the data folder, click on "Upload". In the pop-up window, click "Choose File" and find the file on your computer. Click "Ok" and upload the file to RStudio Cloud. Click on the green arrow to go back to your main directory.
 
-2. Upload the file to RStudio Cloud.
-
-## Install Bioconductor and Bioconductor Packages
-
-Install latest version of Bioconductor by entering the commands below (the lines starting with "#>" are the outpunt produced by the commands listed at the top):
-
-```{r bioconductor, echo=TRUE, message=TRUE, warning=TRUE}
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install(version = "3.12")
+```{r upload, fig.cap='Upload the AB1 sequence file to RStudio Cloud.', echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_graphics("./figures/bioconductor/upload_file.png")
 ```
 
-Next, install specific packages:
+## Download And Run The R Program
 
-```{r biocpack, echo=TRUE, message=TRUE, warning=TRUE}
-BiocManager::install(c("sangerseqR", "Biostrings"))
+1. Download a text file with the commands (the program) that we will run in R.
 
+```{r script, echo=FALSE, message=FALSE, warning=FALSE}
+library(downloadthis)
+## Link in Github repo
+download_link(
+  link = "https://github.com/nikolaussucher/bioinformatics/raw/main/data/sequence_analysis.R",
+  button_label = "Download R script",
+  button_type = "danger",
+  has_icon = TRUE,
+  icon = "fa fa-save",
+  self_contained = FALSE
+)
 ```
 
-Now, we are ready to read a AB1 sequence file, save the chromatogram (electropherogram) as PDF file and the sequence as a text file:
-
-```{r rwseq, echo=TRUE, message=TRUE, warning=TRUE, tidy=TRUE}
-#load packages
-library(sangerseqR)
-library(Biostrings)
-
-#read the ab1 sequence file
-sequence <- readsangerseq("./data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1")
-#save the chromatogram to a pdf file
-chromatogram(sequence,0,0, width = 100, height = 2, filename = "./data/sequence_chromatogram.pdf")                    
-#save the sequence as a text file
-primarySeq(sequence, string=TRUE)
-
-makeBaseCalls(sequence, ratio = 0.33)
-
-```
-
+2. On the right, click on the "Files" tab, then on "Upload". In the pop-up window, click "Choose File" and find the file on your computer. Click "Ok" and upload the file to the main directory of your RStudio Cloud project.
+3. Click on the "sequence_analysis.R" file. It will open in the pane on the top left side of your RStudio window.
+4. Read every line of the script. Lines starting with "#", are comments that explain what the following R commands mean. 
+5. Click on "Source on the top left of the tab that displays the contents of the "sequence_analysis.R" file and choose "Source". The script with the R commands will then be executed. Follow the progress by watching the output generated in the "Console" pane on the lower left. The "BLAST" search may take a while and you my be required to answer "yes (y)" or "no (n)" to the question if you want to keep waiting or not. If everything goes well and you don't see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.
+   
 (ref:chromatogram) The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
 
 ```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
-```
-
-## BLAST From R
-
-```{r blastseq, echo=TRUE, message=TRUE, warning=TRUE, tidy=TRUE}
-#BLAST search in R
-
-#set working directory
-setwd("~/Dropbox/R/bioinformatics")
-
-#function testing if Bioconductor packages are installed
-installBiocManager <- function(x){
-  if(x %in% rownames(installed.packages())==FALSE) {
-    if (!requireNamespace("BiocManager", quietly = TRUE))
-      install.packages("BiocManager")
-    BiocManager::install(x,ask = FALSE)
-  }  
-  else{
-    paste(x,"is already installed!")
-  }
-}
-
-#install necessary Bioconductor packages
-required_packages  <- c("BiocManager", "sangerseqR", "Biostrings", "annotate",
-                       "msa", "ggmsa")
-lapply(required_packages,installBiocManager)
-
-#load packages
-library(Biostrings)
-library(annotate)
-library(msa)
-library(ggmsa)
-library(ggplot2)
-#load the file that contains the query sequence for the BLAST
-
-query <- readDNAStringSet("data/seq.fasta")
-
-#BLAST the sequence
-#blast_output <- blastSequences(query, as="data.frame")
-
-#Inspect the result
-#detail(blast_output)
-#print(blast_output, show = "complete")
-
-#save the returned matches as a DNA string set class
-#fasta <- DNAStringSet(c(blast_output$Hsp_qseq[1], blast_output$Hsp_hseq[c(1,3,5,7,9)]))
-#add the names of the returned sequences
-#names(fasta) <- c(rep("query",1), blast_output$Hit_id[c(1,3,5,7,9)])
-
-fasta <- readDNAStringSet("Equisetum_blast.fasta")
-
-#perform multiple sequence alignment
-aln <- msa(fasta)
-#look at the result
-DNAStringSet(aln)
-#write the alignment to a file
-#writeXStringSet(fasta, file="Equisetum_blast.fasta", format="fasta", width=80)
-
-#plot the alignment
-#ggmsa(fasta, color = "Chemistry_NT", font = "DroidSansMono", start = 1, end = 600,
-#      char_width = 0.5, seq_name = TRUE)  + 
-#      facet_msa(field = 80)
-#ggsave("Equisetum_alignment.pdf", dpi = "print", width = 8.5, height = 11, units = "in")
-
 ```
 
 ```{r alignment, fig.cap='The sequence alingment.', echo=FALSE, message=FALSE, warning=FALSE}

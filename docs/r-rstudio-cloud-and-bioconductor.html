@@ -290,8 +290,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.2" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#rstudio-cloud"><i class="fa fa-check"></i><b>10.2</b> RStudio Cloud</a></li>
 <li class="chapter" data-level="10.3" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#basic-syntax-of-r"><i class="fa fa-check"></i><b>10.3</b> Basic syntax of R</a></li>
 <li class="chapter" data-level="10.4" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-ab1-sequence-file"><i class="fa fa-check"></i><b>10.4</b> Download AB1 Sequence File</a></li>
-<li class="chapter" data-level="10.5" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#install-bioconductor-and-bioconductor-packages"><i class="fa fa-check"></i><b>10.5</b> Install Bioconductor and Bioconductor Packages</a></li>
-<li class="chapter" data-level="10.6" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#blast-from-r"><i class="fa fa-check"></i><b>10.6</b> BLAST From R</a></li>
+<li class="chapter" data-level="10.5" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-and-run-the-r-program"><i class="fa fa-check"></i><b>10.5</b> Download And Run The R Program</a></li>
 </ul></li>
 </ul>
 
@@ -339,46 +338,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">10.2</span> RStudio Cloud</h2>
 <p>RStudio Cloud allows anyone to do, share, teach and learn data science online. We will use it to learn how to use BioConductor.</p>
 <p>There is nothing to configure and no dedicated hardware, installation or annual purchase contract required. We only need a browser.</p>
-<p>Open a web browser and go to: <a href="https://rstudio.cloud" class="uri">https://rstudio.cloud</a></p>
-<p>When the page opens, click on “GET STARTED FOR FREE”.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open a web browser and go to: <a href="https://rstudio.cloud" class="uri">https://rstudio.cloud</a></p></li>
+<li><p>When the page opens, click on “GET STARTED FOR FREE”.</p></li>
+</ol>
 <div class="figure" style="text-align: center"><span id="fig:rstudiocloud"></span>
 <img src="figures/bioconductor/RStudio_cloud.png" alt="The RStudio Cloud landing page." width="70%" />
 <p class="caption">
 Figure 10.1: The RStudio Cloud landing page.
 </p>
 </div>
-<p>On the next page, click on “Sign Up” on the bottom right.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>On the next page, click on “Sign Up” on the bottom right.</li>
+</ol>
 <div class="figure" style="text-align: center"><span id="fig:getstarted"></span>
 <img src="figures/bioconductor/SignUp.png" alt="The RStudio Cloud &quot;Get started&quot; page." width="70%" />
 <p class="caption">
 Figure 10.2: The RStudio Cloud “Get started” page.
 </p>
 </div>
-<p>Fill in the required information on the next page.</p>
+<p>4.Fill in the required information on the next page.</p>
 <div class="figure" style="text-align: center"><span id="fig:signup"></span>
 <img src="figures/bioconductor/SignUpForm.png" alt="The RStudio Cloud sign-up page." width="70%" />
 <p class="caption">
 Figure 10.3: The RStudio Cloud sign-up page.
 </p>
 </div>
-<p>Once you are logged in, click on “New Project” on the top right. You can name the project anything you like, for example “Bioinformatics”.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Once you are logged in, click on “New Project” on the top right. You can name the project anything you like, for example “Bioinformatics”.</li>
+</ol>
 <div class="figure" style="text-align: center"><span id="fig:newproject"></span>
 <img src="figures/bioconductor/NewProject.png" alt="Create a new poject." width="70%" />
 <p class="caption">
 Figure 10.4: Create a new poject.
 </p>
 </div>
-<p>Then, click on the project. The RStudio workspace page will open.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Then, click on the project. The RStudio workspace page will open.</li>
+</ol>
 <div class="figure" style="text-align: center"><span id="fig:workspace"></span>
 <img src="figures/bioconductor/Workspace.png" alt="The RStudio Workspace." width="70%" />
 <p class="caption">
 Figure 10.5: The RStudio Workspace.
 </p>
 </div>
+<ol start="7" style="list-style-type: decimal">
+<li>On the right, click on the “Files” tab, then on “New Folder”. In the pop-up window, enter “data” (without the quotes) and click “OK”.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:newfolder"></span>
+<img src="figures/bioconductor/new_folder.png" alt="Create a new folder." width="70%" />
+<p class="caption">
+Figure 10.6: Create a new folder.
+</p>
+</div>
 </div>
 <div id="basic-syntax-of-r" class="section level2">
 <h2><span class="header-section-number">10.3</span> Basic syntax of R</h2>
 <p>The following examples illustrate the basic syntax of the language and use of the command-line interface. (An expanded list of standard language features can be found in the R manual, “An Introduction to R”.)</p>
+<ol style="list-style-type: decimal">
+<li>Copy the first three lines below and paste them into the “Console” pane on the lower left side of your RStudio workspace window and hit “return”. You should see the output printed beginning with “#&gt;” below. You can continue and enter the remaining commands listed below and observe the output that is generated.</li>
+</ol>
 <p>In R, the generally preferred assignment operator is an arrow made from two characters &lt;-, although = can be used in some cases.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r-rstudio-cloud-and-bioconductor.html#cb3-1"></a></span>
 <span id="cb3-2"><a href="r-rstudio-cloud-and-bioconductor.html#cb3-2"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">6</span> <span class="co"># Create a numeric vector in the current environment</span></span>
@@ -452,103 +471,35 @@ Figure 10.5: The RStudio Workspace.
 <div id="download-ab1-sequence-file" class="section level2">
 <h2><span class="header-section-number">10.4</span> Download AB1 Sequence File</h2>
 <ol style="list-style-type: decimal">
-<li>Download the sequence file in ab1 format.</li>
+<li>Now that you have a basic understanding of the R syntax, download the sequence file in ab1 format.</li>
 </ol>
 <a href="https://github.com/nikolaussucher/bioinformatics/raw/main/data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1">
-<button class="btn btn-danger"><i class="fa fa-save"></i> Download pdf file</button>
+<button class="btn btn-danger"><i class="fa fa-save"></i> Download AB1 file</button>
 </a>
 <ol start="2" style="list-style-type: decimal">
-<li>Upload the file to RStudio Cloud.</li>
+<li>On the right, click on the “Files” tab, ,click on the “data” folder. Once you are in the data folder, click on “Upload”. In the pop-up window, click “Choose File” and find the file on your computer. Click “Ok” and upload the file to RStudio Cloud. Click on the green arrow to go back to your main directory.</li>
 </ol>
+<div class="figure" style="text-align: center"><span id="fig:upload"></span>
+<img src="figures/bioconductor/upload_file.png" alt="Upload the AB1 sequence file to RStudio Cloud." width="70%" />
+<p class="caption">
+Figure 10.7: Upload the AB1 sequence file to RStudio Cloud.
+</p>
 </div>
-<div id="install-bioconductor-and-bioconductor-packages" class="section level2">
-<h2><span class="header-section-number">10.5</span> Install Bioconductor and Bioconductor Packages</h2>
-<p>Install latest version of Bioconductor by entering the commands below (the lines starting with “#&gt;” are the outpunt produced by the commands listed at the top):</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-1"></a><span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb5-2"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-2"></a>    <span class="kw">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb5-3"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-3"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="dt">version =</span> <span class="st">&quot;3.12&quot;</span>)</span>
-<span id="cb5-4"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-4"></a><span class="co">#&gt; &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see</span></span>
-<span id="cb5-5"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-5"></a><span class="co">#&gt; &#39;?repositories&#39; for details</span></span>
-<span id="cb5-6"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-6"></a><span class="co">#&gt; </span></span>
-<span id="cb5-7"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-7"></a><span class="co">#&gt; replacement repositories:</span></span>
-<span id="cb5-8"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-8"></a><span class="co">#&gt;     CRAN: https://packagemanager.rstudio.com/all/__linux__/focal/latest</span></span>
-<span id="cb5-9"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-9"></a><span class="co">#&gt; Bioconductor version 3.12 (BiocManager 1.30.15), R 4.0.3 (2020-10-10)</span></span>
-<span id="cb5-10"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-10"></a><span class="co">#&gt; Installation paths not writeable, unable to update packages</span></span>
-<span id="cb5-11"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-11"></a><span class="co">#&gt;   path: /usr/local/lib/R/library</span></span>
-<span id="cb5-12"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-12"></a><span class="co">#&gt;   packages:</span></span>
-<span id="cb5-13"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-13"></a><span class="co">#&gt;     boot, class, cluster, codetools, foreign, KernSmooth, lattice, MASS,</span></span>
-<span id="cb5-14"><a href="r-rstudio-cloud-and-bioconductor.html#cb5-14"></a><span class="co">#&gt;     Matrix, mgcv, nlme, nnet, spatial, survival</span></span></code></pre></div>
-<p>Next, install specific packages:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-1"></a>BiocManager<span class="op">::</span><span class="kw">install</span>(<span class="kw">c</span>(<span class="st">&quot;sangerseqR&quot;</span>, <span class="st">&quot;Biostrings&quot;</span>))</span>
-<span id="cb6-2"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-2"></a><span class="co">#&gt; &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see</span></span>
-<span id="cb6-3"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-3"></a><span class="co">#&gt; &#39;?repositories&#39; for details</span></span>
-<span id="cb6-4"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-4"></a><span class="co">#&gt; </span></span>
-<span id="cb6-5"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-5"></a><span class="co">#&gt; replacement repositories:</span></span>
-<span id="cb6-6"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-6"></a><span class="co">#&gt;     CRAN: https://packagemanager.rstudio.com/all/__linux__/focal/latest</span></span>
-<span id="cb6-7"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-7"></a><span class="co">#&gt; Bioconductor version 3.12 (BiocManager 1.30.15), R 4.0.3 (2020-10-10)</span></span>
-<span id="cb6-8"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-8"></a><span class="co">#&gt; Warning: package(s) not installed when version(s) same as current; use `force = TRUE` to</span></span>
-<span id="cb6-9"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-9"></a><span class="co">#&gt;   re-install: &#39;sangerseqR&#39; &#39;Biostrings&#39;</span></span>
-<span id="cb6-10"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-10"></a><span class="co">#&gt; Installation paths not writeable, unable to update packages</span></span>
-<span id="cb6-11"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-11"></a><span class="co">#&gt;   path: /usr/local/lib/R/library</span></span>
-<span id="cb6-12"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-12"></a><span class="co">#&gt;   packages:</span></span>
-<span id="cb6-13"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-13"></a><span class="co">#&gt;     boot, class, cluster, codetools, foreign, KernSmooth, lattice, MASS,</span></span>
-<span id="cb6-14"><a href="r-rstudio-cloud-and-bioconductor.html#cb6-14"></a><span class="co">#&gt;     Matrix, mgcv, nlme, nnet, spatial, survival</span></span></code></pre></div>
-<p>Now, we are ready to read a AB1 sequence file, save the chromatogram (electropherogram) as PDF file and the sequence as a text file:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-1"></a><span class="co">#load packages</span></span>
-<span id="cb7-2"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-2"></a><span class="kw">library</span>(sangerseqR)</span>
-<span id="cb7-3"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-3"></a><span class="co">#&gt; Loading required package: Biostrings</span></span>
-<span id="cb7-4"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-4"></a><span class="co">#&gt; Loading required package: BiocGenerics</span></span>
-<span id="cb7-5"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-5"></a><span class="co">#&gt; Loading required package: parallel</span></span>
-<span id="cb7-6"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-6"></a><span class="co">#&gt; </span></span>
-<span id="cb7-7"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-7"></a><span class="co">#&gt; Attaching package: &#39;BiocGenerics&#39;</span></span>
-<span id="cb7-8"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-8"></a><span class="co">#&gt; The following objects are masked from &#39;package:parallel&#39;:</span></span>
-<span id="cb7-9"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-9"></a><span class="co">#&gt; </span></span>
-<span id="cb7-10"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-10"></a><span class="co">#&gt;     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,</span></span>
-<span id="cb7-11"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-11"></a><span class="co">#&gt;     clusterExport, clusterMap, parApply, parCapply, parLapply,</span></span>
-<span id="cb7-12"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-12"></a><span class="co">#&gt;     parLapplyLB, parRapply, parSapply, parSapplyLB</span></span>
-<span id="cb7-13"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-13"></a><span class="co">#&gt; The following objects are masked from &#39;package:stats&#39;:</span></span>
-<span id="cb7-14"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-14"></a><span class="co">#&gt; </span></span>
-<span id="cb7-15"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-15"></a><span class="co">#&gt;     IQR, mad, sd, var, xtabs</span></span>
-<span id="cb7-16"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-16"></a><span class="co">#&gt; The following objects are masked from &#39;package:base&#39;:</span></span>
-<span id="cb7-17"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-17"></a><span class="co">#&gt; </span></span>
-<span id="cb7-18"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-18"></a><span class="co">#&gt;     anyDuplicated, append, as.data.frame, basename, cbind, colnames,</span></span>
-<span id="cb7-19"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-19"></a><span class="co">#&gt;     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,</span></span>
-<span id="cb7-20"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-20"></a><span class="co">#&gt;     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,</span></span>
-<span id="cb7-21"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-21"></a><span class="co">#&gt;     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,</span></span>
-<span id="cb7-22"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-22"></a><span class="co">#&gt;     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,</span></span>
-<span id="cb7-23"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-23"></a><span class="co">#&gt;     union, unique, unsplit, which.max, which.min</span></span>
-<span id="cb7-24"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-24"></a><span class="co">#&gt; Loading required package: S4Vectors</span></span>
-<span id="cb7-25"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-25"></a><span class="co">#&gt; Loading required package: stats4</span></span>
-<span id="cb7-26"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-26"></a><span class="co">#&gt; </span></span>
-<span id="cb7-27"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-27"></a><span class="co">#&gt; Attaching package: &#39;S4Vectors&#39;</span></span>
-<span id="cb7-28"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-28"></a><span class="co">#&gt; The following object is masked from &#39;package:base&#39;:</span></span>
-<span id="cb7-29"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-29"></a><span class="co">#&gt; </span></span>
-<span id="cb7-30"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-30"></a><span class="co">#&gt;     expand.grid</span></span>
-<span id="cb7-31"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-31"></a><span class="co">#&gt; Loading required package: IRanges</span></span>
-<span id="cb7-32"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-32"></a><span class="co">#&gt; Loading required package: XVector</span></span>
-<span id="cb7-33"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-33"></a><span class="co">#&gt; </span></span>
-<span id="cb7-34"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-34"></a><span class="co">#&gt; Attaching package: &#39;Biostrings&#39;</span></span>
-<span id="cb7-35"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-35"></a><span class="co">#&gt; The following object is masked from &#39;package:base&#39;:</span></span>
-<span id="cb7-36"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-36"></a><span class="co">#&gt; </span></span>
-<span id="cb7-37"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-37"></a><span class="co">#&gt;     strsplit</span></span>
-<span id="cb7-38"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-38"></a><span class="kw">library</span>(Biostrings)</span>
-<span id="cb7-39"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-39"></a></span>
-<span id="cb7-40"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-40"></a><span class="co">#read the ab1 sequence file</span></span>
-<span id="cb7-41"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-41"></a>sequence &lt;-<span class="st"> </span><span class="kw">readsangerseq</span>(<span class="st">&quot;./data/78_4212_91_EQ-CHF3_4239_SQ_F10_035.ab1&quot;</span>)</span>
-<span id="cb7-42"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-42"></a><span class="co">#save the chromatogram to a pdf file</span></span>
-<span id="cb7-43"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-43"></a><span class="kw">chromatogram</span>(sequence,<span class="dv">0</span>,<span class="dv">0</span>, <span class="dt">width =</span> <span class="dv">100</span>, <span class="dt">height =</span> <span class="dv">2</span>, <span class="dt">filename =</span> <span class="st">&quot;./data/sequence_chromatogram.pdf&quot;</span>)                    </span>
-<span id="cb7-44"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-44"></a><span class="co">#&gt; Chromatogram saved to ./data/sequence_chromatogram.pdf in the current working directory</span></span>
-<span id="cb7-45"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-45"></a><span class="co">#save the sequence as a text file</span></span>
-<span id="cb7-46"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-46"></a><span class="kw">primarySeq</span>(sequence, <span class="dt">string=</span><span class="ot">TRUE</span>)</span>
-<span id="cb7-47"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-47"></a><span class="co">#&gt; [1] &quot;NNNNNNNNNNNNNNNNNNNNNNNNNNNTAANNNANNCTTCTTTTTTACATTTAACAAGATTTTTTNTACATGAATATAAAGAAAGGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTGAATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTNTAAATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTATTAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATTATGTACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGATATATTTTATATTGAATATTTGGCAATTTTTTATGCATTTATGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTTCTGGGTTATCAATTTGGCAGAGAATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAATCACCTACAATTTATTCACGTTTAAAAAAAAATCTTTTAAAAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGGTTATCCTATTAGTAGATCGACTTGGACTACNTCGACNGATGAAGAANTTTTATTGAATTTTAATAAAATTTGNAAAAGCTTTTATTTTTATTATGGGGGGTTGATAAAAAAAGACATTTTATANNNAATCANNTATATCCTCCGATTTTCATGTGCAAAAACNCTANCTCGTAANCNNNNAANNNNNAANNNNNNA&quot;</span></span>
-<span id="cb7-48"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-48"></a></span>
-<span id="cb7-49"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-49"></a><span class="kw">makeBaseCalls</span>(sequence, <span class="dt">ratio =</span> <span class="fl">0.33</span>)</span>
-<span id="cb7-50"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-50"></a><span class="co">#&gt; Number of datapoints: 10197</span></span>
-<span id="cb7-51"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-51"></a><span class="co">#&gt; Number of basecalls: 855</span></span>
-<span id="cb7-52"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-52"></a><span class="co">#&gt; </span></span>
-<span id="cb7-53"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-53"></a><span class="co">#&gt; Primary Basecalls: GGCATTTTCGCAGTCATCGACACTAATAAAAGATGCTTCTTTTTTACATTTAACAAGATTTTTTGTACATGAATATAAAGAAAGGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTGAATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTCTAAATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTATTAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATTATGTACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGATATATTTTATATTGAATATTTGGCAATTTTTTATGCATTTATGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTTCTGGGTTATCAATTTGGCAGAGAATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAATCACCTACAATTTATTCACGTTTAAAAAAAAATCTTTTAAAAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAGAGGGTTTTTGTGATATTTCAGGTTATCCTATTAGTAGATCGACTTGGACTACATCGACAGATGAAGAAATTTTATTGAATTTTAATAAAATTTGGAAAAGCTTTTATTTTTATTATGGGGGGTTGATAAAAAAAGACATTTTATATAGAATCAAATATATCCTCCGATTTTCATGTGCAAAAACACTAGCTCGTAAACATGAAAAAAAAATATAGCA</span></span>
-<span id="cb7-54"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-54"></a><span class="co">#&gt; </span></span>
-<span id="cb7-55"><a href="r-rstudio-cloud-and-bioconductor.html#cb7-55"></a><span class="co">#&gt; Secondary Basecalls: GGGATATTCGCACTCGTCGTCACTAATAAAAGATGCTTCTTTTTTACATTTAACAAGATTTTTTGTACATGAATATAAAGAAAGGTCTAAAAATGAAAAATTGATTTATTCTTTTAATAAAAGAAATAAATTTGTCACATTTTCTTGGAATTTTTTTTATATTTTTGAATTGGAATTTTTTTTAACTTCTCTTTTGACTAGGTTTATAAATAATTTAGTTCTATCCAACTTATTCGATCAAATTAATCTATTAGAAAAAATAAATAATAATAATAAAAGTCAATATTTTTTATCAGAAAAAAGGATCTATAACCAAAATTCCTGTATTCATTATGTACGGTATCAAAATCGTTGTATTATGGCTTCGGAAGGCTTTTATTTTCATGATACGAACTGGATATATTTTATATTGAATATTTGGCAATTTTTTATGCATTTATGGATTCAACCTTTCAGGTTCTCAACAAAGCATTTTCAAAAGCAGAGTTTTTTTTTTCTGGGTTATCAATTTGGCAGAGAATCCAAACTGCTAAAAGTTCGATCTATTTCACTTGATAAATCACCTACAATTTATTCACGTTTAAAAAAAAATCTTTTAAAAACACAAATTGTATATCCAATAGATTTTCTAGCAAAAAAGGGTTTTTGTGATATTTCAGGTTATCCTATTAATAGATCGACTTGGACTACCTCTACTGATGAAGAAATTTTATTGAATTTTAATAAAATTTGGAAAAGCTTTTATTTTTATTATGGGGGGTTGATAAAAAAAGACATTTTATATACAATCAAATATATCCCCCGATTTTCATGTGCAAAAACACTAYCCCGTAAACTATAAGTYCAAATAGAGCA</span></span></code></pre></div>
+</div>
+<div id="download-and-run-the-r-program" class="section level2">
+<h2><span class="header-section-number">10.5</span> Download And Run The R Program</h2>
+<ol style="list-style-type: decimal">
+<li>Download a text file with the commands (the program) that we will run in R.</li>
+</ol>
+<a href="https://github.com/nikolaussucher/bioinformatics/raw/main/data/sequence_analysis.R">
+<button class="btn btn-danger"><i class="fa fa-save"></i> Download R script</button>
+</a>
+<ol start="2" style="list-style-type: decimal">
+<li>On the right, click on the “Files” tab, then on “Upload”. In the pop-up window, click “Choose File” and find the file on your computer. Click “Ok” and upload the file to the main directory of your RStudio Cloud project.</li>
+<li>Click on the “sequence_analysis.R” file. It will open in the pane on the top left side of your RStudio window.</li>
+<li>Read every line of the script. Lines starting with “#”, are comments that explain what the following R commands mean.</li>
+<li>Click on “Source on the top left of the tab that displays the contents of the”sequence_analysis.R" file and choose “Source”. The script with the R commands will then be executed. Follow the progress by watching the output generated in the “Console” pane on the lower left. The “BLAST” search may take a while and you my be required to answer “yes (y)” or “no (n)” to the question if you want to keep waiting or not. If everything goes well and you don’t see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.</li>
+</ol>
 <p>The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>. The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:chrom"></span>
 <img src="data/sequence_chromatogram.pdf" alt="The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs R and Bioconductor package sangerseqR." width="70%" />
@@ -556,140 +507,6 @@ Figure 10.5: The RStudio Workspace.
 Figure 7.1: The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>.
 </p>
 </div>
-</div>
-<div id="blast-from-r" class="section level2">
-<h2><span class="header-section-number">10.6</span> BLAST From R</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-1"></a><span class="co">#BLAST search in R</span></span>
-<span id="cb8-2"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-2"></a></span>
-<span id="cb8-3"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-3"></a><span class="co">#set working directory</span></span>
-<span id="cb8-4"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-4"></a><span class="kw">setwd</span>(<span class="st">&quot;~/Dropbox/R/bioinformatics&quot;</span>)</span>
-<span id="cb8-5"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-5"></a></span>
-<span id="cb8-6"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-6"></a><span class="co">#function testing if Bioconductor packages are installed</span></span>
-<span id="cb8-7"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-7"></a>installBiocManager &lt;-<span class="st"> </span><span class="cf">function</span>(x){</span>
-<span id="cb8-8"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-8"></a>  <span class="cf">if</span>(x <span class="op">%in%</span><span class="st"> </span><span class="kw">rownames</span>(<span class="kw">installed.packages</span>())<span class="op">==</span><span class="ot">FALSE</span>) {</span>
-<span id="cb8-9"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-9"></a>    <span class="cf">if</span> (<span class="op">!</span><span class="kw">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb8-10"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-10"></a>      <span class="kw">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
-<span id="cb8-11"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-11"></a>    BiocManager<span class="op">::</span><span class="kw">install</span>(x,<span class="dt">ask =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb8-12"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-12"></a>  }  </span>
-<span id="cb8-13"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-13"></a>  <span class="cf">else</span>{</span>
-<span id="cb8-14"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-14"></a>    <span class="kw">paste</span>(x,<span class="st">&quot;is already installed!&quot;</span>)</span>
-<span id="cb8-15"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-15"></a>  }</span>
-<span id="cb8-16"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-16"></a>}</span>
-<span id="cb8-17"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-17"></a></span>
-<span id="cb8-18"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-18"></a><span class="co">#install necessary Bioconductor packages</span></span>
-<span id="cb8-19"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-19"></a>required_packages  &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="st">&quot;sangerseqR&quot;</span>, <span class="st">&quot;Biostrings&quot;</span>, <span class="st">&quot;annotate&quot;</span>,</span>
-<span id="cb8-20"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-20"></a>                       <span class="st">&quot;msa&quot;</span>, <span class="st">&quot;ggmsa&quot;</span>)</span>
-<span id="cb8-21"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-21"></a><span class="kw">lapply</span>(required_packages,installBiocManager)</span>
-<span id="cb8-22"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-22"></a><span class="co">#&gt; &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see</span></span>
-<span id="cb8-23"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-23"></a><span class="co">#&gt; &#39;?repositories&#39; for details</span></span>
-<span id="cb8-24"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-24"></a><span class="co">#&gt; </span></span>
-<span id="cb8-25"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-25"></a><span class="co">#&gt; replacement repositories:</span></span>
-<span id="cb8-26"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-26"></a><span class="co">#&gt;     CRAN: https://packagemanager.rstudio.com/all/__linux__/focal/latest</span></span>
-<span id="cb8-27"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-27"></a><span class="co">#&gt; Bioconductor version 3.12 (BiocManager 1.30.15), R 4.0.3 (2020-10-10)</span></span>
-<span id="cb8-28"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-28"></a><span class="co">#&gt; Installing package(s) &#39;annotate&#39;</span></span>
-<span id="cb8-29"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-29"></a><span class="co">#&gt; also installing the dependencies &#39;bit&#39;, &#39;bit64&#39;, &#39;memoise&#39;, &#39;plogr&#39;, &#39;RSQLite&#39;, &#39;AnnotationDbi&#39;, &#39;XML&#39;, &#39;Biobase&#39;</span></span>
-<span id="cb8-30"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-30"></a><span class="co">#&gt; Installation paths not writeable, unable to update packages</span></span>
-<span id="cb8-31"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-31"></a><span class="co">#&gt;   path: /usr/local/lib/R/library</span></span>
-<span id="cb8-32"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-32"></a><span class="co">#&gt;   packages:</span></span>
-<span id="cb8-33"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-33"></a><span class="co">#&gt;     boot, class, cluster, codetools, foreign, KernSmooth, lattice, MASS,</span></span>
-<span id="cb8-34"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-34"></a><span class="co">#&gt;     Matrix, mgcv, nlme, nnet, spatial, survival</span></span>
-<span id="cb8-35"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-35"></a><span class="co">#&gt; &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see</span></span>
-<span id="cb8-36"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-36"></a><span class="co">#&gt; &#39;?repositories&#39; for details</span></span>
-<span id="cb8-37"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-37"></a><span class="co">#&gt; </span></span>
-<span id="cb8-38"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-38"></a><span class="co">#&gt; replacement repositories:</span></span>
-<span id="cb8-39"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-39"></a><span class="co">#&gt;     CRAN: https://packagemanager.rstudio.com/all/__linux__/focal/latest</span></span>
-<span id="cb8-40"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-40"></a><span class="co">#&gt; Bioconductor version 3.12 (BiocManager 1.30.15), R 4.0.3 (2020-10-10)</span></span>
-<span id="cb8-41"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-41"></a><span class="co">#&gt; Installing package(s) &#39;msa&#39;</span></span>
-<span id="cb8-42"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-42"></a><span class="co">#&gt; Installation paths not writeable, unable to update packages</span></span>
-<span id="cb8-43"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-43"></a><span class="co">#&gt;   path: /usr/local/lib/R/library</span></span>
-<span id="cb8-44"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-44"></a><span class="co">#&gt;   packages:</span></span>
-<span id="cb8-45"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-45"></a><span class="co">#&gt;     boot, class, cluster, codetools, foreign, KernSmooth, lattice, MASS,</span></span>
-<span id="cb8-46"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-46"></a><span class="co">#&gt;     Matrix, mgcv, nlme, nnet, spatial, survival</span></span>
-<span id="cb8-47"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-47"></a><span class="co">#&gt; &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see</span></span>
-<span id="cb8-48"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-48"></a><span class="co">#&gt; &#39;?repositories&#39; for details</span></span>
-<span id="cb8-49"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-49"></a><span class="co">#&gt; </span></span>
-<span id="cb8-50"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-50"></a><span class="co">#&gt; replacement repositories:</span></span>
-<span id="cb8-51"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-51"></a><span class="co">#&gt;     CRAN: https://packagemanager.rstudio.com/all/__linux__/focal/latest</span></span>
-<span id="cb8-52"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-52"></a><span class="co">#&gt; Bioconductor version 3.12 (BiocManager 1.30.15), R 4.0.3 (2020-10-10)</span></span>
-<span id="cb8-53"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-53"></a><span class="co">#&gt; Installing package(s) &#39;ggmsa&#39;</span></span>
-<span id="cb8-54"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-54"></a><span class="co">#&gt; also installing the dependencies &#39;patchwork&#39;, &#39;aplot&#39;</span></span>
-<span id="cb8-55"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-55"></a><span class="co">#&gt; Installation paths not writeable, unable to update packages</span></span>
-<span id="cb8-56"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-56"></a><span class="co">#&gt;   path: /usr/local/lib/R/library</span></span>
-<span id="cb8-57"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-57"></a><span class="co">#&gt;   packages:</span></span>
-<span id="cb8-58"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-58"></a><span class="co">#&gt;     boot, class, cluster, codetools, foreign, KernSmooth, lattice, MASS,</span></span>
-<span id="cb8-59"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-59"></a><span class="co">#&gt;     Matrix, mgcv, nlme, nnet, spatial, survival</span></span>
-<span id="cb8-60"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-60"></a><span class="co">#&gt; [[1]]</span></span>
-<span id="cb8-61"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-61"></a><span class="co">#&gt; [1] &quot;BiocManager is already installed!&quot;</span></span>
-<span id="cb8-62"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-62"></a><span class="co">#&gt; </span></span>
-<span id="cb8-63"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-63"></a><span class="co">#&gt; [[2]]</span></span>
-<span id="cb8-64"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-64"></a><span class="co">#&gt; [1] &quot;sangerseqR is already installed!&quot;</span></span>
-<span id="cb8-65"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-65"></a><span class="co">#&gt; </span></span>
-<span id="cb8-66"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-66"></a><span class="co">#&gt; [[3]]</span></span>
-<span id="cb8-67"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-67"></a><span class="co">#&gt; [1] &quot;Biostrings is already installed!&quot;</span></span>
-<span id="cb8-68"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-68"></a><span class="co">#&gt; </span></span>
-<span id="cb8-69"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-69"></a><span class="co">#&gt; [[4]]</span></span>
-<span id="cb8-70"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-70"></a><span class="co">#&gt; [1] &quot;annotate&quot;</span></span>
-<span id="cb8-71"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-71"></a><span class="co">#&gt; </span></span>
-<span id="cb8-72"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-72"></a><span class="co">#&gt; [[5]]</span></span>
-<span id="cb8-73"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-73"></a><span class="co">#&gt; [1] &quot;msa&quot;</span></span>
-<span id="cb8-74"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-74"></a><span class="co">#&gt; </span></span>
-<span id="cb8-75"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-75"></a><span class="co">#&gt; [[6]]</span></span>
-<span id="cb8-76"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-76"></a><span class="co">#&gt; [1] &quot;ggmsa&quot;</span></span>
-<span id="cb8-77"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-77"></a></span>
-<span id="cb8-78"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-78"></a><span class="co">#load packages</span></span>
-<span id="cb8-79"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-79"></a><span class="kw">library</span>(Biostrings)</span>
-<span id="cb8-80"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-80"></a><span class="kw">library</span>(annotate)</span>
-<span id="cb8-81"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-81"></a><span class="co">#&gt; Loading required package: AnnotationDbi</span></span>
-<span id="cb8-82"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-82"></a><span class="co">#&gt; Loading required package: Biobase</span></span>
-<span id="cb8-83"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-83"></a><span class="co">#&gt; Welcome to Bioconductor</span></span>
-<span id="cb8-84"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-84"></a><span class="co">#&gt; </span></span>
-<span id="cb8-85"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-85"></a><span class="co">#&gt;     Vignettes contain introductory material; view with</span></span>
-<span id="cb8-86"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-86"></a><span class="co">#&gt;     &#39;browseVignettes()&#39;. To cite Bioconductor, see</span></span>
-<span id="cb8-87"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-87"></a><span class="co">#&gt;     &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.</span></span>
-<span id="cb8-88"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-88"></a><span class="co">#&gt; Loading required package: XML</span></span>
-<span id="cb8-89"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-89"></a><span class="co">#&gt; Warning: package &#39;XML&#39; was built under R version 4.0.4</span></span>
-<span id="cb8-90"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-90"></a><span class="kw">library</span>(msa)</span>
-<span id="cb8-91"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-91"></a><span class="kw">library</span>(ggmsa)</span>
-<span id="cb8-92"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-92"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb8-93"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-93"></a><span class="co">#load the file that contains the query sequence for the BLAST</span></span>
-<span id="cb8-94"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-94"></a></span>
-<span id="cb8-95"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-95"></a>query &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(<span class="st">&quot;data/seq.fasta&quot;</span>)</span>
-<span id="cb8-96"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-96"></a></span>
-<span id="cb8-97"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-97"></a><span class="co">#BLAST the sequence</span></span>
-<span id="cb8-98"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-98"></a><span class="co">#blast_output &lt;- blastSequences(query, as=&quot;data.frame&quot;)</span></span>
-<span id="cb8-99"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-99"></a></span>
-<span id="cb8-100"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-100"></a><span class="co">#Inspect the result</span></span>
-<span id="cb8-101"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-101"></a><span class="co">#detail(blast_output)</span></span>
-<span id="cb8-102"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-102"></a><span class="co">#print(blast_output, show = &quot;complete&quot;)</span></span>
-<span id="cb8-103"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-103"></a></span>
-<span id="cb8-104"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-104"></a><span class="co">#save the returned matches as a DNA string set class</span></span>
-<span id="cb8-105"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-105"></a><span class="co">#fasta &lt;- DNAStringSet(c(blast_output$Hsp_qseq[1], blast_output$Hsp_hseq[c(1,3,5,7,9)]))</span></span>
-<span id="cb8-106"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-106"></a><span class="co">#add the names of the returned sequences</span></span>
-<span id="cb8-107"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-107"></a><span class="co">#names(fasta) &lt;- c(rep(&quot;query&quot;,1), blast_output$Hit_id[c(1,3,5,7,9)])</span></span>
-<span id="cb8-108"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-108"></a></span>
-<span id="cb8-109"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-109"></a>fasta &lt;-<span class="st"> </span><span class="kw">readDNAStringSet</span>(<span class="st">&quot;Equisetum_blast.fasta&quot;</span>)</span>
-<span id="cb8-110"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-110"></a></span>
-<span id="cb8-111"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-111"></a><span class="co">#perform multiple sequence alignment</span></span>
-<span id="cb8-112"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-112"></a>aln &lt;-<span class="st"> </span><span class="kw">msa</span>(fasta)</span>
-<span id="cb8-113"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-113"></a><span class="co">#&gt; use default substitution matrix</span></span>
-<span id="cb8-114"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-114"></a><span class="co">#look at the result</span></span>
-<span id="cb8-115"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-115"></a><span class="kw">DNAStringSet</span>(aln)</span>
-<span id="cb8-116"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-116"></a><span class="co">#&gt; DNAStringSet object of length 6:</span></span>
-<span id="cb8-117"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-117"></a><span class="co">#&gt;     width seq                                               names               </span></span>
-<span id="cb8-118"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-118"></a><span class="co">#&gt; [1]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAACACTAGCTCGTAA gi|281371607|gb|G...</span></span>
-<span id="cb8-119"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-119"></a><span class="co">#&gt; [2]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAACACTAGCTCGTAA gi|37993690|gb|AY...</span></span>
-<span id="cb8-120"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-120"></a><span class="co">#&gt; [3]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAACACTAGCTCGTAA gi|359751518|gb|J...</span></span>
-<span id="cb8-121"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-121"></a><span class="co">#&gt; [4]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAACACTA-------- gi|1988363571|gb|...</span></span>
-<span id="cb8-122"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-122"></a><span class="co">#&gt; [5]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAAC------------ gi|402715855|gb|J...</span></span>
-<span id="cb8-123"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-123"></a><span class="co">#&gt; [6]   618 AGTTCTATCCAACTTATTCGATC...TGTGCAAAAACNCTANCTCGTAA query</span></span>
-<span id="cb8-124"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-124"></a><span class="co">#write the alignment to a file</span></span>
-<span id="cb8-125"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-125"></a><span class="co">#writeXStringSet(fasta, file=&quot;Equisetum_blast.fasta&quot;, format=&quot;fasta&quot;, width=80)</span></span>
-<span id="cb8-126"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-126"></a></span>
-<span id="cb8-127"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-127"></a><span class="co">#plot the alignment</span></span>
-<span id="cb8-128"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-128"></a><span class="co">#ggmsa(fasta, color = &quot;Chemistry_NT&quot;, font = &quot;DroidSansMono&quot;, start = 1, end = 600,</span></span>
-<span id="cb8-129"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-129"></a><span class="co">#      char_width = 0.5, seq_name = TRUE)  + </span></span>
-<span id="cb8-130"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-130"></a><span class="co">#      facet_msa(field = 80)</span></span>
-<span id="cb8-131"><a href="r-rstudio-cloud-and-bioconductor.html#cb8-131"></a><span class="co">#ggsave(&quot;Equisetum_alignment.pdf&quot;, dpi = &quot;print&quot;, width = 8.5, height = 11, units = &quot;in&quot;)</span></span></code></pre></div>
 <div class="figure" style="text-align: center"><span id="fig:alignment"></span>
 <img src="Equisetum_alignment.pdf" alt="The sequence alingment." width="70%" />
 <p class="caption">
