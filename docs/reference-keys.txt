@@ -192,5 +192,5 @@ r-rstudio-cloud-and-bioconductor
 an-overview-of-r-rstudio-and-bioconductor
 rstudio-cloud
 basic-syntax-of-r
-download-ab1-sequence-file
+download-the-ab1-sequence-file
 download-and-run-the-r-program

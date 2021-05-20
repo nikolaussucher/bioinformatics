@@ -289,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.1" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#an-overview-of-r-rstudio-and-bioconductor"><i class="fa fa-check"></i><b>10.1</b> An Overview of R, RStudio and BioConductor</a></li>
 <li class="chapter" data-level="10.2" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#rstudio-cloud"><i class="fa fa-check"></i><b>10.2</b> RStudio Cloud</a></li>
 <li class="chapter" data-level="10.3" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#basic-syntax-of-r"><i class="fa fa-check"></i><b>10.3</b> Basic syntax of R</a></li>
-<li class="chapter" data-level="10.4" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-ab1-sequence-file"><i class="fa fa-check"></i><b>10.4</b> Download AB1 Sequence File</a></li>
+<li class="chapter" data-level="10.4" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-the-ab1-sequence-file"><i class="fa fa-check"></i><b>10.4</b> Download The AB1 Sequence File</a></li>
 <li class="chapter" data-level="10.5" data-path="r-rstudio-cloud-and-bioconductor.html"><a href="r-rstudio-cloud-and-bioconductor.html#download-and-run-the-r-program"><i class="fa fa-check"></i><b>10.5</b> Download And Run The R Program</a></li>
 </ul></li>
 </ul>
@@ -468,8 +468,8 @@ Figure 10.6: Create a new folder.
 <span id="cb4-14"><a href="r-rstudio-cloud-and-bioconductor.html#cb4-14"></a><span class="kw">f</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">4</span>)</span>
 <span id="cb4-15"><a href="r-rstudio-cloud-and-bioconductor.html#cb4-15"></a><span class="co">#&gt; [1] 19 22 25</span></span></code></pre></div>
 </div>
-<div id="download-ab1-sequence-file" class="section level2">
-<h2><span class="header-section-number">10.4</span> Download AB1 Sequence File</h2>
+<div id="download-the-ab1-sequence-file" class="section level2">
+<h2><span class="header-section-number">10.4</span> Download The AB1 Sequence File</h2>
 <ol style="list-style-type: decimal">
 <li>Now that you have a basic understanding of the R syntax, download the sequence file in ab1 format.</li>
 </ol>
@@ -498,9 +498,9 @@ Figure 10.7: Upload the AB1 sequence file to RStudio Cloud.
 <li>On the right, click on the “Files” tab, then on “Upload”. In the pop-up window, click “Choose File” and find the file on your computer. Click “Ok” and upload the file to the main directory of your RStudio Cloud project.</li>
 <li>Click on the “sequence_analysis.R” file. It will open in the pane on the top left side of your RStudio window.</li>
 <li>Read every line of the script. Lines starting with “#”, are comments that explain what the following R commands mean.</li>
-<li>Click on “Source on the top left of the tab that displays the contents of the”sequence_analysis.R" file and choose “Source”. The script with the R commands will then be executed. Follow the progress by watching the output generated in the “Console” pane on the lower left. The “BLAST” search may take a while and you my be required to answer “yes (y)” or “no (n)” to the question if you want to keep waiting or not. If everything goes well and you don’t see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.</li>
+<li>Click on “Source” on the top left of the tab that displays the contents of the “sequence_analysis.R” file and choose “Source”. The script with the R commands will then be executed. Follow the progress by watching the output generated in the “Console” pane on the lower left. The “BLAST” search may take a while and you my be required to answer “yes (y)” or “no (n)” to the question if you want to keep waiting or not. If everything goes well and you don’t see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.</li>
 </ol>
-<p>The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>. The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs <a href="https://www.r-project.org">R</a> and <a href="https://bioconductor.org">Bioconductor</a> package <a href="https://bioconductor.org/packages/release/bioc/html/sangerseqR.html">sangerseqR</a>.</p>
+
 <div class="figure" style="text-align: center"><span id="fig:chrom"></span>
 <img src="data/sequence_chromatogram.pdf" alt="The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs R and Bioconductor package sangerseqR." width="70%" />
 <p class="caption">

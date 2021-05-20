@@ -141,7 +141,7 @@ f(c(1,2,3), c(5,3,4))
 f(1:3, 4)
 ```
 
-## Download AB1 Sequence File
+## Download The AB1 Sequence File
 
 1. Now that you have a basic understanding of the R syntax, download the sequence file in ab1 format.
 
@@ -184,11 +184,11 @@ download_link(
 2. On the right, click on the "Files" tab, then on "Upload". In the pop-up window, click "Choose File" and find the file on your computer. Click "Ok" and upload the file to the main directory of your RStudio Cloud project.
 3. Click on the "sequence_analysis.R" file. It will open in the pane on the top left side of your RStudio window.
 4. Read every line of the script. Lines starting with "#", are comments that explain what the following R commands mean. 
-5. Click on "Source on the top left of the tab that displays the contents of the "sequence_analysis.R" file and choose "Source". The script with the R commands will then be executed. Follow the progress by watching the output generated in the "Console" pane on the lower left. The "BLAST" search may take a while and you my be required to answer "yes (y)" or "no (n)" to the question if you want to keep waiting or not. If everything goes well and you don't see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.
+5. Click on "Source" on the top left of the tab that displays the contents of the "sequence_analysis.R" file and choose "Source". The script with the R commands will then be executed. Follow the progress by watching the output generated in the "Console" pane on the lower left. The "BLAST" search may take a while and you my be required to answer "yes (y)" or "no (n)" to the question if you want to keep waiting or not. If everything goes well and you don't see any red error messages when the prrogram has completed, you should see a bunch of new files in your data folder. Click on each file and view the results.
    
-(ref:chromatogram) The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
+(ref:chromresult) The DNA sequence chromatogram obtained from sequencing the PCR products from the unknown organism. This chromatogram was produced using the free and open-source software programs [R](https://www.r-project.org) and [Bioconductor](https://bioconductor.org) package [sangerseqR](https://bioconductor.org/packages/release/bioc/html/sangerseqR.html). 
 
-```{r chrom, fig.cap='(ref:chromatogram)', echo=FALSE, message=FALSE, warning=FALSE}
+```{r chrom, fig.cap='(ref:chromresult)', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./data/sequence_chromatogram.pdf")
 ```
 
