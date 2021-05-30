@@ -57,7 +57,7 @@ knitr::include_graphics("./figures/bioinformatics/primer_job_id.png")
 
 ```{r results, fig.cap='The Primer-BLAST results page.', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("./figures/bioinformatics/primer_results.png")
-`````
+```
 
 8. Did the program return suitable forward and reverse primers? If not, why not? You may have to repeat the search with modified paramaters. Which parameters can you modify? Which parameters do you need to leave unchanged?
 
